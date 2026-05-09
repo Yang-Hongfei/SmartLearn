@@ -1,0 +1,10 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+langchain-chroma>=0.2.0
+langchain-core>=0.3.0
+neo4j==5.26.0
+openai==1.55.0
+cohere==5.13.0
+pydantic-settings==2.6.0
+httpx==0.28.0
+python-dotenv==1.0.1
