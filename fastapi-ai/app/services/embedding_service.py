@@ -1,17 +1,23 @@
-"""Embedding 服务 —— 文本转向量，调用 Qwen3-Embedding（DashScope）。
+"""Embedding 服务 —— 文本转向量（阿里云百炼 text-embedding-v4）。"""
 
-设计要点：
-- embed_text 委托给 embed_batch，消除重复的 API 调用代码
-- 批量接口 embed_batch 是核心，一次请求处理多条文本
-"""
-
+from openai import OpenAI
 from app.core.config import settings
-from app.services.llm_service import get_client
+
+_embedding_client: OpenAI | None = None
+
+
+def get_embedding_client() -> OpenAI:
+    global _embedding_client
+    if _embedding_client is None:
+        _embedding_client = OpenAI(
+            api_key=settings.embedding_api_key or settings.deepseek_api_key,
+            base_url=settings.embedding_base_url,
+        )
+    return _embedding_client
 
 
 async def embed_batch(texts: list[str]) -> list[list[float]]:
-    """批量文本 → 向量列表，返回 [ [1024维], [1024维], ... ]"""
-    client = get_client()
+    client = get_embedding_client()
     response = client.embeddings.create(
         model=settings.embedding_model,
         input=texts,
@@ -21,5 +27,4 @@ async def embed_batch(texts: list[str]) -> list[list[float]]:
 
 
 async def embed_text(text: str) -> list[float]:
-    """单条文本 → 向量，直接委托给批量接口"""
     return (await embed_batch([text]))[0]

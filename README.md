@@ -289,6 +289,5 @@ streamlit run streamlit_app.py
 | Streamlit | `http://localhost:8501` | AI 可视化前端 |
 | Neo4j Browser | `http://localhost:7474` | 图数据库管理 |
 
-## License
+## 流程可视化
 
-MIT

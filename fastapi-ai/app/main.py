@@ -9,7 +9,7 @@
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import rag, knowledge, learning_path, analysis
+from app.api import rag, knowledge, learning_path, analysis, pdf_parse
 from app.services import kg_service
 
 
@@ -46,6 +46,7 @@ app.include_router(rag.router)            # /api/rag/*
 app.include_router(knowledge.router)       # /api/knowledge/*
 app.include_router(learning_path.router)   # /api/learning-path/*
 app.include_router(analysis.router)        # /api/analysis/*  ← SpringBoot 对接核心
+app.include_router(pdf_parse.router)       # /api/pdf/*       ← PDF 解析
 
 
 @app.get("/api/health")

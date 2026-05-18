@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mysql --version)",
+      "Bash(mysql -u root -proot -e \"SELECT 1\")",
+      "Bash(mysql *)",
+      "Bash(curl -s -X DELETE http://localhost:8080/api/pdf/imports/2)",
+      "Bash(curl -s -X POST http://localhost:8080/api/pdf/upload -F \"file=@C:/Users/86134/Desktop/面试题/面渣逆袭-分布式篇\\(2\\).pdf\")",
+      "Bash(curl *)",
+      "Bash(python -c ' *)",
+      "Bash(python -c \"from app.core.config import settings; print\\('API Key:', settings.dashscope_api_key[:8] + '...' if settings.dashscope_api_key else 'EMPTY!'\\)\")",
+      "Bash(python -X utf8 -c ' *)",
+      "Bash(cd /tmp)",
+      "Bash(taskkill //F //IM java.exe)",
+      "Bash(mvn compile *)",
+      "Bash(mvn spring-boot:run -q)",
+      "Bash(taskkill //F //IM python.exe)",
+      "Bash(python -m uvicorn app.main:app --host 0.0.0.0 --port 8000)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); q=d['data']; print\\(f'Random Q: {q[\\\\\"content\\\\\"][:80]}...'\\)\")",
+      "Bash(netstat -ano)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); [print\\(f'ID:{r[\\\\\"id\\\\\"]} file:{r[\\\\\"filename\\\\\"]} pages:{r[\\\\\"totalPages\\\\\"]} chunks:{r[\\\\\"totalChunks\\\\\"]} Q:{r[\\\\\"questionsExtracted\\\\\"]} status:{r[\\\\\"status\\\\\"]}'\\) for r in d['data']['records'][:5]]\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f'Total: {d[\\\\\"data\\\\\"][\\\\\"total\\\\\"]} questions'\\)\")"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/smartlearn?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 666666
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.smartlearn.model.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+smartlearn:
+  ai:
+    base-url: http://localhost:8000
+  upload:
+    path: C:/Users/86134/Desktop/项目/SmartLearn智能刷题平台（独立全栈开发）/springboot-backend/uploads

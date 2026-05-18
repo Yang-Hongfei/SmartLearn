@@ -31,13 +31,15 @@ def parse_llm_json(text: str) -> dict:
     # 尝试 2：提取 ```json ... ``` 代码块
     if "```json" in text:
         start = text.index("```json") + 7
-        end = text.index("```", start)
-        text = text[start:end]
+        end = text.find("```", start)
+        if end != -1:
+            text = text[start:end]
     elif "```" in text:
         # 尝试 3：提取 ``` ... ``` 代码块
         start = text.index("```") + 3
-        end = text.index("```", start)
-        text = text[start:end]
+        end = text.find("```", start)
+        if end != -1:
+            text = text[start:end]
 
     # 尝试 4：剥离包裹后再解析
     try:
