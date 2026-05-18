@@ -1,0 +1,6973 @@
+{
+  "nodes": [
+    {
+      "id": "kp_ArrayList",
+      "name": "ArrayList",
+      "description": "ArrayList（分类：数组）",
+      "difficulty": 2,
+      "category": "数组"
+    },
+    {
+      "id": "kp_B+树",
+      "name": "B+树",
+      "description": "B+树（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_HashMap",
+      "name": "HashMap",
+      "description": "HashMap（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_HashSet",
+      "name": "HashSet",
+      "description": "HashSet（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_LinkedHashMap",
+      "name": "LinkedHashMap",
+      "description": "LinkedHashMap（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_String",
+      "name": "String",
+      "description": "String（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_StringBuffer",
+      "name": "StringBuffer",
+      "description": "StringBuffer（分类：缓冲池）",
+      "difficulty": 2,
+      "category": "缓冲池"
+    },
+    {
+      "id": "kp_StringBuilder",
+      "name": "StringBuilder",
+      "description": "StringBuilder（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_StringConcatenation",
+      "name": "StringConcatenation",
+      "description": "StringConcatenation（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_StringConstantPool",
+      "name": "StringConstantPool",
+      "description": "StringConstantPool（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_StringImmutability",
+      "name": "StringImmutability",
+      "description": "StringImmutability（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_TreeMap",
+      "name": "TreeMap",
+      "description": "TreeMap（分类：树）",
+      "difficulty": 2,
+      "category": "树"
+    },
+    {
+      "id": "kp_abstract_class_constructor",
+      "name": "Abstract Class Constructor",
+      "description": "Abstract Class Constructor（分类：类加载）",
+      "difficulty": 2,
+      "category": "类加载"
+    },
+    {
+      "id": "kp_abstract_class_interface",
+      "name": "Abstract Class Interface",
+      "description": "Abstract Class Interface（分类：类加载）",
+      "difficulty": 2,
+      "category": "类加载"
+    },
+    {
+      "id": "kp_abstract_class_vs_regular_class",
+      "name": "Abstract Class Vs Regular Class",
+      "description": "Abstract Class Vs Regular Class（分类：类加载）",
+      "difficulty": 2,
+      "category": "类加载"
+    },
+    {
+      "id": "kp_acid",
+      "name": "Acid",
+      "description": "Acid（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_annotation",
+      "name": "Annotation",
+      "description": "Annotation（分类：Java注解）",
+      "difficulty": 2,
+      "category": "Java注解"
+    },
+    {
+      "id": "kp_aof",
+      "name": "Aof",
+      "description": "Aof（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_aof_data_format",
+      "name": "Aof Data Format",
+      "description": "Aof Data Format（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_aof_flush_strategy",
+      "name": "Aof Flush Strategy",
+      "description": "Aof Flush Strategy（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_aof_rewrite",
+      "name": "Aof Rewrite",
+      "description": "Aof Rewrite（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_aof_rewrite_impact",
+      "name": "Aof Rewrite Impact",
+      "description": "Aof Rewrite Impact（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_aof_rewrite_process",
+      "name": "Aof Rewrite Process",
+      "description": "Aof Rewrite Process（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_aop",
+      "name": "Aop",
+      "description": "Aop（分类：Spring AOP）",
+      "difficulty": 2,
+      "category": "Spring AOP"
+    },
+    {
+      "id": "kp_aop_application_scenarios",
+      "name": "Aop Application Scenarios",
+      "description": "Aop Application Scenarios（分类：Spring AOP）",
+      "difficulty": 2,
+      "category": "Spring AOP"
+    },
+    {
+      "id": "kp_aop_ioc",
+      "name": "Aop Ioc",
+      "description": "Aop Ioc（分类：Spring AOP）",
+      "difficulty": 2,
+      "category": "Spring AOP"
+    },
+    {
+      "id": "kp_aop_oop_relationship",
+      "name": "Aop Oop Relationship",
+      "description": "Aop Oop Relationship（分类：Spring AOP）",
+      "difficulty": 2,
+      "category": "Spring AOP"
+    },
+    {
+      "id": "kp_applicationcontext",
+      "name": "Applicationcontext",
+      "description": "Applicationcontext（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_aqs",
+      "name": "Aqs",
+      "description": "Aqs（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_array",
+      "name": "Array",
+      "description": "Array（分类：数组）",
+      "difficulty": 2,
+      "category": "数组"
+    },
+    {
+      "id": "kp_arraylist",
+      "name": "Arraylist",
+      "description": "Arraylist（分类：数组）",
+      "difficulty": 2,
+      "category": "数组"
+    },
+    {
+      "id": "kp_as_if_serial",
+      "name": "As If Serial",
+      "description": "As If Serial（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_aspectj",
+      "name": "Aspectj",
+      "description": "Aspectj（分类：AspectJ）",
+      "difficulty": 2,
+      "category": "AspectJ"
+    },
+    {
+      "id": "kp_atomic_class",
+      "name": "Atomic Class",
+      "description": "Atomic Class（分类：类加载）",
+      "difficulty": 2,
+      "category": "类加载"
+    },
+    {
+      "id": "kp_atomic_integer",
+      "name": "Atomic Integer",
+      "description": "Atomic Integer（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_atomic_operation",
+      "name": "Atomic Operation",
+      "description": "Atomic Operation（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_atomic_reference",
+      "name": "Atomic Reference",
+      "description": "Atomic Reference（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_atomicity",
+      "name": "Atomicity",
+      "description": "Atomicity（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_autoboxing_unboxing",
+      "name": "Autoboxing Unboxing",
+      "description": "Autoboxing Unboxing（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_b_plus_tree",
+      "name": "B Plus Tree",
+      "description": "B Plus Tree（分类：树）",
+      "difficulty": 2,
+      "category": "树"
+    },
+    {
+      "id": "kp_b_tree",
+      "name": "B Tree",
+      "description": "B Tree（分类：树）",
+      "difficulty": 2,
+      "category": "树"
+    },
+    {
+      "id": "kp_bean_registration",
+      "name": "Bean Registration",
+      "description": "Bean Registration（分类：Spring Bean）",
+      "difficulty": 2,
+      "category": "Spring Bean"
+    },
+    {
+      "id": "kp_beanfactory",
+      "name": "Beanfactory",
+      "description": "Beanfactory（分类：Spring Bean）",
+      "difficulty": 2,
+      "category": "Spring Bean"
+    },
+    {
+      "id": "kp_binary_tree",
+      "name": "Binary Tree",
+      "description": "Binary Tree（分类：二叉树/查找）",
+      "difficulty": 2,
+      "category": "二叉树/查找"
+    },
+    {
+      "id": "kp_bit_operation",
+      "name": "Bit Operation",
+      "description": "Bit Operation（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_blocking_io",
+      "name": "Blocking Io",
+      "description": "Blocking Io（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_blockingqueue",
+      "name": "Blockingqueue",
+      "description": "Blockingqueue（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_bloom_filter",
+      "name": "Bloom Filter",
+      "description": "Bloom Filter（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_break_continue_return",
+      "name": "Break Continue Return",
+      "description": "Break Continue Return（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_break_parent_delegation",
+      "name": "Break Parent Delegation",
+      "description": "Break Parent Delegation（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_break_parent_delegation_examples",
+      "name": "Break Parent Delegation Examples",
+      "description": "Break Parent Delegation Examples（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_bytecode",
+      "name": "Bytecode",
+      "description": "Bytecode（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_cache_avalanche",
+      "name": "Cache Avalanche",
+      "description": "Cache Avalanche（分类：缓存）",
+      "difficulty": 2,
+      "category": "缓存"
+    },
+    {
+      "id": "kp_cache_consistency",
+      "name": "Cache Consistency",
+      "description": "Cache Consistency（分类：缓存）",
+      "difficulty": 2,
+      "category": "缓存"
+    },
+    {
+      "id": "kp_cache_design",
+      "name": "Cache Design",
+      "description": "Cache Design（分类：缓存）",
+      "difficulty": 2,
+      "category": "缓存"
+    },
+    {
+      "id": "kp_cache_penetration",
+      "name": "Cache Penetration",
+      "description": "Cache Penetration（分类：缓存）",
+      "difficulty": 2,
+      "category": "缓存"
+    },
+    {
+      "id": "kp_cas",
+      "name": "Cas",
+      "description": "Cas（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_cglib_proxy",
+      "name": "Cglib Proxy",
+      "description": "Cglib Proxy（分类：代理模式）",
+      "difficulty": 2,
+      "category": "代理模式"
+    },
+    {
+      "id": "kp_character_set_emoji",
+      "name": "Character Set Emoji",
+      "description": "Character Set Emoji（分类：字符集）",
+      "difficulty": 2,
+      "category": "字符集"
+    },
+    {
+      "id": "kp_class_lifecycle",
+      "name": "Class Lifecycle",
+      "description": "Class Lifecycle（分类：类加载）",
+      "difficulty": 2,
+      "category": "类加载"
+    },
+    {
+      "id": "kp_class_loader_types",
+      "name": "Class Loader Types",
+      "description": "Class Loader Types（分类：类加载）",
+      "difficulty": 2,
+      "category": "类加载"
+    },
+    {
+      "id": "kp_class_loading_mechanism",
+      "name": "Class Loading Mechanism",
+      "description": "Class Loading Mechanism（分类：类加载）",
+      "difficulty": 2,
+      "category": "类加载"
+    },
+    {
+      "id": "kp_class_loading_process",
+      "name": "Class Loading Process",
+      "description": "Class Loading Process（分类：类加载）",
+      "difficulty": 2,
+      "category": "类加载"
+    },
+    {
+      "id": "kp_clone",
+      "name": "Clone",
+      "description": "Clone（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_cms",
+      "name": "Cms",
+      "description": "Cms（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_collection_classes",
+      "name": "Collection Classes",
+      "description": "Collection Classes（分类：类加载）",
+      "difficulty": 2,
+      "category": "类加载"
+    },
+    {
+      "id": "kp_collection_framework",
+      "name": "Collection Framework",
+      "description": "Collection Framework（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_collection_interface",
+      "name": "Collection Interface",
+      "description": "Collection Interface（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_collection_utilities",
+      "name": "Collection Utilities",
+      "description": "Collection Utilities（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_compile_interpret",
+      "name": "Compile Interpret",
+      "description": "Compile Interpret（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_compiler",
+      "name": "Compiler",
+      "description": "Compiler（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_completablefuture",
+      "name": "Completablefuture",
+      "description": "Completablefuture（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_component_bean_difference",
+      "name": "Component Bean Difference",
+      "description": "Component Bean Difference（分类：Spring Bean）",
+      "difficulty": 2,
+      "category": "Spring Bean"
+    },
+    {
+      "id": "kp_component_scan",
+      "name": "Component Scan",
+      "description": "Component Scan（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_concurrency_parallelism",
+      "name": "Concurrency Parallelism",
+      "description": "Concurrency Parallelism（分类：动态规划）",
+      "difficulty": 2,
+      "category": "动态规划"
+    },
+    {
+      "id": "kp_concurrent_hashmap",
+      "name": "Concurrent Hashmap",
+      "description": "Concurrent Hashmap（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_concurrent_hashmap_get",
+      "name": "Concurrent Hashmap Get",
+      "description": "Concurrent Hashmap Get（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_concurrent_hashmap_improvements",
+      "name": "Concurrent Hashmap Improvements",
+      "description": "Concurrent Hashmap Improvements（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_concurrent_hashmap_jdk7",
+      "name": "Concurrent Hashmap Jdk7",
+      "description": "Concurrent Hashmap Jdk7（分类：JDK）",
+      "difficulty": 2,
+      "category": "JDK"
+    },
+    {
+      "id": "kp_concurrent_hashmap_jdk7_get",
+      "name": "Concurrent Hashmap Jdk7 Get",
+      "description": "Concurrent Hashmap Jdk7 Get（分类：JDK）",
+      "difficulty": 2,
+      "category": "JDK"
+    },
+    {
+      "id": "kp_concurrent_hashmap_jdk7_put",
+      "name": "Concurrent Hashmap Jdk7 Put",
+      "description": "Concurrent Hashmap Jdk7 Put（分类：JDK）",
+      "difficulty": 2,
+      "category": "JDK"
+    },
+    {
+      "id": "kp_concurrent_hashmap_jdk8",
+      "name": "Concurrent Hashmap Jdk8",
+      "description": "Concurrent Hashmap Jdk8（分类：JDK）",
+      "difficulty": 2,
+      "category": "JDK"
+    },
+    {
+      "id": "kp_concurrent_hashmap_jdk8_put",
+      "name": "Concurrent Hashmap Jdk8 Put",
+      "description": "Concurrent Hashmap Jdk8 Put（分类：JDK）",
+      "difficulty": 2,
+      "category": "JDK"
+    },
+    {
+      "id": "kp_concurrent_hashmap_lock_evolution",
+      "name": "Concurrent Hashmap Lock Evolution",
+      "description": "Concurrent Hashmap Lock Evolution（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_concurrent_hashmap_usage",
+      "name": "Concurrent Hashmap Usage",
+      "description": "Concurrent Hashmap Usage（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_concurrent_hashmap_visibility",
+      "name": "Concurrent Hashmap Visibility",
+      "description": "Concurrent Hashmap Visibility（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_concurrent_hashmap_vs_hashtable",
+      "name": "Concurrent Hashmap Vs Hashtable",
+      "description": "Concurrent Hashmap Vs Hashtable（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_consumer_mode",
+      "name": "Consumer Mode",
+      "description": "Consumer Mode（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_context_switch",
+      "name": "Context Switch",
+      "description": "Context Switch（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_copy_on_write_arraylist",
+      "name": "Copy On Write Arraylist",
+      "description": "Copy On Write Arraylist（分类：数组）",
+      "difficulty": 2,
+      "category": "数组"
+    },
+    {
+      "id": "kp_copyonwritearraylist",
+      "name": "Copyonwritearraylist",
+      "description": "Copyonwritearraylist（分类：数组）",
+      "difficulty": 2,
+      "category": "数组"
+    },
+    {
+      "id": "kp_coroutine",
+      "name": "Coroutine",
+      "description": "Coroutine（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_count_functions",
+      "name": "Count Functions",
+      "description": "Count Functions（分类：SQL函数）",
+      "difficulty": 2,
+      "category": "SQL函数"
+    },
+    {
+      "id": "kp_countdownlatch",
+      "name": "Countdownlatch",
+      "description": "Countdownlatch（分类：SQL函数）",
+      "difficulty": 2,
+      "category": "SQL函数"
+    },
+    {
+      "id": "kp_covering_index",
+      "name": "Covering Index",
+      "description": "Covering Index（分类：索引）",
+      "difficulty": 2,
+      "category": "索引"
+    },
+    {
+      "id": "kp_cpu_high_analysis",
+      "name": "Cpu High Analysis",
+      "description": "Cpu High Analysis（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_cross_platform",
+      "name": "Cross Platform",
+      "description": "Cross Platform（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_current_read",
+      "name": "Current Read",
+      "description": "Current Read（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_cyclicbarrier",
+      "name": "Cyclicbarrier",
+      "description": "Cyclicbarrier（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_daemon_thread",
+      "name": "Daemon Thread",
+      "description": "Daemon Thread（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_data_accuracy",
+      "name": "Data Accuracy",
+      "description": "Data Accuracy（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_data_import",
+      "name": "Data Import",
+      "description": "Data Import（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_data_structure",
+      "name": "Data Structure",
+      "description": "Data Structure（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_data_sync",
+      "name": "Data Sync",
+      "description": "Data Sync（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_data_type_blob_text",
+      "name": "Data Type Blob Text",
+      "description": "Data Type Blob Text（分类：数据类型）",
+      "difficulty": 2,
+      "category": "数据类型"
+    },
+    {
+      "id": "kp_data_type_currency",
+      "name": "Data Type Currency",
+      "description": "Data Type Currency（分类：数据类型）",
+      "difficulty": 2,
+      "category": "数据类型"
+    },
+    {
+      "id": "kp_data_type_datetime_timestamp",
+      "name": "Data Type Datetime Timestamp",
+      "description": "Data Type Datetime Timestamp（分类：数据类型）",
+      "difficulty": 2,
+      "category": "数据类型"
+    },
+    {
+      "id": "kp_data_type_float_double",
+      "name": "Data Type Float Double",
+      "description": "Data Type Float Double（分类：数据类型）",
+      "difficulty": 2,
+      "category": "数据类型"
+    },
+    {
+      "id": "kp_data_type_varchar_char",
+      "name": "Data Type Varchar Char",
+      "description": "Data Type Varchar Char（分类：数据类型）",
+      "difficulty": 2,
+      "category": "数据类型"
+    },
+    {
+      "id": "kp_data_types",
+      "name": "Data Types",
+      "description": "Data Types（分类：数据类型）",
+      "difficulty": 2,
+      "category": "数据类型"
+    },
+    {
+      "id": "kp_database_normalization",
+      "name": "Database Normalization",
+      "description": "Database Normalization（分类：数据库设计）",
+      "difficulty": 2,
+      "category": "数据库设计"
+    },
+    {
+      "id": "kp_database_sharding",
+      "name": "Database Sharding",
+      "description": "Database Sharding（分类：数据库设计）",
+      "difficulty": 2,
+      "category": "数据库设计"
+    },
+    {
+      "id": "kp_deadlock",
+      "name": "Deadlock",
+      "description": "Deadlock（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_deadlock_conditions",
+      "name": "Deadlock Conditions",
+      "description": "Deadlock Conditions（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_deadlock_prevention",
+      "name": "Deadlock Prevention",
+      "description": "Deadlock Prevention（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_dependency_injection",
+      "name": "Dependency Injection",
+      "description": "Dependency Injection（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_di",
+      "name": "Di",
+      "description": "Di（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_dirty_read",
+      "name": "Dirty Read",
+      "description": "Dirty Read（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_distributed_id",
+      "name": "Distributed Id",
+      "description": "Distributed Id（分类：分布式系统）",
+      "difficulty": 2,
+      "category": "分布式系统"
+    },
+    {
+      "id": "kp_distributed_transaction",
+      "name": "Distributed Transaction",
+      "description": "Distributed Transaction（分类：分布式系统）",
+      "difficulty": 2,
+      "category": "分布式系统"
+    },
+    {
+      "id": "kp_drop_delete_truncate",
+      "name": "Drop Delete Truncate",
+      "description": "Drop Delete Truncate（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_epoll",
+      "name": "Epoll",
+      "description": "Epoll（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_equals_and_operator",
+      "name": "Equals And Operator",
+      "description": "Equals And Operator（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_exception_handling",
+      "name": "Exception Handling",
+      "description": "Exception Handling（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_exception_hierarchy",
+      "name": "Exception Hierarchy",
+      "description": "Exception Hierarchy（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_exchanger",
+      "name": "Exchanger",
+      "description": "Exchanger（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_execution_plan",
+      "name": "Execution Plan",
+      "description": "Execution Plan（分类：SQL执行）",
+      "difficulty": 2,
+      "category": "SQL执行"
+    },
+    {
+      "id": "kp_explain",
+      "name": "Explain",
+      "description": "Explain（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_explain_index",
+      "name": "Explain Index",
+      "description": "Explain Index（分类：索引）",
+      "difficulty": 2,
+      "category": "索引"
+    },
+    {
+      "id": "kp_fail_fast",
+      "name": "Fail Fast",
+      "description": "Fail Fast（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_fail_safe",
+      "name": "Fail Safe",
+      "description": "Fail Safe（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_final_finally_finalize",
+      "name": "Final Finally Finalize",
+      "description": "Final Finally Finalize（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_final_keyword",
+      "name": "Final Keyword",
+      "description": "Final Keyword（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_finalize",
+      "name": "Finalize",
+      "description": "Finalize（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_float_representation",
+      "name": "Float Representation",
+      "description": "Float Representation（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_full_field_sort",
+      "name": "Full Field Sort",
+      "description": "Full Field Sort（分类：排序算法）",
+      "difficulty": 2,
+      "category": "排序算法"
+    },
+    {
+      "id": "kp_full_gc",
+      "name": "Full Gc",
+      "description": "Full Gc（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_full_gc_frequent",
+      "name": "Full Gc Frequent",
+      "description": "Full Gc Frequent（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_full_gc_trigger",
+      "name": "Full Gc Trigger",
+      "description": "Full Gc Trigger（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_g1",
+      "name": "G1",
+      "description": "G1（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_garbage_collection",
+      "name": "Garbage Collection",
+      "description": "Garbage Collection（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_gc",
+      "name": "Gc",
+      "description": "Gc（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_gc_algorithm",
+      "name": "Gc Algorithm",
+      "description": "Gc Algorithm（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_gc_algorithms",
+      "name": "Gc Algorithms",
+      "description": "Gc Algorithms（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_gc_cms",
+      "name": "Gc Cms",
+      "description": "Gc Cms（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_gc_collector",
+      "name": "Gc Collector",
+      "description": "Gc Collector（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_gc_g1",
+      "name": "Gc G1",
+      "description": "Gc G1（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_gc_parallel",
+      "name": "Gc Parallel",
+      "description": "Gc Parallel（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_gc_root",
+      "name": "Gc Root",
+      "description": "Gc Root（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_gc_selection",
+      "name": "Gc Selection",
+      "description": "Gc Selection（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_gc_tricolor",
+      "name": "Gc Tricolor",
+      "description": "Gc Tricolor（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_generational_collection",
+      "name": "Generational Collection",
+      "description": "Generational Collection（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_generics",
+      "name": "Generics",
+      "description": "Generics（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_generics_wildcard",
+      "name": "Generics Wildcard",
+      "description": "Generics Wildcard（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_global_id",
+      "name": "Global Id",
+      "description": "Global Id（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_global_lock",
+      "name": "Global Lock",
+      "description": "Global Lock（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_group_by",
+      "name": "Group By",
+      "description": "Group By（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_happens_before",
+      "name": "Happens Before",
+      "description": "Happens Before（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_happens_before_rules",
+      "name": "Happens Before Rules",
+      "description": "Happens Before Rules（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_hash_collision",
+      "name": "Hash Collision",
+      "description": "Hash Collision（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_hash_function",
+      "name": "Hash Function",
+      "description": "Hash Function（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_hashcode_equals",
+      "name": "Hashcode Equals",
+      "description": "Hashcode Equals（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_hashmap",
+      "name": "Hashmap",
+      "description": "Hashmap（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_hashmap_capacity_power_of_two",
+      "name": "Hashmap Capacity Power Of Two",
+      "description": "Hashmap Capacity Power Of Two（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_hashmap_hash_collision",
+      "name": "Hashmap Hash Collision",
+      "description": "Hashmap Hash Collision（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_hashmap_hash_function",
+      "name": "Hashmap Hash Function",
+      "description": "Hashmap Hash Function（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_hashmap_initial_capacity",
+      "name": "Hashmap Initial Capacity",
+      "description": "Hashmap Initial Capacity（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_hashmap_jdk8_optimization",
+      "name": "Hashmap Jdk8 Optimization",
+      "description": "Hashmap Jdk8 Optimization（分类：JDK）",
+      "difficulty": 2,
+      "category": "JDK"
+    },
+    {
+      "id": "kp_hashmap_lookup",
+      "name": "Hashmap Lookup",
+      "description": "Hashmap Lookup（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_hashmap_order",
+      "name": "Hashmap Order",
+      "description": "Hashmap Order（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_hashmap_put",
+      "name": "Hashmap Put",
+      "description": "Hashmap Put（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_hashmap_resize",
+      "name": "Hashmap Resize",
+      "description": "Hashmap Resize（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_hashmap_thread_safety",
+      "name": "Hashmap Thread Safety",
+      "description": "Hashmap Thread Safety（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_hashmap_thread_safety_solution",
+      "name": "Hashmap Thread Safety Solution",
+      "description": "Hashmap Thread Safety Solution（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_hashmap_treeify",
+      "name": "Hashmap Treeify",
+      "description": "Hashmap Treeify（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_hashmap_vs_concurrent_hashmap",
+      "name": "Hashmap Vs Concurrent Hashmap",
+      "description": "Hashmap Vs Concurrent Hashmap（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_hashtable",
+      "name": "Hashtable",
+      "description": "Hashtable（分类：哈希）",
+      "difficulty": 2,
+      "category": "哈希"
+    },
+    {
+      "id": "kp_heap_memory_allocation",
+      "name": "Heap Memory Allocation",
+      "description": "Heap Memory Allocation（分类：内存管理）",
+      "difficulty": 2,
+      "category": "内存管理"
+    },
+    {
+      "id": "kp_heap_overflow",
+      "name": "Heap Overflow",
+      "description": "Heap Overflow（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_hot_key",
+      "name": "Hot Key",
+      "description": "Hot Key（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_i++",
+      "name": "I++",
+      "description": "I++（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_in_exists",
+      "name": "In Exists",
+      "description": "In Exists（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_increment_decrement",
+      "name": "Increment Decrement",
+      "description": "Increment Decrement（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_index",
+      "name": "Index",
+      "description": "Index（分类：索引）",
+      "difficulty": 2,
+      "category": "索引"
+    },
+    {
+      "id": "kp_index_basics",
+      "name": "Index Basics",
+      "description": "Index Basics（分类：索引）",
+      "difficulty": 2,
+      "category": "索引"
+    },
+    {
+      "id": "kp_index_classification",
+      "name": "Index Classification",
+      "description": "Index Classification（分类：类加载）",
+      "difficulty": 2,
+      "category": "类加载"
+    },
+    {
+      "id": "kp_index_creation",
+      "name": "Index Creation",
+      "description": "Index Creation（分类：索引）",
+      "difficulty": 2,
+      "category": "索引"
+    },
+    {
+      "id": "kp_index_design",
+      "name": "Index Design",
+      "description": "Index Design（分类：索引）",
+      "difficulty": 2,
+      "category": "索引"
+    },
+    {
+      "id": "kp_index_failure",
+      "name": "Index Failure",
+      "description": "Index Failure（分类：索引）",
+      "difficulty": 2,
+      "category": "索引"
+    },
+    {
+      "id": "kp_index_left_prefix",
+      "name": "Index Left Prefix",
+      "description": "Index Left Prefix（分类：索引）",
+      "difficulty": 2,
+      "category": "索引"
+    },
+    {
+      "id": "kp_index_optimization",
+      "name": "Index Optimization",
+      "description": "Index Optimization（分类：索引）",
+      "difficulty": 2,
+      "category": "索引"
+    },
+    {
+      "id": "kp_index_pushdown",
+      "name": "Index Pushdown",
+      "description": "Index Pushdown（分类：索引）",
+      "difficulty": 2,
+      "category": "索引"
+    },
+    {
+      "id": "kp_index_selectivity",
+      "name": "Index Selectivity",
+      "description": "Index Selectivity（分类：索引）",
+      "difficulty": 2,
+      "category": "索引"
+    },
+    {
+      "id": "kp_index_unsuitable",
+      "name": "Index Unsuitable",
+      "description": "Index Unsuitable（分类：索引）",
+      "difficulty": 2,
+      "category": "索引"
+    },
+    {
+      "id": "kp_inheritablethreadlocal",
+      "name": "Inheritablethreadlocal",
+      "description": "Inheritablethreadlocal（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_inheritance_abstraction",
+      "name": "Inheritance Abstraction",
+      "description": "Inheritance Abstraction（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_innodb_buffer_pool",
+      "name": "Innodb Buffer Pool",
+      "description": "Innodb Buffer Pool（分类：InnoDB存储引擎）",
+      "difficulty": 2,
+      "category": "InnoDB存储引擎"
+    },
+    {
+      "id": "kp_innodb_buffer_pool_size",
+      "name": "Innodb Buffer Pool Size",
+      "description": "Innodb Buffer Pool Size（分类：InnoDB存储引擎）",
+      "difficulty": 2,
+      "category": "InnoDB存储引擎"
+    },
+    {
+      "id": "kp_innodb_data_page_structure",
+      "name": "Innodb Data Page Structure",
+      "description": "Innodb Data Page Structure（分类：InnoDB存储引擎）",
+      "difficulty": 2,
+      "category": "InnoDB存储引擎"
+    },
+    {
+      "id": "kp_innodb_lru_optimization",
+      "name": "Innodb Lru Optimization",
+      "description": "Innodb Lru Optimization（分类：InnoDB存储引擎）",
+      "difficulty": 2,
+      "category": "InnoDB存储引擎"
+    },
+    {
+      "id": "kp_innodb_memory_structure",
+      "name": "Innodb Memory Structure",
+      "description": "Innodb Memory Structure（分类：InnoDB存储引擎）",
+      "difficulty": 2,
+      "category": "InnoDB存储引擎"
+    },
+    {
+      "id": "kp_innodb_myisam_difference",
+      "name": "Innodb Myisam Difference",
+      "description": "Innodb Myisam Difference（分类：InnoDB存储引擎）",
+      "difficulty": 2,
+      "category": "InnoDB存储引擎"
+    },
+    {
+      "id": "kp_innodb_page",
+      "name": "Innodb Page",
+      "description": "Innodb Page（分类：InnoDB存储引擎）",
+      "difficulty": 2,
+      "category": "InnoDB存储引擎"
+    },
+    {
+      "id": "kp_instruction_reordering",
+      "name": "Instruction Reordering",
+      "description": "Instruction Reordering（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_integer_cache",
+      "name": "Integer Cache",
+      "description": "Integer Cache（分类：缓存）",
+      "difficulty": 2,
+      "category": "缓存"
+    },
+    {
+      "id": "kp_intention_lock",
+      "name": "Intention Lock",
+      "description": "Intention Lock（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_inter_thread_communication",
+      "name": "Inter Thread Communication",
+      "description": "Inter Thread Communication（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_interface_constructor",
+      "name": "Interface Constructor",
+      "description": "Interface Constructor（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_interface_multiple_inheritance",
+      "name": "Interface Multiple Inheritance",
+      "description": "Interface Multiple Inheritance（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_interpreter",
+      "name": "Interpreter",
+      "description": "Interpreter（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_interrupt",
+      "name": "Interrupt",
+      "description": "Interrupt（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_io_model",
+      "name": "Io Model",
+      "description": "Io Model（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_io_multiplexing",
+      "name": "Io Multiplexing",
+      "description": "Io Multiplexing（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_io_stream",
+      "name": "Io Stream",
+      "description": "Io Stream（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_io_streams",
+      "name": "Io Streams",
+      "description": "Io Streams（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_ioc",
+      "name": "Ioc",
+      "description": "Ioc（分类：Spring IoC）",
+      "difficulty": 2,
+      "category": "Spring IoC"
+    },
+    {
+      "id": "kp_ioc_container",
+      "name": "Ioc Container",
+      "description": "Ioc Container（分类：Spring IoC）",
+      "difficulty": 2,
+      "category": "Spring IoC"
+    },
+    {
+      "id": "kp_iocp",
+      "name": "Iocp",
+      "description": "Iocp（分类：Spring IoC）",
+      "difficulty": 2,
+      "category": "Spring IoC"
+    },
+    {
+      "id": "kp_isolation_level",
+      "name": "Isolation Level",
+      "description": "Isolation Level（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_java_basics",
+      "name": "Java Basics",
+      "description": "Java Basics（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_java_features",
+      "name": "Java Features",
+      "description": "Java Features（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_java_memory_model",
+      "name": "Java Memory Model",
+      "description": "Java Memory Model（分类：内存管理）",
+      "difficulty": 2,
+      "category": "内存管理"
+    },
+    {
+      "id": "kp_jdk8_new_features",
+      "name": "Jdk8 New Features",
+      "description": "Jdk8 New Features（分类：JDK）",
+      "difficulty": 2,
+      "category": "JDK"
+    },
+    {
+      "id": "kp_jdk_dynamic_proxy",
+      "name": "Jdk Dynamic Proxy",
+      "description": "Jdk Dynamic Proxy（分类：代理模式）",
+      "difficulty": 2,
+      "category": "代理模式"
+    },
+    {
+      "id": "kp_jit",
+      "name": "Jit",
+      "description": "Jit（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_jmm",
+      "name": "Jmm",
+      "description": "Jmm（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_join",
+      "name": "Join",
+      "description": "Join（分类：SQL查询）",
+      "difficulty": 2,
+      "category": "SQL查询"
+    },
+    {
+      "id": "kp_join_optimization",
+      "name": "Join Optimization",
+      "description": "Join Optimization（分类：SQL查询）",
+      "difficulty": 2,
+      "category": "SQL查询"
+    },
+    {
+      "id": "kp_jvm_architecture",
+      "name": "Jvm Architecture",
+      "description": "Jvm Architecture（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_basics",
+      "name": "Jvm Basics",
+      "description": "Jvm Basics（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_escape_analysis",
+      "name": "Jvm Escape Analysis",
+      "description": "Jvm Escape Analysis（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_features",
+      "name": "Jvm Features",
+      "description": "Jvm Features（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_garbage_collection",
+      "name": "Jvm Garbage Collection",
+      "description": "Jvm Garbage Collection（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_gc_root_analysis",
+      "name": "Jvm Gc Root Analysis",
+      "description": "Jvm Gc Root Analysis（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_heap",
+      "name": "Jvm Heap",
+      "description": "Jvm Heap（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_heap_memory_partition",
+      "name": "Jvm Heap Memory Partition",
+      "description": "Jvm Heap Memory Partition（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_heap_stack_diff",
+      "name": "Jvm Heap Stack Diff",
+      "description": "Jvm Heap Stack Diff（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_jdk_jre",
+      "name": "Jvm Jdk Jre",
+      "description": "Jvm Jdk Jre（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_learning",
+      "name": "Jvm Learning",
+      "description": "Jvm Learning（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_local_variable_table",
+      "name": "Jvm Local Variable Table",
+      "description": "Jvm Local Variable Table（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_memory",
+      "name": "Jvm Memory",
+      "description": "Jvm Memory（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_memory_area",
+      "name": "Jvm Memory Area",
+      "description": "Jvm Memory Area（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_memory_evolution",
+      "name": "Jvm Memory Evolution",
+      "description": "Jvm Memory Evolution（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_method_area",
+      "name": "Jvm Method Area",
+      "description": "Jvm Method Area（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_monitoring_tools",
+      "name": "Jvm Monitoring Tools",
+      "description": "Jvm Monitoring Tools（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_native_method",
+      "name": "Jvm Native Method",
+      "description": "Jvm Native Method（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_native_method_stack",
+      "name": "Jvm Native Method Stack",
+      "description": "Jvm Native Method Stack（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_object_access",
+      "name": "Jvm Object Access",
+      "description": "Jvm Object Access（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_object_layout",
+      "name": "Jvm Object Layout",
+      "description": "Jvm Object Layout（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_object_promotion_old_gen",
+      "name": "Jvm Object Promotion Old Gen",
+      "description": "Jvm Object Promotion Old Gen（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_oom_memory_leak",
+      "name": "Jvm Oom Memory Leak",
+      "description": "Jvm Oom Memory Leak（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_parameters",
+      "name": "Jvm Parameters",
+      "description": "Jvm Parameters（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_pc_register",
+      "name": "Jvm Pc Register",
+      "description": "Jvm Pc Register（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_runtime_data_area",
+      "name": "Jvm Runtime Data Area",
+      "description": "Jvm Runtime Data Area（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_stack",
+      "name": "Jvm Stack",
+      "description": "Jvm Stack（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_stack_frame",
+      "name": "Jvm Stack Frame",
+      "description": "Jvm Stack Frame（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_stw",
+      "name": "Jvm Stw",
+      "description": "Jvm Stw（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_threads",
+      "name": "Jvm Threads",
+      "description": "Jvm Threads（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_tools",
+      "name": "Jvm Tools",
+      "description": "Jvm Tools（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_troubleshooting",
+      "name": "Jvm Troubleshooting",
+      "description": "Jvm Troubleshooting（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_tuning",
+      "name": "Jvm Tuning",
+      "description": "Jvm Tuning（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_variable_location",
+      "name": "Jvm Variable Location",
+      "description": "Jvm Variable Location（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_vm_stack",
+      "name": "Jvm Vm Stack",
+      "description": "Jvm Vm Stack（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_jvm_young_generation_partition",
+      "name": "Jvm Young Generation Partition",
+      "description": "Jvm Young Generation Partition（分类：JVM虚拟机）",
+      "difficulty": 2,
+      "category": "JVM虚拟机"
+    },
+    {
+      "id": "kp_kqueue",
+      "name": "Kqueue",
+      "description": "Kqueue（分类：队列）",
+      "difficulty": 2,
+      "category": "队列"
+    },
+    {
+      "id": "kp_linkedlist",
+      "name": "Linkedlist",
+      "description": "Linkedlist（分类：动态规划）",
+      "difficulty": 2,
+      "category": "动态规划"
+    },
+    {
+      "id": "kp_local_cache",
+      "name": "Local Cache",
+      "description": "Local Cache（分类：缓存）",
+      "difficulty": 2,
+      "category": "缓存"
+    },
+    {
+      "id": "kp_lock",
+      "name": "Lock",
+      "description": "Lock（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_lock_interface",
+      "name": "Lock Interface",
+      "description": "Lock Interface（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_logical_operators",
+      "name": "Logical Operators",
+      "description": "Logical Operators（分类：日志）",
+      "difficulty": 2,
+      "category": "日志"
+    },
+    {
+      "id": "kp_lsp",
+      "name": "Lsp",
+      "description": "Lsp（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_major_gc",
+      "name": "Major Gc",
+      "description": "Major Gc（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_mark_compact",
+      "name": "Mark Compact",
+      "description": "Mark Compact（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_mark_copy",
+      "name": "Mark Copy",
+      "description": "Mark Copy（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_mark_sweep",
+      "name": "Mark Sweep",
+      "description": "Mark Sweep（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_master_slave_replication",
+      "name": "Master Slave Replication",
+      "description": "Master Slave Replication（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_member_vs_local_variable",
+      "name": "Member Vs Local Variable",
+      "description": "Member Vs Local Variable（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_memory_high_analysis",
+      "name": "Memory High Analysis",
+      "description": "Memory High Analysis（分类：内存管理）",
+      "difficulty": 2,
+      "category": "内存管理"
+    },
+    {
+      "id": "kp_memory_leak",
+      "name": "Memory Leak",
+      "description": "Memory Leak（分类：内存管理）",
+      "difficulty": 2,
+      "category": "内存管理"
+    },
+    {
+      "id": "kp_message_queue_models",
+      "name": "Message Queue Models",
+      "description": "Message Queue Models（分类：队列）",
+      "difficulty": 2,
+      "category": "队列"
+    },
+    {
+      "id": "kp_message_queue_usage",
+      "name": "Message Queue Usage",
+      "description": "Message Queue Usage（分类：队列）",
+      "difficulty": 2,
+      "category": "队列"
+    },
+    {
+      "id": "kp_metaspace",
+      "name": "Metaspace",
+      "description": "Metaspace（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_middleware",
+      "name": "Middleware",
+      "description": "Middleware（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_minor_gc",
+      "name": "Minor Gc",
+      "description": "Minor Gc（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_minor_gc_frequent",
+      "name": "Minor Gc Frequent",
+      "description": "Minor Gc Frequent（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_mixed_gc",
+      "name": "Mixed Gc",
+      "description": "Mixed Gc（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_multi_core_scheduling",
+      "name": "Multi Core Scheduling",
+      "description": "Multi Core Scheduling（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_multiple_inheritance",
+      "name": "Multiple Inheritance",
+      "description": "Multiple Inheritance（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_mvcc",
+      "name": "Mvcc",
+      "description": "Mvcc（分类：Spring MVC）",
+      "difficulty": 2,
+      "category": "Spring MVC"
+    },
+    {
+      "id": "kp_mybatis_architecture",
+      "name": "Mybatis Architecture",
+      "description": "Mybatis Architecture（分类：MySQL架构）",
+      "difficulty": 2,
+      "category": "MySQL架构"
+    },
+    {
+      "id": "kp_mybatis_basics",
+      "name": "Mybatis Basics",
+      "description": "Mybatis Basics（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_mybatis_cache",
+      "name": "Mybatis Cache",
+      "description": "Mybatis Cache（分类：缓存）",
+      "difficulty": 2,
+      "category": "缓存"
+    },
+    {
+      "id": "kp_mybatis_executor",
+      "name": "Mybatis Executor",
+      "description": "Mybatis Executor（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_mybatis_lazy_loading",
+      "name": "Mybatis Lazy Loading",
+      "description": "Mybatis Lazy Loading（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_mybatis_lifecycle",
+      "name": "Mybatis Lifecycle",
+      "description": "Mybatis Lifecycle（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_mybatis_like_query",
+      "name": "Mybatis Like Query",
+      "description": "Mybatis Like Query（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_mybatis_mapper_proxy",
+      "name": "Mybatis Mapper Proxy",
+      "description": "Mybatis Mapper Proxy（分类：代理模式）",
+      "difficulty": 2,
+      "category": "代理模式"
+    },
+    {
+      "id": "kp_mybatis_pagination",
+      "name": "Mybatis Pagination",
+      "description": "Mybatis Pagination（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_mybatis_placeholder_dollar",
+      "name": "Mybatis Placeholder Dollar",
+      "description": "Mybatis Placeholder Dollar（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_mybatis_plugin",
+      "name": "Mybatis Plugin",
+      "description": "Mybatis Plugin（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_mybatis_primary_key",
+      "name": "Mybatis Primary Key",
+      "description": "Mybatis Primary Key（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_mybatis_resultmap_mapping",
+      "name": "Mybatis Resultmap Mapping",
+      "description": "Mybatis Resultmap Mapping（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_mybatis_typehandler_enum",
+      "name": "Mybatis Typehandler Enum",
+      "description": "Mybatis Typehandler Enum（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_mybatis_vs_hibernate",
+      "name": "Mybatis Vs Hibernate",
+      "description": "Mybatis Vs Hibernate（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_mycat",
+      "name": "Mycat",
+      "description": "Mycat（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_mysql_alter_table",
+      "name": "Mysql Alter Table",
+      "description": "Mysql Alter Table（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_architecture",
+      "name": "Mysql Architecture",
+      "description": "Mysql Architecture（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_atomicity",
+      "name": "Mysql Atomicity",
+      "description": "Mysql Atomicity（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_basics",
+      "name": "Mysql Basics",
+      "description": "Mysql Basics（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_bin_files",
+      "name": "Mysql Bin Files",
+      "description": "Mysql Bin Files（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_binlog",
+      "name": "Mysql Binlog",
+      "description": "Mysql Binlog（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_binlog_config",
+      "name": "Mysql Binlog Config",
+      "description": "Mysql Binlog Config（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_binlog_redo_diff",
+      "name": "Mysql Binlog Redo Diff",
+      "description": "Mysql Binlog Redo Diff（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_buf_next_to_write",
+      "name": "Mysql Buf Next To Write",
+      "description": "Mysql Buf Next To Write（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_commands",
+      "name": "Mysql Commands",
+      "description": "Mysql Commands（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_consistency",
+      "name": "Mysql Consistency",
+      "description": "Mysql Consistency（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_cpu_high",
+      "name": "Mysql Cpu High",
+      "description": "Mysql Cpu High（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_deep_pagination",
+      "name": "Mysql Deep Pagination",
+      "description": "Mysql Deep Pagination（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_disk_sector",
+      "name": "Mysql Disk Sector",
+      "description": "Mysql Disk Sector（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_functions",
+      "name": "Mysql Functions",
+      "description": "Mysql Functions（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_gap_lock",
+      "name": "Mysql Gap Lock",
+      "description": "Mysql Gap Lock（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_index_back_to_table",
+      "name": "Mysql Index Back To Table",
+      "description": "Mysql Index Back To Table（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_index_bplus_vs_hash",
+      "name": "Mysql Index Bplus Vs Hash",
+      "description": "Mysql Index Bplus Vs Hash（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_index_clustered_vs_nonclustered",
+      "name": "Mysql Index Clustered Vs Nonclustered",
+      "description": "Mysql Index Clustered Vs Nonclustered（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_index_creation_order",
+      "name": "Mysql Index Creation Order",
+      "description": "Mysql Index Creation Order（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_innodb_flush_log_at_trx_commit",
+      "name": "Mysql Innodb Flush Log At Trx Commit",
+      "description": "Mysql Innodb Flush Log At Trx Commit（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_isolation_level",
+      "name": "Mysql Isolation Level",
+      "description": "Mysql Isolation Level（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_join",
+      "name": "Mysql Join",
+      "description": "Mysql Join（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_limit",
+      "name": "Mysql Limit",
+      "description": "Mysql Limit（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_lock",
+      "name": "Mysql Lock",
+      "description": "Mysql Lock（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_locks",
+      "name": "Mysql Locks",
+      "description": "Mysql Locks（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_log_difference",
+      "name": "Mysql Log Difference",
+      "description": "Mysql Log Difference（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_log_files",
+      "name": "Mysql Log Files",
+      "description": "Mysql Log Files（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_lsn",
+      "name": "Mysql Lsn",
+      "description": "Mysql Lsn（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_mtr",
+      "name": "Mysql Mtr",
+      "description": "Mysql Mtr（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_next_key_lock",
+      "name": "Mysql Next Key Lock",
+      "description": "Mysql Next Key Lock（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_performance",
+      "name": "Mysql Performance",
+      "description": "Mysql Performance（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_record_lock",
+      "name": "Mysql Record Lock",
+      "description": "Mysql Record Lock（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_redo_log",
+      "name": "Mysql Redo Log",
+      "description": "Mysql Redo Log（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_redo_log_block",
+      "name": "Mysql Redo Log Block",
+      "description": "Mysql Redo Log Block（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_redo_log_buffer",
+      "name": "Mysql Redo Log Buffer",
+      "description": "Mysql Redo Log Buffer（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_redo_log_flush",
+      "name": "Mysql Redo Log Flush",
+      "description": "Mysql Redo Log Flush（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_redo_log_mechanism",
+      "name": "Mysql Redo Log Mechanism",
+      "description": "Mysql Redo Log Mechanism（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_redo_log_size",
+      "name": "Mysql Redo Log Size",
+      "description": "Mysql Redo Log Size（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_redo_log_structure",
+      "name": "Mysql Redo Log Structure",
+      "description": "Mysql Redo Log Structure（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_row_lock",
+      "name": "Mysql Row Lock",
+      "description": "Mysql Row Lock（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_segment_extent_page_row",
+      "name": "Mysql Segment Extent Page Row",
+      "description": "Mysql Segment Extent Page Row（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_select_for_update",
+      "name": "Mysql Select For Update",
+      "description": "Mysql Select For Update（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_sequential_write",
+      "name": "Mysql Sequential Write",
+      "description": "Mysql Sequential Write（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_sort",
+      "name": "Mysql Sort",
+      "description": "Mysql Sort（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_transaction",
+      "name": "Mysql Transaction",
+      "description": "Mysql Transaction（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_transaction_acidity",
+      "name": "Mysql Transaction Acidity",
+      "description": "Mysql Transaction Acidity（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_two_phase_commit",
+      "name": "Mysql Two Phase Commit",
+      "description": "Mysql Two Phase Commit（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_wal",
+      "name": "Mysql Wal",
+      "description": "Mysql Wal（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_mysql_xid",
+      "name": "Mysql Xid",
+      "description": "Mysql Xid（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_native_method",
+      "name": "Native Method",
+      "description": "Native Method（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_next_key_lock",
+      "name": "Next Key Lock",
+      "description": "Next Key Lock（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_non_repeatable_read",
+      "name": "Non Repeatable Read",
+      "description": "Non Repeatable Read（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_null_value_trap",
+      "name": "Null Value Trap",
+      "description": "Null Value Trap（分类：SQL陷阱）",
+      "difficulty": 2,
+      "category": "SQL陷阱"
+    },
+    {
+      "id": "kp_object_creation",
+      "name": "Object Creation",
+      "description": "Object Creation（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_object_destruction",
+      "name": "Object Destruction",
+      "description": "Object Destruction（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_oom",
+      "name": "Oom",
+      "description": "Oom（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_oop_encapsulation",
+      "name": "Oop Encapsulation",
+      "description": "Oop Encapsulation（分类：面向对象）",
+      "difficulty": 2,
+      "category": "面向对象"
+    },
+    {
+      "id": "kp_oop_inheritance",
+      "name": "Oop Inheritance",
+      "description": "Oop Inheritance（分类：面向对象）",
+      "difficulty": 2,
+      "category": "面向对象"
+    },
+    {
+      "id": "kp_oop_polymorphism",
+      "name": "Oop Polymorphism",
+      "description": "Oop Polymorphism（分类：面向对象）",
+      "difficulty": 2,
+      "category": "面向对象"
+    },
+    {
+      "id": "kp_oop_vs_procedural",
+      "name": "Oop Vs Procedural",
+      "description": "Oop Vs Procedural（分类：面向对象）",
+      "difficulty": 2,
+      "category": "面向对象"
+    },
+    {
+      "id": "kp_optimistic_lock",
+      "name": "Optimistic Lock",
+      "description": "Optimistic Lock（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_optional",
+      "name": "Optional",
+      "description": "Optional（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_overload_override",
+      "name": "Overload Override",
+      "description": "Overload Override（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_pagination_optimization",
+      "name": "Pagination Optimization",
+      "description": "Pagination Optimization（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_pagination_slow_reason",
+      "name": "Pagination Slow Reason",
+      "description": "Pagination Slow Reason（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_parallel_old",
+      "name": "Parallel Old",
+      "description": "Parallel Old（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_parallel_scavenge",
+      "name": "Parallel Scavenge",
+      "description": "Parallel Scavenge（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_parent_delegation_model",
+      "name": "Parent Delegation Model",
+      "description": "Parent Delegation Model（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_parnew",
+      "name": "Parnew",
+      "description": "Parnew（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_pessimistic_lock",
+      "name": "Pessimistic Lock",
+      "description": "Pessimistic Lock（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_pessimistic_optimistic_lock",
+      "name": "Pessimistic Optimistic Lock",
+      "description": "Pessimistic Optimistic Lock（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_phantom_read",
+      "name": "Phantom Read",
+      "description": "Phantom Read（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_poll",
+      "name": "Poll",
+      "description": "Poll（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_polymorphism",
+      "name": "Polymorphism",
+      "description": "Polymorphism（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_predicate_pushdown",
+      "name": "Predicate Pushdown",
+      "description": "Predicate Pushdown（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_primary_key_index",
+      "name": "Primary Key Index",
+      "description": "Primary Key Index（分类：索引）",
+      "difficulty": 2,
+      "category": "索引"
+    },
+    {
+      "id": "kp_process_thread",
+      "name": "Process Thread",
+      "description": "Process Thread（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_pt_online_schema_change",
+      "name": "Pt Online Schema Change",
+      "description": "Pt Online Schema Change（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_query_optimization",
+      "name": "Query Optimization",
+      "description": "Query Optimization（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_queue",
+      "name": "Queue",
+      "description": "Queue（分类：队列）",
+      "difficulty": 2,
+      "category": "队列"
+    },
+    {
+      "id": "kp_queue_stack",
+      "name": "Queue Stack",
+      "description": "Queue Stack（分类：栈）",
+      "difficulty": 2,
+      "category": "栈"
+    },
+    {
+      "id": "kp_range_query",
+      "name": "Range Query",
+      "description": "Range Query（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rdb_aof_comparison",
+      "name": "Rdb Aof Comparison",
+      "description": "Rdb Aof Comparison（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rdb_aof_selection",
+      "name": "Rdb Aof Selection",
+      "description": "Rdb Aof Selection（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_read_write_separation",
+      "name": "Read Write Separation",
+      "description": "Read Write Separation（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_readview",
+      "name": "Readview",
+      "description": "Readview（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_red_black_tree",
+      "name": "Red Black Tree",
+      "description": "Red Black Tree（分类：树）",
+      "difficulty": 2,
+      "category": "树"
+    },
+    {
+      "id": "kp_redis",
+      "name": "Redis",
+      "description": "Redis（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_6_multithread",
+      "name": "Redis 6 Multithread",
+      "description": "Redis 6 Multithread（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_async_replication",
+      "name": "Redis Async Replication",
+      "description": "Redis Async Replication（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_basics",
+      "name": "Redis Basics",
+      "description": "Redis Basics（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_bigkey_handling",
+      "name": "Redis Bigkey Handling",
+      "description": "Redis Bigkey Handling（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_bitmap",
+      "name": "Redis Bitmap",
+      "description": "Redis Bitmap（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_blocking",
+      "name": "Redis Blocking",
+      "description": "Redis Blocking（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_cache",
+      "name": "Redis Cache",
+      "description": "Redis Cache（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_cache_avalanche",
+      "name": "Redis Cache Avalanche",
+      "description": "Redis Cache Avalanche（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_client_connection",
+      "name": "Redis Client Connection",
+      "description": "Redis Client Connection（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_cluster",
+      "name": "Redis Cluster",
+      "description": "Redis Cluster（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_compression",
+      "name": "Redis Compression",
+      "description": "Redis Compression（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_configuration",
+      "name": "Redis Configuration",
+      "description": "Redis Configuration（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_consistent_hashing",
+      "name": "Redis Consistent Hashing",
+      "description": "Redis Consistent Hashing（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_data_partition",
+      "name": "Redis Data Partition",
+      "description": "Redis Data Partition（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_data_structure",
+      "name": "Redis Data Structure",
+      "description": "Redis Data Structure（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_data_types",
+      "name": "Redis Data Types",
+      "description": "Redis Data Types（分类：数据类型）",
+      "difficulty": 2,
+      "category": "数据类型"
+    },
+    {
+      "id": "kp_redis_datastructure",
+      "name": "Redis Datastructure",
+      "description": "Redis Datastructure（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_deployment",
+      "name": "Redis Deployment",
+      "description": "Redis Deployment（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_dict",
+      "name": "Redis Dict",
+      "description": "Redis Dict（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_distributed_lock",
+      "name": "Redis Distributed Lock",
+      "description": "Redis Distributed Lock（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_eviction_policy",
+      "name": "Redis Eviction Policy",
+      "description": "Redis Eviction Policy（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_failover",
+      "name": "Redis Failover",
+      "description": "Redis Failover（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_full_sync",
+      "name": "Redis Full Sync",
+      "description": "Redis Full Sync（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_geo",
+      "name": "Redis Geo",
+      "description": "Redis Geo（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_hash",
+      "name": "Redis Hash",
+      "description": "Redis Hash（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_hash_collision",
+      "name": "Redis Hash Collision",
+      "description": "Redis Hash Collision（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_hash_slot",
+      "name": "Redis Hash Slot",
+      "description": "Redis Hash Slot（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_hash_vs_string",
+      "name": "Redis Hash Vs String",
+      "description": "Redis Hash Vs String（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_high_availability",
+      "name": "Redis High Availability",
+      "description": "Redis High Availability（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_hotkey_handling",
+      "name": "Redis Hotkey Handling",
+      "description": "Redis Hotkey Handling（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_hyperloglog",
+      "name": "Redis Hyperloglog",
+      "description": "Redis Hyperloglog（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_incremental_sync",
+      "name": "Redis Incremental Sync",
+      "description": "Redis Incremental Sync（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_intset",
+      "name": "Redis Intset",
+      "description": "Redis Intset（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_io_multiplexing",
+      "name": "Redis Io Multiplexing",
+      "description": "Redis Io Multiplexing（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_keepalive",
+      "name": "Redis Keepalive",
+      "description": "Redis Keepalive（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_key_expiration",
+      "name": "Redis Key Expiration",
+      "description": "Redis Key Expiration（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_linkedlist",
+      "name": "Redis Linkedlist",
+      "description": "Redis Linkedlist（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_list",
+      "name": "Redis List",
+      "description": "Redis List（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_listpack",
+      "name": "Redis Listpack",
+      "description": "Redis Listpack（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_lock",
+      "name": "Redis Lock",
+      "description": "Redis Lock（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_lua_script",
+      "name": "Redis Lua Script",
+      "description": "Redis Lua Script（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_memory",
+      "name": "Redis Memory",
+      "description": "Redis Memory（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_memory_eviction",
+      "name": "Redis Memory Eviction",
+      "description": "Redis Memory Eviction（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_memory_management",
+      "name": "Redis Memory Management",
+      "description": "Redis Memory Management（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_message_queue",
+      "name": "Redis Message Queue",
+      "description": "Redis Message Queue（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_mixed_persistence",
+      "name": "Redis Mixed Persistence",
+      "description": "Redis Mixed Persistence（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_performance",
+      "name": "Redis Performance",
+      "description": "Redis Performance（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_persistence",
+      "name": "Redis Persistence",
+      "description": "Redis Persistence（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_pipeline",
+      "name": "Redis Pipeline",
+      "description": "Redis Pipeline（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_quicklist",
+      "name": "Redis Quicklist",
+      "description": "Redis Quicklist（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_rdb",
+      "name": "Redis Rdb",
+      "description": "Redis Rdb（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_recovery",
+      "name": "Redis Recovery",
+      "description": "Redis Recovery（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_redisson",
+      "name": "Redis Redisson",
+      "description": "Redis Redisson（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_replication",
+      "name": "Redis Replication",
+      "description": "Redis Replication（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_scan",
+      "name": "Redis Scan",
+      "description": "Redis Scan（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_sds",
+      "name": "Redis Sds",
+      "description": "Redis Sds（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_seckill",
+      "name": "Redis Seckill",
+      "description": "Redis Seckill（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_sentinel",
+      "name": "Redis Sentinel",
+      "description": "Redis Sentinel（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_set",
+      "name": "Redis Set",
+      "description": "Redis Set（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_single_thread",
+      "name": "Redis Single Thread",
+      "description": "Redis Single Thread（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_skiplist_range_query",
+      "name": "Redis Skiplist Range Query",
+      "description": "Redis Skiplist Range Query（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_skiplist_span",
+      "name": "Redis Skiplist Span",
+      "description": "Redis Skiplist Span（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_sorted_set",
+      "name": "Redis Sorted Set",
+      "description": "Redis Sorted Set（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_split_brain",
+      "name": "Redis Split Brain",
+      "description": "Redis Split Brain（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_string",
+      "name": "Redis String",
+      "description": "Redis String（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_timeout",
+      "name": "Redis Timeout",
+      "description": "Redis Timeout（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_topology",
+      "name": "Redis Topology",
+      "description": "Redis Topology（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_transaction",
+      "name": "Redis Transaction",
+      "description": "Redis Transaction（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_transaction_acid",
+      "name": "Redis Transaction Acid",
+      "description": "Redis Transaction Acid（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_transaction_no_rollback",
+      "name": "Redis Transaction No Rollback",
+      "description": "Redis Transaction No Rollback（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_transaction_notes",
+      "name": "Redis Transaction Notes",
+      "description": "Redis Transaction Notes（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_transaction_principle",
+      "name": "Redis Transaction Principle",
+      "description": "Redis Transaction Principle（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_use_cases",
+      "name": "Redis Use Cases",
+      "description": "Redis Use Cases（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_vs_mysql",
+      "name": "Redis Vs Mysql",
+      "description": "Redis Vs Mysql（分类：MySQL数据库）",
+      "difficulty": 2,
+      "category": "MySQL数据库"
+    },
+    {
+      "id": "kp_redis_ziplist",
+      "name": "Redis Ziplist",
+      "description": "Redis Ziplist（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_ziplist_cascade_update",
+      "name": "Redis Ziplist Cascade Update",
+      "description": "Redis Ziplist Cascade Update（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_ziplist_encoding",
+      "name": "Redis Ziplist Encoding",
+      "description": "Redis Ziplist Encoding（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_ziplist_limit",
+      "name": "Redis Ziplist Limit",
+      "description": "Redis Ziplist Limit（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redis_zset",
+      "name": "Redis Zset",
+      "description": "Redis Zset（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redisson",
+      "name": "Redisson",
+      "description": "Redisson（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redisson_watchdog",
+      "name": "Redisson Watchdog",
+      "description": "Redisson Watchdog（分类：Redis缓存）",
+      "difficulty": 2,
+      "category": "Redis缓存"
+    },
+    {
+      "id": "kp_redlock",
+      "name": "Redlock",
+      "description": "Redlock（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_redo_log",
+      "name": "Redo Log",
+      "description": "Redo Log（分类：日志）",
+      "difficulty": 2,
+      "category": "日志"
+    },
+    {
+      "id": "kp_redo_log_checkpoint",
+      "name": "Redo Log Checkpoint",
+      "description": "Redo Log Checkpoint（分类：日志）",
+      "difficulty": 2,
+      "category": "日志"
+    },
+    {
+      "id": "kp_redo_log_tuning",
+      "name": "Redo Log Tuning",
+      "description": "Redo Log Tuning（分类：日志）",
+      "difficulty": 2,
+      "category": "日志"
+    },
+    {
+      "id": "kp_reentrantlock",
+      "name": "Reentrantlock",
+      "description": "Reentrantlock（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_reentrantlock_lock_method",
+      "name": "Reentrantlock Lock Method",
+      "description": "Reentrantlock Lock Method（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_reflection",
+      "name": "Reflection",
+      "description": "Reflection（分类：Java反射）",
+      "difficulty": 2,
+      "category": "Java反射"
+    },
+    {
+      "id": "kp_repeatable_read",
+      "name": "Repeatable Read",
+      "description": "Repeatable Read（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_replication_lag",
+      "name": "Replication Lag",
+      "description": "Replication Lag（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rocketmq_architecture",
+      "name": "Rocketmq Architecture",
+      "description": "Rocketmq Architecture（分类：MySQL架构）",
+      "difficulty": 2,
+      "category": "MySQL架构"
+    },
+    {
+      "id": "kp_rocketmq_components",
+      "name": "Rocketmq Components",
+      "description": "Rocketmq Components（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rocketmq_delayed_message",
+      "name": "Rocketmq Delayed Message",
+      "description": "Rocketmq Delayed Message（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rocketmq_file_io",
+      "name": "Rocketmq File Io",
+      "description": "Rocketmq File Io（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rocketmq_flush_disk",
+      "name": "Rocketmq Flush Disk",
+      "description": "Rocketmq Flush Disk（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rocketmq_high_availability",
+      "name": "Rocketmq High Availability",
+      "description": "Rocketmq High Availability（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rocketmq_load_balance",
+      "name": "Rocketmq Load Balance",
+      "description": "Rocketmq Load Balance（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rocketmq_message_backlog",
+      "name": "Rocketmq Message Backlog",
+      "description": "Rocketmq Message Backlog（分类：日志）",
+      "difficulty": 2,
+      "category": "日志"
+    },
+    {
+      "id": "kp_rocketmq_message_duplication",
+      "name": "Rocketmq Message Duplication",
+      "description": "Rocketmq Message Duplication（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rocketmq_message_filter",
+      "name": "Rocketmq Message Filter",
+      "description": "Rocketmq Message Filter（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rocketmq_message_model",
+      "name": "Rocketmq Message Model",
+      "description": "Rocketmq Message Model（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rocketmq_message_reliability",
+      "name": "Rocketmq Message Reliability",
+      "description": "Rocketmq Message Reliability（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rocketmq_nameserver",
+      "name": "Rocketmq Nameserver",
+      "description": "Rocketmq Nameserver（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rocketmq_ordered_message",
+      "name": "Rocketmq Ordered Message",
+      "description": "Rocketmq Ordered Message（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rocketmq_pros_cons",
+      "name": "Rocketmq Pros Cons",
+      "description": "Rocketmq Pros Cons（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rocketmq_selection",
+      "name": "Rocketmq Selection",
+      "description": "Rocketmq Selection（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rocketmq_storage",
+      "name": "Rocketmq Storage",
+      "description": "Rocketmq Storage（分类：存储引擎）",
+      "difficulty": 2,
+      "category": "存储引擎"
+    },
+    {
+      "id": "kp_rocketmq_transaction_message",
+      "name": "Rocketmq Transaction Message",
+      "description": "Rocketmq Transaction Message（分类：事务管理）",
+      "difficulty": 2,
+      "category": "事务管理"
+    },
+    {
+      "id": "kp_rocketmq_workflow",
+      "name": "Rocketmq Workflow",
+      "description": "Rocketmq Workflow（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rocketmq_zero_copy",
+      "name": "Rocketmq Zero Copy",
+      "description": "Rocketmq Zero Copy（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_router",
+      "name": "Router",
+      "description": "Router（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_rowid_sort",
+      "name": "Rowid Sort",
+      "description": "Rowid Sort（分类：排序算法）",
+      "difficulty": 2,
+      "category": "排序算法"
+    },
+    {
+      "id": "kp_rpc",
+      "name": "Rpc",
+      "description": "Rpc（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_scale_out",
+      "name": "Scale Out",
+      "description": "Scale Out（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_select",
+      "name": "Select",
+      "description": "Select（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_select_star",
+      "name": "Select Star",
+      "description": "Select Star（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_semaphore",
+      "name": "Semaphore",
+      "description": "Semaphore（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_serial",
+      "name": "Serial",
+      "description": "Serial（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_serial_old",
+      "name": "Serial Old",
+      "description": "Serial Old（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_serializable",
+      "name": "Serializable",
+      "description": "Serializable（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_serialization",
+      "name": "Serialization",
+      "description": "Serialization（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_set_transaction",
+      "name": "Set Transaction",
+      "description": "Set Transaction（分类：事务管理）",
+      "difficulty": 2,
+      "category": "事务管理"
+    },
+    {
+      "id": "kp_sharding",
+      "name": "Sharding",
+      "description": "Sharding（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_sharding_strategy",
+      "name": "Sharding Strategy",
+      "description": "Sharding Strategy（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_shardingsphere",
+      "name": "Shardingsphere",
+      "description": "Shardingsphere（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_singleton",
+      "name": "Singleton",
+      "description": "Singleton（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_skip_list",
+      "name": "Skip List",
+      "description": "Skip List（分类：动态规划）",
+      "difficulty": 2,
+      "category": "动态规划"
+    },
+    {
+      "id": "kp_sleep",
+      "name": "Sleep",
+      "description": "Sleep（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_slow_query_log",
+      "name": "Slow Query Log",
+      "description": "Slow Query Log（分类：日志）",
+      "difficulty": 2,
+      "category": "日志"
+    },
+    {
+      "id": "kp_slow_sql",
+      "name": "Slow Sql",
+      "description": "Slow Sql（分类：SQL语言）",
+      "difficulty": 2,
+      "category": "SQL语言"
+    },
+    {
+      "id": "kp_slow_sql_optimization",
+      "name": "Slow Sql Optimization",
+      "description": "Slow Sql Optimization（分类：SQL语言）",
+      "difficulty": 2,
+      "category": "SQL语言"
+    },
+    {
+      "id": "kp_snapshot_read",
+      "name": "Snapshot Read",
+      "description": "Snapshot Read（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_snowflake",
+      "name": "Snowflake",
+      "description": "Snowflake（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_socket",
+      "name": "Socket",
+      "description": "Socket（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_solid",
+      "name": "Solid",
+      "description": "Solid（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_sort_merge_passes",
+      "name": "Sort Merge Passes",
+      "description": "Sort Merge Passes（分类：排序算法）",
+      "difficulty": 2,
+      "category": "排序算法"
+    },
+    {
+      "id": "kp_sort_optimization",
+      "name": "Sort Optimization",
+      "description": "Sort Optimization（分类：排序算法）",
+      "difficulty": 2,
+      "category": "排序算法"
+    },
+    {
+      "id": "kp_space_allocation_guarantee",
+      "name": "Space Allocation Guarantee",
+      "description": "Space Allocation Guarantee（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_spin_lock",
+      "name": "Spin Lock",
+      "description": "Spin Lock（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_spring",
+      "name": "Spring",
+      "description": "Spring（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_annotations",
+      "name": "Spring Annotations",
+      "description": "Spring Annotations（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_aop",
+      "name": "Spring Aop",
+      "description": "Spring Aop（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_aop_advice",
+      "name": "Spring Aop Advice",
+      "description": "Spring Aop Advice（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_aop_concepts",
+      "name": "Spring Aop Concepts",
+      "description": "Spring Aop Concepts（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_aop_summary",
+      "name": "Spring Aop Summary",
+      "description": "Spring Aop Summary（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_aop_timing",
+      "name": "Spring Aop Timing",
+      "description": "Spring Aop Timing（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_aop_weaving",
+      "name": "Spring Aop Weaving",
+      "description": "Spring Aop Weaving（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_autowired",
+      "name": "Spring Autowired",
+      "description": "Spring Autowired（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_autowiring",
+      "name": "Spring Autowiring",
+      "description": "Spring Autowiring（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_aware_interface",
+      "name": "Spring Aware Interface",
+      "description": "Spring Aware Interface（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_bean",
+      "name": "Spring Bean",
+      "description": "Spring Bean（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_bean_lifecycle",
+      "name": "Spring Bean Lifecycle",
+      "description": "Spring Bean Lifecycle（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_bean_scope",
+      "name": "Spring Bean Scope",
+      "description": "Spring Bean Scope（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_boot_auto_configuration",
+      "name": "Spring Boot Auto Configuration",
+      "description": "Spring Boot Auto Configuration（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_boot_intro",
+      "name": "Spring Boot Intro",
+      "description": "Spring Boot Intro（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_boot_starter",
+      "name": "Spring Boot Starter",
+      "description": "Spring Boot Starter（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_boot_startup",
+      "name": "Spring Boot Startup",
+      "description": "Spring Boot Startup（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_cache",
+      "name": "Spring Cache",
+      "description": "Spring Cache（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_circular_dependency",
+      "name": "Spring Circular Dependency",
+      "description": "Spring Circular Dependency（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_container",
+      "name": "Spring Container",
+      "description": "Spring Container（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_cycle_dependency",
+      "name": "Spring Cycle Dependency",
+      "description": "Spring Cycle Dependency（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_design_patterns",
+      "name": "Spring Design Patterns",
+      "description": "Spring Design Patterns（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_features",
+      "name": "Spring Features",
+      "description": "Spring Features（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_init_destroy_method",
+      "name": "Spring Init Destroy Method",
+      "description": "Spring Init Destroy Method（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_intro",
+      "name": "Spring Intro",
+      "description": "Spring Intro（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_ioc",
+      "name": "Spring Ioc",
+      "description": "Spring Ioc（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_ioc_mechanism",
+      "name": "Spring Ioc Mechanism",
+      "description": "Spring Ioc Mechanism（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_ioc_understanding",
+      "name": "Spring Ioc Understanding",
+      "description": "Spring Ioc Understanding（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_modules",
+      "name": "Spring Modules",
+      "description": "Spring Modules（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_mvc_components",
+      "name": "Spring Mvc Components",
+      "description": "Spring Mvc Components（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_mvc_restful",
+      "name": "Spring Mvc Restful",
+      "description": "Spring Mvc Restful（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_mvc_workflow",
+      "name": "Spring Mvc Workflow",
+      "description": "Spring Mvc Workflow（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_resource",
+      "name": "Spring Resource",
+      "description": "Spring Resource（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_singleton",
+      "name": "Spring Singleton",
+      "description": "Spring Singleton（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_source",
+      "name": "Spring Source",
+      "description": "Spring Source（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_three_level_cache",
+      "name": "Spring Three Level Cache",
+      "description": "Spring Three Level Cache（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_transaction",
+      "name": "Spring Transaction",
+      "description": "Spring Transaction（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_spring_transaction_propagation",
+      "name": "Spring Transaction Propagation",
+      "description": "Spring Transaction Propagation（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_springboot",
+      "name": "Springboot",
+      "description": "Springboot（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_springcloud",
+      "name": "Springcloud",
+      "description": "Springcloud（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_springmvc",
+      "name": "Springmvc",
+      "description": "Springmvc（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_springtask",
+      "name": "Springtask",
+      "description": "Springtask（分类：Spring框架）",
+      "difficulty": 2,
+      "category": "Spring框架"
+    },
+    {
+      "id": "kp_sql_execution",
+      "name": "Sql Execution",
+      "description": "Sql Execution（分类：SQL语言）",
+      "difficulty": 2,
+      "category": "SQL语言"
+    },
+    {
+      "id": "kp_sql_execution_order",
+      "name": "Sql Execution Order",
+      "description": "Sql Execution Order（分类：SQL语言）",
+      "difficulty": 2,
+      "category": "SQL语言"
+    },
+    {
+      "id": "kp_sql_execution_process",
+      "name": "Sql Execution Process",
+      "description": "Sql Execution Process（分类：SQL语言）",
+      "difficulty": 2,
+      "category": "SQL语言"
+    },
+    {
+      "id": "kp_sql_group_top_n",
+      "name": "Sql Group Top N",
+      "description": "Sql Group Top N（分类：SQL语言）",
+      "difficulty": 2,
+      "category": "SQL语言"
+    },
+    {
+      "id": "kp_sql_implicit_conversion",
+      "name": "Sql Implicit Conversion",
+      "description": "Sql Implicit Conversion（分类：SQL语言）",
+      "difficulty": 2,
+      "category": "SQL语言"
+    },
+    {
+      "id": "kp_sql_optimization",
+      "name": "Sql Optimization",
+      "description": "Sql Optimization（分类：SQL语言）",
+      "difficulty": 2,
+      "category": "SQL语言"
+    },
+    {
+      "id": "kp_sql_parse_tree",
+      "name": "Sql Parse Tree",
+      "description": "Sql Parse Tree（分类：SQL语言）",
+      "difficulty": 2,
+      "category": "SQL语言"
+    },
+    {
+      "id": "kp_sql_query",
+      "name": "Sql Query",
+      "description": "Sql Query（分类：SQL语言）",
+      "difficulty": 2,
+      "category": "SQL语言"
+    },
+    {
+      "id": "kp_sql_update_process",
+      "name": "Sql Update Process",
+      "description": "Sql Update Process（分类：SQL语言）",
+      "difficulty": 2,
+      "category": "SQL语言"
+    },
+    {
+      "id": "kp_stack_overflow",
+      "name": "Stack Overflow",
+      "description": "Stack Overflow（分类：栈）",
+      "difficulty": 2,
+      "category": "栈"
+    },
+    {
+      "id": "kp_static_keyword",
+      "name": "Static Keyword",
+      "description": "Static Keyword（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_static_vs_instance_method",
+      "name": "Static Vs Instance Method",
+      "description": "Static Vs Instance Method（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_static_vs_instance_variable",
+      "name": "Static Vs Instance Variable",
+      "description": "Static Vs Instance Variable（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_stop",
+      "name": "Stop",
+      "description": "Stop（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_storage_engine_selection",
+      "name": "Storage Engine Selection",
+      "description": "Storage Engine Selection（分类：存储引擎）",
+      "difficulty": 2,
+      "category": "存储引擎"
+    },
+    {
+      "id": "kp_strategy",
+      "name": "Strategy",
+      "description": "Strategy（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_stream",
+      "name": "Stream",
+      "description": "Stream（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_string",
+      "name": "String",
+      "description": "String（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_string_intern",
+      "name": "String Intern",
+      "description": "String Intern（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_string_to_integer",
+      "name": "String To Integer",
+      "description": "String To Integer（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_strong_consistency",
+      "name": "Strong Consistency",
+      "description": "Strong Consistency（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_subquery",
+      "name": "Subquery",
+      "description": "Subquery（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_switch_statement",
+      "name": "Switch Statement",
+      "description": "Switch Statement（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_synchronized",
+      "name": "Synchronized",
+      "description": "Synchronized（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_synchronized_lock_states",
+      "name": "Synchronized Lock States",
+      "description": "Synchronized Lock States（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_synchronized_lock_upgrade",
+      "name": "Synchronized Lock Upgrade",
+      "description": "Synchronized Lock Upgrade（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_synchronized_optimization",
+      "name": "Synchronized Optimization",
+      "description": "Synchronized Optimization（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_synchronized_vs_reentrantlock",
+      "name": "Synchronized Vs Reentrantlock",
+      "description": "Synchronized Vs Reentrantlock（分类：分布式锁）",
+      "difficulty": 2,
+      "category": "分布式锁"
+    },
+    {
+      "id": "kp_table_design",
+      "name": "Table Design",
+      "description": "Table Design（分类：数据库设计）",
+      "difficulty": 2,
+      "category": "数据库设计"
+    },
+    {
+      "id": "kp_table_sharding",
+      "name": "Table Sharding",
+      "description": "Table Sharding（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_this_keyword",
+      "name": "This Keyword",
+      "description": "This Keyword（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_thread_communication",
+      "name": "Thread Communication",
+      "description": "Thread Communication（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_creation",
+      "name": "Thread Creation",
+      "description": "Thread Creation（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_interrupt",
+      "name": "Thread Interrupt",
+      "description": "Thread Interrupt（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_lifecycle",
+      "name": "Thread Lifecycle",
+      "description": "Thread Lifecycle（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_local_memory",
+      "name": "Thread Local Memory",
+      "description": "Thread Local Memory（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_pool",
+      "name": "Thread Pool",
+      "description": "Thread Pool（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_pool_configuration",
+      "name": "Thread Pool Configuration",
+      "description": "Thread Pool Configuration（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_pool_execute_submit",
+      "name": "Thread Pool Execute Submit",
+      "description": "Thread Pool Execute Submit（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_pool_parameters",
+      "name": "Thread Pool Parameters",
+      "description": "Thread Pool Parameters（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_pool_recovery",
+      "name": "Thread Pool Recovery",
+      "description": "Thread Pool Recovery（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_pool_rejection_policy",
+      "name": "Thread Pool Rejection Policy",
+      "description": "Thread Pool Rejection Policy（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_pool_shutdown",
+      "name": "Thread Pool Shutdown",
+      "description": "Thread Pool Shutdown（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_pool_tuning",
+      "name": "Thread Pool Tuning",
+      "description": "Thread Pool Tuning（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_pool_types",
+      "name": "Thread Pool Types",
+      "description": "Thread Pool Types（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_pool_usage_notes",
+      "name": "Thread Pool Usage Notes",
+      "description": "Thread Pool Usage Notes（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_run",
+      "name": "Thread Run",
+      "description": "Thread Run（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_safe_collections",
+      "name": "Thread Safe Collections",
+      "description": "Thread Safe Collections（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_safety",
+      "name": "Thread Safety",
+      "description": "Thread Safety（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_scheduling",
+      "name": "Thread Scheduling",
+      "description": "Thread Scheduling（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_sleep_wait",
+      "name": "Thread Sleep Wait",
+      "description": "Thread Sleep Wait（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_start",
+      "name": "Thread Start",
+      "description": "Thread Start（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_states",
+      "name": "Thread States",
+      "description": "Thread States（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_sync_mutex",
+      "name": "Thread Sync Mutex",
+      "description": "Thread Sync Mutex（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_thread_types",
+      "name": "Thread Types",
+      "description": "Thread Types（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_threadlocal",
+      "name": "Threadlocal",
+      "description": "Threadlocal（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_threadlocal_implementation",
+      "name": "Threadlocal Implementation",
+      "description": "Threadlocal Implementation（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_threadlocal_improvements",
+      "name": "Threadlocal Improvements",
+      "description": "Threadlocal Improvements（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_threadlocal_memory_leak",
+      "name": "Threadlocal Memory Leak",
+      "description": "Threadlocal Memory Leak（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_threadlocal_usage",
+      "name": "Threadlocal Usage",
+      "description": "Threadlocal Usage（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_threadlocal_weak_reference",
+      "name": "Threadlocal Weak Reference",
+      "description": "Threadlocal Weak Reference（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_threadlocalmap",
+      "name": "Threadlocalmap",
+      "description": "Threadlocalmap（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_threadpool",
+      "name": "Threadpool",
+      "description": "Threadpool（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_threadpool_usage",
+      "name": "Threadpool Usage",
+      "description": "Threadpool Usage（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_threadpool_workflow",
+      "name": "Threadpool Workflow",
+      "description": "Threadpool Workflow（分类：并发编程）",
+      "difficulty": 2,
+      "category": "并发编程"
+    },
+    {
+      "id": "kp_time_complexity",
+      "name": "Time Complexity",
+      "description": "Time Complexity（分类：复杂度分析）",
+      "difficulty": 2,
+      "category": "复杂度分析"
+    },
+    {
+      "id": "kp_tlab",
+      "name": "Tlab",
+      "description": "Tlab（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_tomcat_class_loader",
+      "name": "Tomcat Class Loader",
+      "description": "Tomcat Class Loader（分类：类加载）",
+      "difficulty": 2,
+      "category": "类加载"
+    },
+    {
+      "id": "kp_transaction_failure",
+      "name": "Transaction Failure",
+      "description": "Transaction Failure（分类：事务管理）",
+      "difficulty": 2,
+      "category": "事务管理"
+    },
+    {
+      "id": "kp_transaction_isolation",
+      "name": "Transaction Isolation",
+      "description": "Transaction Isolation（分类：事务管理）",
+      "difficulty": 2,
+      "category": "事务管理"
+    },
+    {
+      "id": "kp_type_conversion",
+      "name": "Type Conversion",
+      "description": "Type Conversion（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_undo_log",
+      "name": "Undo Log",
+      "description": "Undo Log（分类：日志）",
+      "difficulty": 2,
+      "category": "日志"
+    },
+    {
+      "id": "kp_union_index",
+      "name": "Union Index",
+      "description": "Union Index（分类：索引）",
+      "difficulty": 2,
+      "category": "索引"
+    },
+    {
+      "id": "kp_union_union_all",
+      "name": "Union Union All",
+      "description": "Union Union All（分类：SQL查询）",
+      "difficulty": 2,
+      "category": "SQL查询"
+    },
+    {
+      "id": "kp_value_passing",
+      "name": "Value Passing",
+      "description": "Value Passing（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_vector",
+      "name": "Vector",
+      "description": "Vector（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_volatile",
+      "name": "Volatile",
+      "description": "Volatile（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_volatile_ordering",
+      "name": "Volatile Ordering",
+      "description": "Volatile Ordering（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_volatile_primitive_vs_reference",
+      "name": "Volatile Primitive Vs Reference",
+      "description": "Volatile Primitive Vs Reference（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_volatile_visibility",
+      "name": "Volatile Visibility",
+      "description": "Volatile Visibility（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_volatile_vs_synchronized",
+      "name": "Volatile Vs Synchronized",
+      "description": "Volatile Vs Synchronized（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_wait_notify",
+      "name": "Wait Notify",
+      "description": "Wait Notify（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_web_container",
+      "name": "Web Container",
+      "description": "Web Container（分类：容器）",
+      "difficulty": 2,
+      "category": "容器"
+    },
+    {
+      "id": "kp_yield",
+      "name": "Yield",
+      "description": "Yield（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_young_gc_trigger",
+      "name": "Young Gc Trigger",
+      "description": "Young Gc Trigger（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_zgc",
+      "name": "Zgc",
+      "description": "Zgc（分类：JVM垃圾回收）",
+      "difficulty": 2,
+      "category": "JVM垃圾回收"
+    },
+    {
+      "id": "kp_zset",
+      "name": "Zset",
+      "description": "Zset（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_回表",
+      "name": "回表",
+      "description": "回表（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_索引存储",
+      "name": "索引存储",
+      "description": "索引存储（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_联合索引",
+      "name": "联合索引",
+      "description": "联合索引（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    },
+    {
+      "id": "kp_覆盖索引",
+      "name": "覆盖索引",
+      "description": "覆盖索引（分类：其他）",
+      "difficulty": 2,
+      "category": "其他"
+    }
+  ],
+  "relations": [
+    {
+      "from": "kp_spring_intro",
+      "to": "kp_spring_features",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_intro",
+      "to": "kp_spring_modules",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_intro",
+      "to": "kp_spring_annotations",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_features",
+      "to": "kp_spring_modules",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_features",
+      "to": "kp_spring_annotations",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_modules",
+      "to": "kp_spring_annotations",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_aop_ioc",
+      "to": "kp_di",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_aop_ioc",
+      "to": "kp_ioc_container",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_aop_ioc",
+      "to": "kp_bean_registration",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_aop_ioc",
+      "to": "kp_dependency_injection",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_aop_ioc",
+      "to": "kp_spring_ioc",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_aop_ioc",
+      "to": "kp_spring_ioc_mechanism",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_aop_ioc",
+      "to": "kp_spring_ioc_understanding",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_di",
+      "to": "kp_ioc_container",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_di",
+      "to": "kp_bean_registration",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_di",
+      "to": "kp_dependency_injection",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_di",
+      "to": "kp_spring_ioc",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_di",
+      "to": "kp_spring_ioc_mechanism",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_di",
+      "to": "kp_spring_ioc_understanding",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_ioc_container",
+      "to": "kp_bean_registration",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_ioc_container",
+      "to": "kp_dependency_injection",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_ioc_container",
+      "to": "kp_spring_ioc",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_ioc_container",
+      "to": "kp_spring_ioc_mechanism",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_ioc_container",
+      "to": "kp_spring_ioc_understanding",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_bean_registration",
+      "to": "kp_dependency_injection",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_bean_registration",
+      "to": "kp_spring_ioc",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_bean_registration",
+      "to": "kp_spring_ioc_mechanism",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_bean_registration",
+      "to": "kp_spring_ioc_understanding",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_dependency_injection",
+      "to": "kp_spring_ioc",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_dependency_injection",
+      "to": "kp_spring_ioc_mechanism",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_dependency_injection",
+      "to": "kp_spring_ioc_understanding",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_ioc",
+      "to": "kp_spring_ioc_mechanism",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_ioc",
+      "to": "kp_spring_ioc_understanding",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_ioc_mechanism",
+      "to": "kp_spring_ioc_understanding",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_beanfactory",
+      "to": "kp_applicationcontext",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_beanfactory",
+      "to": "kp_spring_container",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_applicationcontext",
+      "to": "kp_spring_container",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean",
+      "to": "kp_spring_bean_lifecycle",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean",
+      "to": "kp_spring_bean_scope",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean",
+      "to": "kp_spring_aware_interface",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean",
+      "to": "kp_spring_init_destroy_method",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean",
+      "to": "kp_spring_autowired",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean",
+      "to": "kp_spring_resource",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean",
+      "to": "kp_spring_autowiring",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean",
+      "to": "kp_component_bean_difference",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean",
+      "to": "kp_component_scan",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean_lifecycle",
+      "to": "kp_spring_bean_scope",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean_lifecycle",
+      "to": "kp_spring_aware_interface",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean_lifecycle",
+      "to": "kp_spring_init_destroy_method",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean_lifecycle",
+      "to": "kp_spring_autowired",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean_lifecycle",
+      "to": "kp_spring_resource",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean_lifecycle",
+      "to": "kp_spring_autowiring",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean_lifecycle",
+      "to": "kp_component_bean_difference",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean_lifecycle",
+      "to": "kp_component_scan",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean_scope",
+      "to": "kp_spring_aware_interface",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean_scope",
+      "to": "kp_spring_init_destroy_method",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean_scope",
+      "to": "kp_spring_autowired",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean_scope",
+      "to": "kp_spring_resource",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean_scope",
+      "to": "kp_spring_autowiring",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean_scope",
+      "to": "kp_component_bean_difference",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_bean_scope",
+      "to": "kp_component_scan",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_aware_interface",
+      "to": "kp_spring_init_destroy_method",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_aware_interface",
+      "to": "kp_spring_autowired",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_aware_interface",
+      "to": "kp_spring_resource",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_aware_interface",
+      "to": "kp_spring_autowiring",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_aware_interface",
+      "to": "kp_component_bean_difference",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_aware_interface",
+      "to": "kp_component_scan",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_init_destroy_method",
+      "to": "kp_spring_autowired",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_init_destroy_method",
+      "to": "kp_spring_resource",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_init_destroy_method",
+      "to": "kp_spring_autowiring",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_init_destroy_method",
+      "to": "kp_component_bean_difference",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_init_destroy_method",
+      "to": "kp_component_scan",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_autowired",
+      "to": "kp_spring_resource",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_autowired",
+      "to": "kp_spring_autowiring",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_autowired",
+      "to": "kp_component_bean_difference",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_autowired",
+      "to": "kp_component_scan",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_resource",
+      "to": "kp_spring_autowiring",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_resource",
+      "to": "kp_component_bean_difference",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_resource",
+      "to": "kp_component_scan",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_autowiring",
+      "to": "kp_component_bean_difference",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_autowiring",
+      "to": "kp_component_scan",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_component_bean_difference",
+      "to": "kp_component_scan",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_circular_dependency",
+      "to": "kp_spring_cycle_dependency",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_circular_dependency",
+      "to": "kp_spring_three_level_cache",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_cycle_dependency",
+      "to": "kp_spring_three_level_cache",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_intro",
+      "to": "kp_aop_ioc",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_intro",
+      "to": "kp_di",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_intro",
+      "to": "kp_ioc_container",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_intro",
+      "to": "kp_bean_registration",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_intro",
+      "to": "kp_dependency_injection",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_intro",
+      "to": "kp_spring_ioc",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_intro",
+      "to": "kp_spring_ioc_mechanism",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_intro",
+      "to": "kp_spring_ioc_understanding",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_features",
+      "to": "kp_aop_ioc",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_features",
+      "to": "kp_di",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_features",
+      "to": "kp_ioc_container",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_features",
+      "to": "kp_bean_registration",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_features",
+      "to": "kp_dependency_injection",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_features",
+      "to": "kp_spring_ioc",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_features",
+      "to": "kp_spring_ioc_mechanism",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_features",
+      "to": "kp_spring_ioc_understanding",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_modules",
+      "to": "kp_aop_ioc",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_modules",
+      "to": "kp_di",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_modules",
+      "to": "kp_ioc_container",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_modules",
+      "to": "kp_bean_registration",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_modules",
+      "to": "kp_dependency_injection",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_modules",
+      "to": "kp_spring_ioc",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_modules",
+      "to": "kp_spring_ioc_mechanism",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_modules",
+      "to": "kp_spring_ioc_understanding",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_annotations",
+      "to": "kp_aop_ioc",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_annotations",
+      "to": "kp_di",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_annotations",
+      "to": "kp_ioc_container",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_annotations",
+      "to": "kp_bean_registration",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_annotations",
+      "to": "kp_dependency_injection",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_annotations",
+      "to": "kp_spring_ioc",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_annotations",
+      "to": "kp_spring_ioc_mechanism",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_annotations",
+      "to": "kp_spring_ioc_understanding",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_aop_ioc",
+      "to": "kp_beanfactory",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_aop_ioc",
+      "to": "kp_applicationcontext",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_aop_ioc",
+      "to": "kp_spring_container",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_di",
+      "to": "kp_beanfactory",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_di",
+      "to": "kp_applicationcontext",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_di",
+      "to": "kp_spring_container",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_ioc_container",
+      "to": "kp_beanfactory",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_ioc_container",
+      "to": "kp_applicationcontext",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_ioc_container",
+      "to": "kp_spring_container",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_bean_registration",
+      "to": "kp_beanfactory",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_bean_registration",
+      "to": "kp_applicationcontext",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_bean_registration",
+      "to": "kp_spring_container",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_dependency_injection",
+      "to": "kp_beanfactory",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_dependency_injection",
+      "to": "kp_applicationcontext",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_dependency_injection",
+      "to": "kp_spring_container",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_ioc",
+      "to": "kp_beanfactory",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_ioc",
+      "to": "kp_applicationcontext",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_ioc",
+      "to": "kp_spring_container",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_ioc_mechanism",
+      "to": "kp_beanfactory",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_ioc_mechanism",
+      "to": "kp_applicationcontext",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_ioc_mechanism",
+      "to": "kp_spring_container",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_ioc_understanding",
+      "to": "kp_beanfactory",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_ioc_understanding",
+      "to": "kp_applicationcontext",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_ioc_understanding",
+      "to": "kp_spring_container",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_beanfactory",
+      "to": "kp_spring_bean",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_beanfactory",
+      "to": "kp_spring_bean_lifecycle",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_beanfactory",
+      "to": "kp_spring_bean_scope",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_beanfactory",
+      "to": "kp_spring_aware_interface",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_beanfactory",
+      "to": "kp_spring_init_destroy_method",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_beanfactory",
+      "to": "kp_spring_autowired",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_beanfactory",
+      "to": "kp_spring_resource",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_beanfactory",
+      "to": "kp_spring_autowiring",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_beanfactory",
+      "to": "kp_component_bean_difference",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_beanfactory",
+      "to": "kp_component_scan",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_applicationcontext",
+      "to": "kp_spring_bean",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_applicationcontext",
+      "to": "kp_spring_bean_lifecycle",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_applicationcontext",
+      "to": "kp_spring_bean_scope",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_applicationcontext",
+      "to": "kp_spring_aware_interface",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_applicationcontext",
+      "to": "kp_spring_init_destroy_method",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_applicationcontext",
+      "to": "kp_spring_autowired",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_applicationcontext",
+      "to": "kp_spring_resource",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_applicationcontext",
+      "to": "kp_spring_autowiring",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_applicationcontext",
+      "to": "kp_component_bean_difference",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_applicationcontext",
+      "to": "kp_component_scan",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_container",
+      "to": "kp_spring_bean",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_container",
+      "to": "kp_spring_bean_lifecycle",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_container",
+      "to": "kp_spring_bean_scope",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_container",
+      "to": "kp_spring_aware_interface",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_container",
+      "to": "kp_spring_init_destroy_method",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_container",
+      "to": "kp_spring_autowired",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_container",
+      "to": "kp_spring_resource",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_container",
+      "to": "kp_spring_autowiring",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_container",
+      "to": "kp_component_bean_difference",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_container",
+      "to": "kp_component_scan",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_bean",
+      "to": "kp_spring_circular_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_bean",
+      "to": "kp_spring_cycle_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_bean",
+      "to": "kp_spring_three_level_cache",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_bean_lifecycle",
+      "to": "kp_spring_circular_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_bean_lifecycle",
+      "to": "kp_spring_cycle_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_bean_lifecycle",
+      "to": "kp_spring_three_level_cache",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_bean_scope",
+      "to": "kp_spring_circular_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_bean_scope",
+      "to": "kp_spring_cycle_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_bean_scope",
+      "to": "kp_spring_three_level_cache",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aware_interface",
+      "to": "kp_spring_circular_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aware_interface",
+      "to": "kp_spring_cycle_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aware_interface",
+      "to": "kp_spring_three_level_cache",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_init_destroy_method",
+      "to": "kp_spring_circular_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_init_destroy_method",
+      "to": "kp_spring_cycle_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_init_destroy_method",
+      "to": "kp_spring_three_level_cache",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_autowired",
+      "to": "kp_spring_circular_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_autowired",
+      "to": "kp_spring_cycle_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_autowired",
+      "to": "kp_spring_three_level_cache",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_resource",
+      "to": "kp_spring_circular_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_resource",
+      "to": "kp_spring_cycle_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_resource",
+      "to": "kp_spring_three_level_cache",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_autowiring",
+      "to": "kp_spring_circular_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_autowiring",
+      "to": "kp_spring_cycle_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_autowiring",
+      "to": "kp_spring_three_level_cache",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_component_bean_difference",
+      "to": "kp_spring_circular_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_component_bean_difference",
+      "to": "kp_spring_cycle_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_component_bean_difference",
+      "to": "kp_spring_three_level_cache",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_component_scan",
+      "to": "kp_spring_circular_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_component_scan",
+      "to": "kp_spring_cycle_dependency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_component_scan",
+      "to": "kp_spring_three_level_cache",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_aop",
+      "to": "kp_aop_oop_relationship",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_aop",
+      "to": "kp_aop_application_scenarios",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_aop_oop_relationship",
+      "to": "kp_aop_application_scenarios",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_aop_concepts",
+      "to": "kp_spring_aop_weaving",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_aop_concepts",
+      "to": "kp_spring_aop_advice",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_aop_concepts",
+      "to": "kp_spring_aop_timing",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_aop_concepts",
+      "to": "kp_spring_aop_summary",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_aop_weaving",
+      "to": "kp_spring_aop_advice",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_aop_weaving",
+      "to": "kp_spring_aop_timing",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_aop_weaving",
+      "to": "kp_spring_aop_summary",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_aop_advice",
+      "to": "kp_spring_aop_timing",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_aop_advice",
+      "to": "kp_spring_aop_summary",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_aop_timing",
+      "to": "kp_spring_aop_summary",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_aspectj",
+      "to": "kp_spring_aop",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_aspectj",
+      "to": "kp_jdk_dynamic_proxy",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_aspectj",
+      "to": "kp_cglib_proxy",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_aop",
+      "to": "kp_jdk_dynamic_proxy",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_aop",
+      "to": "kp_cglib_proxy",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_jdk_dynamic_proxy",
+      "to": "kp_cglib_proxy",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_aop",
+      "to": "kp_spring_aop_concepts",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_aop",
+      "to": "kp_spring_aop_weaving",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_aop",
+      "to": "kp_spring_aop_advice",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_aop",
+      "to": "kp_spring_aop_timing",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_aop",
+      "to": "kp_spring_aop_summary",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_aop_oop_relationship",
+      "to": "kp_spring_aop_concepts",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_aop_oop_relationship",
+      "to": "kp_spring_aop_weaving",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_aop_oop_relationship",
+      "to": "kp_spring_aop_advice",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_aop_oop_relationship",
+      "to": "kp_spring_aop_timing",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_aop_oop_relationship",
+      "to": "kp_spring_aop_summary",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_aop_application_scenarios",
+      "to": "kp_spring_aop_concepts",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_aop_application_scenarios",
+      "to": "kp_spring_aop_weaving",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_aop_application_scenarios",
+      "to": "kp_spring_aop_advice",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_aop_application_scenarios",
+      "to": "kp_spring_aop_timing",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_aop_application_scenarios",
+      "to": "kp_spring_aop_summary",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_concepts",
+      "to": "kp_aspectj",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_concepts",
+      "to": "kp_spring_aop",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_concepts",
+      "to": "kp_jdk_dynamic_proxy",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_concepts",
+      "to": "kp_cglib_proxy",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_weaving",
+      "to": "kp_aspectj",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_weaving",
+      "to": "kp_spring_aop",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_weaving",
+      "to": "kp_jdk_dynamic_proxy",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_weaving",
+      "to": "kp_cglib_proxy",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_advice",
+      "to": "kp_aspectj",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_advice",
+      "to": "kp_spring_aop",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_advice",
+      "to": "kp_jdk_dynamic_proxy",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_advice",
+      "to": "kp_cglib_proxy",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_timing",
+      "to": "kp_aspectj",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_timing",
+      "to": "kp_spring_aop",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_timing",
+      "to": "kp_jdk_dynamic_proxy",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_timing",
+      "to": "kp_cglib_proxy",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_summary",
+      "to": "kp_aspectj",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_summary",
+      "to": "kp_spring_aop",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_summary",
+      "to": "kp_jdk_dynamic_proxy",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_aop_summary",
+      "to": "kp_cglib_proxy",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_boot_intro",
+      "to": "kp_spring_boot_auto_configuration",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_boot_intro",
+      "to": "kp_spring_boot_starter",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_boot_auto_configuration",
+      "to": "kp_spring_boot_starter",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_boot_startup",
+      "to": "kp_springtask",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_boot_startup",
+      "to": "kp_spring_cache",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_springtask",
+      "to": "kp_spring_cache",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_boot_intro",
+      "to": "kp_spring_boot_startup",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_boot_intro",
+      "to": "kp_springtask",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_boot_intro",
+      "to": "kp_spring_cache",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_boot_auto_configuration",
+      "to": "kp_spring_boot_startup",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_boot_auto_configuration",
+      "to": "kp_springtask",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_boot_auto_configuration",
+      "to": "kp_spring_cache",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_boot_starter",
+      "to": "kp_spring_boot_startup",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_boot_starter",
+      "to": "kp_springtask",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_boot_starter",
+      "to": "kp_spring_cache",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_spring_mvc_components",
+      "to": "kp_spring_mvc_workflow",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_mvc_components",
+      "to": "kp_spring_mvc_restful",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_mvc_workflow",
+      "to": "kp_spring_mvc_restful",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_transaction",
+      "to": "kp_transaction_isolation",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_transaction",
+      "to": "kp_spring_transaction_propagation",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_transaction",
+      "to": "kp_transaction_failure",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_transaction_isolation",
+      "to": "kp_spring_transaction_propagation",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_transaction_isolation",
+      "to": "kp_transaction_failure",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_spring_transaction_propagation",
+      "to": "kp_transaction_failure",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_mysql_basics",
+      "to": "kp_mysql_architecture",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_mysql_basics",
+      "to": "kp_sql_execution_process",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_mysql_architecture",
+      "to": "kp_sql_execution_process",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_mysql_performance",
+      "to": "kp_storage_engine_selection",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_mysql_performance",
+      "to": "kp_innodb_myisam_difference",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_storage_engine_selection",
+      "to": "kp_innodb_myisam_difference",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_mysql_join",
+      "to": "kp_mysql_commands",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_mysql_join",
+      "to": "kp_mysql_functions",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_mysql_join",
+      "to": "kp_mysql_limit",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_mysql_commands",
+      "to": "kp_mysql_functions",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_mysql_commands",
+      "to": "kp_mysql_limit",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_mysql_functions",
+      "to": "kp_mysql_limit",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_innodb_memory_structure",
+      "to": "kp_innodb_buffer_pool",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_innodb_memory_structure",
+      "to": "kp_innodb_data_page_structure",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_innodb_buffer_pool",
+      "to": "kp_innodb_data_page_structure",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_mysql_binlog",
+      "to": "kp_mysql_redo_log",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_mysql_binlog",
+      "to": "kp_mysql_wal",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_mysql_redo_log",
+      "to": "kp_mysql_wal",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_sql_execution_order",
+      "to": "kp_sql_parse_tree",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_sql_execution_order",
+      "to": "kp_sql_implicit_conversion",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_sql_parse_tree",
+      "to": "kp_sql_implicit_conversion",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_mysql_basics",
+      "to": "kp_mysql_performance",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_basics",
+      "to": "kp_storage_engine_selection",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_basics",
+      "to": "kp_innodb_myisam_difference",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_architecture",
+      "to": "kp_mysql_performance",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_architecture",
+      "to": "kp_storage_engine_selection",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_architecture",
+      "to": "kp_innodb_myisam_difference",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_sql_execution_process",
+      "to": "kp_mysql_performance",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_sql_execution_process",
+      "to": "kp_storage_engine_selection",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_sql_execution_process",
+      "to": "kp_innodb_myisam_difference",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_performance",
+      "to": "kp_mysql_join",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_performance",
+      "to": "kp_mysql_commands",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_performance",
+      "to": "kp_mysql_functions",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_performance",
+      "to": "kp_mysql_limit",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_storage_engine_selection",
+      "to": "kp_mysql_join",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_storage_engine_selection",
+      "to": "kp_mysql_commands",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_storage_engine_selection",
+      "to": "kp_mysql_functions",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_storage_engine_selection",
+      "to": "kp_mysql_limit",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_innodb_myisam_difference",
+      "to": "kp_mysql_join",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_innodb_myisam_difference",
+      "to": "kp_mysql_commands",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_innodb_myisam_difference",
+      "to": "kp_mysql_functions",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_innodb_myisam_difference",
+      "to": "kp_mysql_limit",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_join",
+      "to": "kp_innodb_memory_structure",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_join",
+      "to": "kp_innodb_buffer_pool",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_join",
+      "to": "kp_innodb_data_page_structure",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_commands",
+      "to": "kp_innodb_memory_structure",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_commands",
+      "to": "kp_innodb_buffer_pool",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_commands",
+      "to": "kp_innodb_data_page_structure",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_functions",
+      "to": "kp_innodb_memory_structure",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_functions",
+      "to": "kp_innodb_buffer_pool",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_functions",
+      "to": "kp_innodb_data_page_structure",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_limit",
+      "to": "kp_innodb_memory_structure",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_limit",
+      "to": "kp_innodb_buffer_pool",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_limit",
+      "to": "kp_innodb_data_page_structure",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_innodb_memory_structure",
+      "to": "kp_mysql_binlog",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_innodb_memory_structure",
+      "to": "kp_mysql_redo_log",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_innodb_memory_structure",
+      "to": "kp_mysql_wal",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_innodb_buffer_pool",
+      "to": "kp_mysql_binlog",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_innodb_buffer_pool",
+      "to": "kp_mysql_redo_log",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_innodb_buffer_pool",
+      "to": "kp_mysql_wal",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_innodb_data_page_structure",
+      "to": "kp_mysql_binlog",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_innodb_data_page_structure",
+      "to": "kp_mysql_redo_log",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_innodb_data_page_structure",
+      "to": "kp_mysql_wal",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_binlog",
+      "to": "kp_sql_execution_order",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_binlog",
+      "to": "kp_sql_parse_tree",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_binlog",
+      "to": "kp_sql_implicit_conversion",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_redo_log",
+      "to": "kp_sql_execution_order",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_redo_log",
+      "to": "kp_sql_parse_tree",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_redo_log",
+      "to": "kp_sql_implicit_conversion",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_wal",
+      "to": "kp_sql_execution_order",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_wal",
+      "to": "kp_sql_parse_tree",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_mysql_wal",
+      "to": "kp_sql_implicit_conversion",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_database_normalization",
+      "to": "kp_table_design",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_data_type_varchar_char",
+      "to": "kp_data_type_blob_text",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_data_type_varchar_char",
+      "to": "kp_data_type_datetime_timestamp",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_data_type_varchar_char",
+      "to": "kp_data_type_currency",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_data_type_varchar_char",
+      "to": "kp_data_type_float_double",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_data_type_blob_text",
+      "to": "kp_data_type_datetime_timestamp",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_data_type_blob_text",
+      "to": "kp_data_type_currency",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_data_type_blob_text",
+      "to": "kp_data_type_float_double",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_data_type_datetime_timestamp",
+      "to": "kp_data_type_currency",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_data_type_datetime_timestamp",
+      "to": "kp_data_type_float_double",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_data_type_currency",
+      "to": "kp_data_type_float_double",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_null_value_trap",
+      "to": "kp_character_set_emoji",
+      "type": "RELATED_TO",
+      "weight": 0.5
+    },
+    {
+      "from": "kp_database_normalization",
+      "to": "kp_data_type_varchar_char",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_database_normalization",
+      "to": "kp_data_type_blob_text",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_database_normalization",
+      "to": "kp_data_type_datetime_timestamp",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_database_normalization",
+      "to": "kp_data_type_currency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_database_normalization",
+      "to": "kp_data_type_float_double",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_table_design",
+      "to": "kp_data_type_varchar_char",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_table_design",
+      "to": "kp_data_type_blob_text",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_table_design",
+      "to": "kp_data_type_datetime_timestamp",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_table_design",
+      "to": "kp_data_type_currency",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_table_design",
+      "to": "kp_data_type_float_double",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_data_type_varchar_char",
+      "to": "kp_null_value_trap",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_data_type_varchar_char",
+      "to": "kp_character_set_emoji",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_data_type_blob_text",
+      "to": "kp_null_value_trap",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_data_type_blob_text",
+      "to": "kp_character_set_emoji",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_data_type_datetime_timestamp",
+      "to": "kp_null_value_trap",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_data_type_datetime_timestamp",
+      "to": "kp_character_set_emoji",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_data_type_currency",
+      "to": "kp_null_value_trap",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_data_type_currency",
+      "to": "kp_character_set_emoji",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_data_type_float_double",
+      "to": "kp_null_value_trap",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    },
+    {
+      "from": "kp_data_type_float_double",
+      "to": "kp_character_set_emoji",
+      "type": "PREREQUISITE",
+      "weight": 0.7
+    }
+  ]
+}

@@ -145,6 +145,79 @@ SmartLearn智能刷题平台/
 | **自主判题** | 问答题 | 前端提交 → SpringBoot 保存答案 → 展示标准答案 → 用户手动标对/错 |
 | **AI 判题** | 问答题 | 前端提交 → SpringBoot → FastAPI → DeepSeek LLM 评判 → 返回对错 + 解析 + 薄弱点 + 学习路径 |
 
+### AI 判题深度流程
+
+AI 判题是 SmartLearn 的核心诊断引擎，FastAPI 内部采用 **"规则判题 → LLM 诊断 → Neo4j 补全 → 路径规划"** 四阶段流水线：
+
+```
+SpringBoot POST /api/analysis/submit-answer
+    │  携带：userId, question(题目+答案), userAnswer, knowledgePointIds
+    │
+    ▼
+┌─────────────────────────────────────────────────────────────┐
+│ FastAPI analysis_service.analyze_answer()                   │
+│                                                             │
+│  ① 规则判题（Python 本地，不消耗 AI token）                   │
+│     _judge(type, userAnswer, correctAnswer)                 │
+│     - 选择题/判断题：精确匹配（忽略大小写）                    │
+│     - 问答题：精确匹配或包含匹配（容忍格式差异）               │
+│     → 产出：is_correct: bool                                │
+│                                                             │
+│  ② LLM 深度分析（DeepSeek Chat）                             │
+│     将题目信息 + 判题结果构造成 prompt，调用 LLM               │
+│     → 产出 JSON：                                           │
+│       {                                                     │
+│         "error_analysis": {                                 │
+│           "explanation": "解题思路与核心概念",                │
+│           "error_type": "概念混淆/知识漏洞/粗心错误/方法错误", │
+│           "error_detail": "针对学生错误的具体分析"            │
+│         },                                                  │
+│         "weak_point_analysis": [                            │
+│           { "knowledge_point_id": "kp_xxx",                 │
+│             "knowledge_point_name": "...",                  │
+│             "current_mastery": 0.0-1.0,    ← LLM 估算掌握度  │
+│             "reason": "判断依据" }                           │
+│         ]                                                   │
+│       }                                                     │
+│                                                             │
+│  ③ Neo4j 补全薄弱点（_enrich_weak_points）                   │
+│     对题目关联的每个 knowledge_point_id：                     │
+│       → MATCH (k:KnowledgePoint {id}) RETURN k              │
+│     策略：LLM 分析过的知识点 → 保留 LLM 的判断，              │
+│           用 Neo4j 的权威名称替换 LLM 的猜测名称              │
+│           LLM 没分析的知识点 → 用 Neo4j 兜底补齐，            │
+│           默认掌握度 0.3（答错）或 0.7（答对）                │
+│     → 产出：完整的薄弱点列表（确保绑定题目的知识点全覆盖）     │
+│                                                             │
+│  ④ 学习路径生成（path_service.generate_learning_path）       │
+│     薄弱点按掌握度升序 → 从最弱的开始学                       │
+│     对每个薄弱点：                                           │
+│       → Neo4j: MATCH (k)-[PREREQUISITE*1..]->(prereq)       │
+│               追溯前置依赖知识                                 │
+│       → 去重合并，确保前置知识点排在前面（拓扑序）             │
+│       → LLM: 为每个路径节点生成一句话学习建议                  │
+│     → 产出：ordered learning_path [{order, knowledge_point,  │
+│              reason}]                                        │
+│                                                             │
+│  最终组装 → AnswerAnalysisResponse 返回 SpringBoot           │
+│    {                                                        │
+│      is_correct,           ← ① 规则判题                      │
+│      error_analysis,       ← ② LLM 错题解析                  │
+│      weak_point_analysis,  ← ③ LLM掌握度 + Neo4j名称的融合   │
+│      learning_path         ← ④ Neo4j前置追溯 + LLM建议       │
+│    }                                                        │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**各步骤职责分工：**
+
+| 步骤 | 数据来源 | 做什么 | 为什么不让 LLM 全包 |
+|------|----------|--------|---------------------|
+| ① 判题 | Python 规则 | 判断对/错 | 选择题的判题是确定性的，规则匹配比 LLM 更快更可靠 |
+| ② 诊断 | DeepSeek LLM | 错题解析、掌握度估算 | LLM 擅长语义理解，能分析"为什么错"而不仅是"错没错" |
+| ③ 补全 | Neo4j 图数据库 | 知识点权威名称、全覆盖 | LLM 可能遗漏或编造知识点名称，Neo4j 保证数据一致性 |
+| ④ 路径 | Neo4j 图遍历 + LLM | 前置依赖追溯 + 学习建议 | 图数据库天然适合做关系追溯，LLM 负责生成可读的学习建议 |
+
 ### PDF 导入流程
 
 ```
