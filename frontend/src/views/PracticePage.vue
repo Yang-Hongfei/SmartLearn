@@ -300,7 +300,7 @@ onMounted(() => {
         <div class="top-bar">
           <ModeSelector v-model="mode" />
           <el-select v-if="mode === 'sequential'"
-            v-model="selectedTopic" placeholder="全部分类" clearable
+            v-model="selectedTopic" placeholder="全部分类" clearable filterable
             @change="onTopicChange" style="width:200px; margin-left:12px">
             <el-option v-for="t in topics" :key="t" :label="t" :value="t" />
           </el-select>
