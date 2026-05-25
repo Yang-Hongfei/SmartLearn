@@ -29,4 +29,9 @@ public class ConfigController {
         }
         return ApiResponse.success(aiClient.setApiKey(apiKey.trim()));
     }
+
+    @DeleteMapping("/api-key")
+    public ApiResponse<Map<String, Object>> clearApiKey() {
+        return ApiResponse.success(aiClient.clearApiKey());
+    }
 }

@@ -41,7 +41,7 @@ public class PdfImportService {
     }
 
     @Transactional
-    public PdfImport uploadAndParse(MultipartFile file) {
+    public PdfImport uploadAndParse(MultipartFile file, Long userId) {
         String filename = file.getOriginalFilename();
         long fileSize = file.getSize();
 
@@ -64,6 +64,7 @@ public class PdfImportService {
         PdfImport pdfImport = new PdfImport();
         pdfImport.setFilename(filename);
         pdfImport.setFileSize(fileSize);
+        pdfImport.setUserId(userId);
         pdfImport.setStatus("processing");
         importMapper.insert(pdfImport);
 
@@ -215,11 +216,11 @@ public class PdfImportService {
         return sb.toString();
     }
 
-    public List<PdfImport> getImports(int page, int size) {
-        return importMapper.findAll((page - 1) * size, size);
+    public List<PdfImport> getImports(Long userId, int page, int size) {
+        return importMapper.findAccessibleByUser(userId, (page - 1) * size, size);
     }
 
-    public long countImports() { return importMapper.count(); }
+    public long countImports(Long userId) { return importMapper.countAccessibleByUser(userId); }
 
     public PdfImport getImport(Long id) { return importMapper.findById(id); }
 

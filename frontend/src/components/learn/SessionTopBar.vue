@@ -1,5 +1,6 @@
 <script setup>
 import { useRouter } from 'vue-router'
+import { logout } from '../../api/authApi'
 
 const props = defineProps({
   pdfName: String,
@@ -14,6 +15,8 @@ const router = useRouter()
 function goBack() {
   router.push('/learn-hub')
 }
+
+async function handleLogout() { await logout(); router.push('/login') }
 </script>
 
 <template>
@@ -21,6 +24,7 @@ function goBack() {
     <button class="topbar-back" @click="goBack">&larr; 返回</button>
     <span class="topbar-name">{{ pdfName }}</span>
     <span class="topbar-progress">{{ currentNode }} / {{ totalNodes }}</span>
+    <button class="topbar-logout" @click="handleLogout">退出</button>
     <button class="topbar-skip" @click="emit('skipToTest')">直接测试</button>
   </div>
 </template>
@@ -56,6 +60,9 @@ function goBack() {
   color: rgba(255,255,255,0.35);
   font-variant-numeric: tabular-nums;
 }
+
+.topbar-logout { background: none; border: none; color: rgba(255,255,255,0.35); font-size: 12px; cursor: pointer; padding: 0; }
+.topbar-logout:hover { color: rgba(255,100,100,0.7); }
 
 .topbar-skip {
   background: rgba(255,193,7,0.08);

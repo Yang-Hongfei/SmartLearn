@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { pdfApi } from '../api/pdfApi'
 import { learnApi } from '../api/learnApi'
+import { logout } from '../api/authApi'
 
 const router = useRouter()
 const imports = ref([])
@@ -71,6 +72,8 @@ function goBack() {
   router.push('/')
 }
 
+async function handleLogout() { await logout(); router.push('/login') }
+
 onMounted(loadData)
 </script>
 
@@ -80,6 +83,7 @@ onMounted(loadData)
       <div class="hub-top">
         <button class="back-link" @click="goBack">&larr; 返回首页</button>
         <span class="hub-title">AI 带学</span>
+        <button class="logout-link" @click="handleLogout">退出</button>
       </div>
 
       <div v-if="loading" class="hub-loading">
@@ -173,6 +177,9 @@ onMounted(loadData)
   padding: 0;
 }
 .back-link:hover { color: #1a1a1a; }
+
+.logout-link { margin-left: auto; background: none; border: none; font-size: 13px; color: #9ca3af; cursor: pointer; padding: 0; }
+.logout-link:hover { color: #e5534b; }
 
 .hub-title {
   font-size: 20px;

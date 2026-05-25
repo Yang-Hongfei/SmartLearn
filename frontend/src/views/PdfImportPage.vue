@@ -5,6 +5,7 @@ import SettingsModal from '../components/common/SettingsModal.vue'
 import UploadDragger from '../components/pdf/UploadDragger.vue'
 import ImportHistoryTable from '../components/pdf/ImportHistoryTable.vue'
 import ImportResultModal from '../components/pdf/ImportResultModal.vue'
+import { logout } from '../api/authApi'
 
 const router = useRouter()
 const historyTable = ref(null)
@@ -12,6 +13,7 @@ const resultModal = ref({ visible: false, data: null })
 const showSettings = ref(false)
 
 function onOpenSettings() { showSettings.value = true }
+async function handleLogout() { await logout(); router.push('/login') }
 onMounted(() => window.addEventListener('open-settings', onOpenSettings))
 onBeforeUnmount(() => { window.removeEventListener('open-settings', onOpenSettings) })
 
@@ -30,7 +32,10 @@ function handleUploaded(result) {
         <button class="topbar-tab" @click="router.push('/practice')">刷题练习</button>
         <button class="topbar-tab topbar-tab--active">PDF 导入</button>
       </nav>
-      <button class="topbar-settings" @click="showSettings = true" title="设置 API Key">&#9881;</button>
+      <div class="topbar-actions">
+        <button class="topbar-btn" @click="handleLogout" title="退出登录">&#10154;</button>
+        <button class="topbar-btn" @click="showSettings = true" title="设置 API Key">&#9881;</button>
+      </div>
     </div>
     <div class="import-body">
       <div class="import-hint">
@@ -57,8 +62,9 @@ function handleUploaded(result) {
 .topbar-tab { padding: 6px 14px; border-radius: 4px; font-size: 13px; cursor: pointer; border: none; background: transparent; color: #6b7280; }
 .topbar-tab:hover { color: #1a1a1a; }
 .topbar-tab--active { background: #f3f4f6; color: #1a1a1a; font-weight: 500; }
-.topbar-settings { margin-left: auto; width: 32px; height: 32px; border-radius: 50%; border: 1px solid #e5e7eb; background: #fff; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #6b7280; }
-.topbar-settings:hover { color: #1a1a1a; border-color: #9ca3af; }
+.topbar-actions { margin-left: auto; display: flex; gap: 6px; }
+.topbar-btn { width: 32px; height: 32px; border-radius: 50%; border: 1px solid #e5e7eb; background: #fff; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #6b7280; }
+.topbar-btn:hover { color: #1a1a1a; border-color: #9ca3af; }
 .import-body { max-width: 900px; margin: 0 auto; padding: 24px; }
 .import-hint { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px 20px; margin-bottom: 24px; }
 .import-hint p { font-size: 13px; color: #6b7280; margin: 0; line-height: 1.7; }

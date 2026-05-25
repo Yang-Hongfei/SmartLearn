@@ -202,3 +202,9 @@ MySQL 8，库名 `smartlearn`。5 张表：`users`, `questions`, `practice_recor
 | `fastapi-ai/.env` | LLM/Embedding/Neo4j/Chroma 参数 |
 | `springboot-backend/src/main/resources/application.yml` | MySQL、AI 地址、上传路径 |
 | `frontend/vite.config.js` | 开发代理 `/api` → `localhost:8080` |
+
+## 生产部署
+
+CentOS 7.6 部署指南 → [`deploy/DEPLOY.md`](deploy/DEPLOY.md)
+
+一键部署脚本 → `deploy/deploy.sh`

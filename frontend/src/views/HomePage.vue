@@ -2,18 +2,23 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
 import SettingsModal from '../components/common/SettingsModal.vue'
+import { logout } from '../api/authApi'
 
 const router = useRouter()
 const showSettings = ref(false)
 
 function onOpenSettings() { showSettings.value = true }
+async function handleLogout() { await logout(); router.push('/login') }
 onMounted(() => window.addEventListener('open-settings', onOpenSettings))
 onBeforeUnmount(() => window.removeEventListener('open-settings', onOpenSettings))
 </script>
 
 <template>
   <div class="home">
-    <button class="home-settings" @click="showSettings = true" title="设置 API Key">&#9881;</button>
+    <div class="home-top-actions">
+      <button class="home-top-btn" @click="handleLogout" title="退出登录">&#10154;</button>
+      <button class="home-top-btn" @click="showSettings = true" title="设置 API Key">&#9881;</button>
+    </div>
     <div class="home-content">
       <div class="brand">
         <h1 class="brand-name">SmartLearn</h1>
@@ -30,8 +35,9 @@ onBeforeUnmount(() => window.removeEventListener('open-settings', onOpenSettings
 
 <style scoped>
 .home { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #f8f9fb; position: relative; }
-.home-settings { position: fixed; top: 16px; right: 16px; width: 36px; height: 36px; border-radius: 50%; border: 1px solid #e5e7eb; background: #fff; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #6b7280; transition: color 0.15s, border-color 0.15s; }
-.home-settings:hover { color: #1a1a1a; border-color: #9ca3af; }
+.home-top-actions { position: fixed; top: 16px; right: 16px; display: flex; gap: 8px; }
+.home-top-btn { width: 36px; height: 36px; border-radius: 50%; border: 1px solid #e5e7eb; background: #fff; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #6b7280; transition: color 0.15s, border-color 0.15s; }
+.home-top-btn:hover { color: #1a1a1a; border-color: #9ca3af; }
 .home-content { text-align: center; max-width: 520px; padding: 60px 40px; }
 .brand { margin-bottom: 48px; }
 .brand-name { font-size: 36px; font-weight: 700; color: #1a1a1a; letter-spacing: -0.5px; margin: 0 0 12px; }

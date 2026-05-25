@@ -91,8 +91,14 @@ public class AiServiceClient {
                 return objectMapper.readValue(rawResponse, Map.class);
             }
             return new HashMap<>();
+        } catch (org.springframework.web.client.HttpStatusCodeException e) {
+            String responseBody = e.getResponseBodyAsString();
+            log.error("AI learn plan HTTP {}: {}", e.getRawStatusCode(), responseBody);
+            throw new RuntimeException("生成学习计划失败: " + responseBody, e);
         } catch (Exception e) {
-            throw new RuntimeException("Failed to generate learn plan", e);
+            log.error("AI learn plan failed: {}", e.getMessage());
+            String cause = e.getMessage() != null ? e.getMessage() : "未知错误";
+            throw new RuntimeException("生成学习计划失败: " + cause, e);
         }
     }
 
@@ -135,6 +141,19 @@ public class AiServiceClient {
             return new HashMap<>();
         } catch (Exception e) {
             throw new RuntimeException("Failed to set API key", e);
+        }
+    }
+
+    public Map<String, Object> clearApiKey() {
+        try {
+            HttpHeaders headers = jsonHeaders();
+            HttpEntity<String> entity = new HttpEntity<>(headers);
+            restTemplate.delete(baseUrl + "/api/config/api-key");
+            Map<String, Object> result = new HashMap<>();
+            result.put("status", "ok");
+            return result;
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to clear API key", e);
         }
     }
 

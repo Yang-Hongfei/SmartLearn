@@ -52,13 +52,12 @@ async def parse_pdf_text(raw_text: str, filename: str = "", chunk_index: int = 0
 
     chunk_info = f"（第 {chunk_index + 1}/{total_chunks} 块）" if total_chunks > 1 else ""
 
-    llm = llm_service.get_model()
-    # Temporary instance for lower temp + higher max_tokens on PDF parsing
+    # Create instance with PDF-optimized params, using effective API key (custom or env)
     from langchain_openai import ChatOpenAI
     from app.core.config import settings
     llm = ChatOpenAI(
         model=settings.llm_model,
-        api_key=settings.deepseek_api_key,
+        api_key=llm_service.get_effective_api_key(),
         base_url=settings.deepseek_base_url,
         temperature=0.2,
         max_tokens=8192,

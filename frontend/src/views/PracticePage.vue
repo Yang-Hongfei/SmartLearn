@@ -13,9 +13,9 @@ import NavigationControls from '../components/practice/NavigationControls.vue'
 import SettingsModal from '../components/common/SettingsModal.vue'
 import { questionApi } from '../api/questionApi.js'
 import { practiceApi } from '../api/practiceApi.js'
+import { logout } from '../api/authApi'
 
 const router = useRouter()
-const USER_ID = 1
 
 const mode = ref('random')
 const question = ref(null)
@@ -40,6 +40,7 @@ const selectedTopic = ref('')
 const showSettings = ref(false)
 
 function onOpenSettings() { showSettings.value = true }
+async function handleLogout() { await logout(); router.push('/login') }
 onMounted(() => window.addEventListener('open-settings', onOpenSettings))
 onBeforeUnmount(() => { window.removeEventListener('open-settings', onOpenSettings) })
 
@@ -50,7 +51,7 @@ const showAiBtn = computed(() => submitted.value && currentRecordId.value)
 
 async function loadRandomQuestion() {
   loading.value = true; resetState()
-  try { question.value = await questionApi.random(USER_ID) } catch (e) { ElMessage.error(e.message) }
+  try { question.value = await questionApi.random() } catch (e) { ElMessage.error(e.message) }
   loading.value = false
 }
 
@@ -101,7 +102,7 @@ async function handleSubmit() {
   if (isEssay.value) { showJudgeDialog.value = true; return }
   submitting.value = true
   try {
-    const result = await practiceApi.submit({ userId: USER_ID, questionId: question.value.id, userAnswer: answer.value, judgeMode: 'auto' })
+    const result = await practiceApi.submit({ questionId: question.value.id, userAnswer: answer.value, judgeMode: 'auto' })
     submitted.value = true; currentRecordId.value = result.recordId
     isCorrect.value = result.isCorrect; showCorrectAnswer.value = true
     ElMessage({ message: result.isCorrect ? '回答正确！' : '回答错误', type: result.isCorrect ? 'success' : 'error' })
@@ -113,7 +114,7 @@ async function handleSubmit() {
 async function handleJudgeChoice(judgeMode) {
   showJudgeDialog.value = false; submitting.value = true
   try {
-    const result = await practiceApi.submit({ userId: USER_ID, questionId: question.value.id, userAnswer: answer.value, judgeMode })
+    const result = await practiceApi.submit({ questionId: question.value.id, userAnswer: answer.value, judgeMode })
     submitted.value = true; currentRecordId.value = result.recordId
     if (judgeMode === 'self') { showCorrectAnswer.value = true; showSelfJudge.value = true }
     else if (judgeMode === 'ai') { isCorrect.value = result.isCorrect; showAiAnalysis.value = true; aiAnalysisData.value = result.aiAnalysis }
@@ -140,10 +141,10 @@ async function handleLearned() {
 
 function handleSkip() { question.value = null; loadQuestion('next') }
 
-async function loadStats() { try { stats.value = await practiceApi.stats(USER_ID) } catch (e) { /* ignore */ } }
+async function loadStats() { try { stats.value = await practiceApi.stats() } catch (e) { /* ignore */ } }
 async function loadTotalCount() { try { totalQuestions.value = await questionApi.count() } catch (e) { /* ignore */ } }
 async function loadTopics() { try { topics.value = await questionApi.topics() } catch (e) { /* ignore */ } }
-async function reloadIncorrect() { try { const list = await questionApi.incorrect(USER_ID); incorrectIds.value = list.map(q => q.id); totalQuestions.value = incorrectIds.value.length } catch (e) { /* ignore */ } }
+async function reloadIncorrect() { try { const list = await questionApi.incorrect(); incorrectIds.value = list.map(q => q.id); totalQuestions.value = incorrectIds.value.length } catch (e) { /* ignore */ } }
 function onTopicChange() { resetState(); question.value = null; sequentialIdx.value = 0; loadSequentialQuestion('next') }
 
 watch(mode, async () => {
@@ -165,7 +166,10 @@ onMounted(() => { loadStats(); loadTotalCount(); loadTopics(); loadRandomQuestio
         <button class="topbar-tab topbar-tab--active">刷题练习</button>
         <button class="topbar-tab" @click="router.push('/import')">PDF 导入</button>
       </nav>
-      <button class="topbar-settings" @click="showSettings = true" title="设置 API Key">&#9881;</button>
+      <div class="topbar-actions">
+        <button class="topbar-btn" @click="handleLogout" title="退出登录">&#10154;</button>
+        <button class="topbar-btn" @click="showSettings = true" title="设置 API Key">&#9881;</button>
+      </div>
     </div>
     <div class="practice-body">
       <div class="practice-main">
@@ -222,8 +226,9 @@ onMounted(() => { loadStats(); loadTotalCount(); loadTopics(); loadRandomQuestio
 .topbar-tab { padding: 6px 14px; border-radius: 4px; font-size: 13px; cursor: pointer; border: none; background: transparent; color: #6b7280; }
 .topbar-tab:hover { color: #1a1a1a; }
 .topbar-tab--active { background: #f3f4f6; color: #1a1a1a; font-weight: 500; }
-.topbar-settings { margin-left: auto; width: 32px; height: 32px; border-radius: 50%; border: 1px solid #e5e7eb; background: #fff; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #6b7280; }
-.topbar-settings:hover { color: #1a1a1a; border-color: #9ca3af; }
+.topbar-actions { margin-left: auto; display: flex; gap: 6px; }
+.topbar-btn { width: 32px; height: 32px; border-radius: 50%; border: 1px solid #e5e7eb; background: #fff; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #6b7280; }
+.topbar-btn:hover { color: #1a1a1a; border-color: #9ca3af; }
 .practice-body { display: flex; gap: 24px; max-width: 1100px; margin: 0 auto; padding: 24px; }
 .practice-main { flex: 1; min-width: 0; }
 .practice-sidebar { flex-shrink: 0; }

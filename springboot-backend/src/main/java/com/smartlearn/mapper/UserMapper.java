@@ -9,7 +9,11 @@ public interface UserMapper {
     @Select("SELECT * FROM users WHERE id = #{id}")
     User findById(Long id);
 
-    @Insert("INSERT INTO users (username, password_hash, nickname, created_at, updated_at) VALUES (#{username}, #{passwordHash}, #{nickname}, NOW(), NOW())")
+    @Select("SELECT * FROM users WHERE username = #{username}")
+    User findByUsername(String username);
+
+    @Insert("INSERT INTO users (username, password_hash, nickname, role, created_at, updated_at) " +
+            "VALUES (#{username}, #{passwordHash}, #{nickname}, #{role}, NOW(), NOW())")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     int insert(User user);
 }

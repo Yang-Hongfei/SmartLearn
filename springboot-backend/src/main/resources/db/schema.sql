@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS users (
     username VARCHAR(50) NOT NULL UNIQUE,
     password_hash VARCHAR(255) NOT NULL,
     nickname VARCHAR(100) DEFAULT '',
+    role VARCHAR(20) DEFAULT 'user' COMMENT 'admin/user',
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -54,6 +55,8 @@ CREATE TABLE IF NOT EXISTS pdf_imports (
     status VARCHAR(20) DEFAULT 'pending' COMMENT 'pending/processing/completed/failed',
     error_message TEXT NULL,
     raw_text_snippet TEXT NULL,
+    user_id BIGINT DEFAULT NULL COMMENT 'NULL=admin preset, else owner',
+    admin_preset TINYINT DEFAULT 0 COMMENT '1=admin preset visible to all',
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -73,4 +76,5 @@ CREATE TABLE IF NOT EXISTS learn_progress (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Insert a default user for practice
-INSERT IGNORE INTO users (id, username, password_hash, nickname) VALUES (1, 'default', '', '学习者');
+INSERT IGNORE INTO users (id, username, password_hash, nickname, role) VALUES (1, 'admin', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', '管理员', 'admin');
+-- default password: admin123

@@ -38,9 +38,10 @@ async function saveKey() {
   saving.value = false
 }
 
-function clearKey() {
+async function clearKey() {
   apiKey.value = ''
   localStorage.removeItem('sm_ds_key')
+  try { await configApi.clearApiKey() } catch (e) { /* ignore */ }
   ElMessage.info('API Key 已清除')
   loadStatus()
 }

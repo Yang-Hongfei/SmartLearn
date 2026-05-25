@@ -4708,43 +4708,43 @@
       "weight": 0.5
     },
     {
-      "from": "kp_aop_ioc",
+      "from": "kp_ioc",
       "to": "kp_di",
       "type": "RELATED_TO",
       "weight": 0.5
     },
     {
-      "from": "kp_aop_ioc",
+      "from": "kp_ioc",
       "to": "kp_ioc_container",
       "type": "RELATED_TO",
       "weight": 0.5
     },
     {
-      "from": "kp_aop_ioc",
+      "from": "kp_ioc",
       "to": "kp_bean_registration",
       "type": "RELATED_TO",
       "weight": 0.5
     },
     {
-      "from": "kp_aop_ioc",
+      "from": "kp_ioc",
       "to": "kp_dependency_injection",
       "type": "RELATED_TO",
       "weight": 0.5
     },
     {
-      "from": "kp_aop_ioc",
+      "from": "kp_ioc",
       "to": "kp_spring_ioc",
       "type": "RELATED_TO",
       "weight": 0.5
     },
     {
-      "from": "kp_aop_ioc",
+      "from": "kp_ioc",
       "to": "kp_spring_ioc_mechanism",
       "type": "RELATED_TO",
       "weight": 0.5
     },
     {
-      "from": "kp_aop_ioc",
+      "from": "kp_ioc",
       "to": "kp_spring_ioc_understanding",
       "type": "RELATED_TO",
       "weight": 0.5
@@ -5183,7 +5183,7 @@
     },
     {
       "from": "kp_spring_intro",
-      "to": "kp_aop_ioc",
+      "to": "kp_ioc",
       "type": "PREREQUISITE",
       "weight": 0.7
     },
@@ -5231,7 +5231,7 @@
     },
     {
       "from": "kp_spring_features",
-      "to": "kp_aop_ioc",
+      "to": "kp_ioc",
       "type": "PREREQUISITE",
       "weight": 0.7
     },
@@ -5279,7 +5279,7 @@
     },
     {
       "from": "kp_spring_modules",
-      "to": "kp_aop_ioc",
+      "to": "kp_ioc",
       "type": "PREREQUISITE",
       "weight": 0.7
     },
@@ -5327,7 +5327,7 @@
     },
     {
       "from": "kp_spring_annotations",
-      "to": "kp_aop_ioc",
+      "to": "kp_ioc",
       "type": "PREREQUISITE",
       "weight": 0.7
     },
@@ -5374,19 +5374,19 @@
       "weight": 0.7
     },
     {
-      "from": "kp_aop_ioc",
+      "from": "kp_ioc",
       "to": "kp_beanfactory",
       "type": "PREREQUISITE",
       "weight": 0.7
     },
     {
-      "from": "kp_aop_ioc",
+      "from": "kp_ioc",
       "to": "kp_applicationcontext",
       "type": "PREREQUISITE",
       "weight": 0.7
     },
     {
-      "from": "kp_aop_ioc",
+      "from": "kp_ioc",
       "to": "kp_spring_container",
       "type": "PREREQUISITE",
       "weight": 0.7

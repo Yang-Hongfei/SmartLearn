@@ -6,13 +6,13 @@ const client = axios.create({
   timeout: 600000
 })
 
-// Attach user's API key from localStorage to every request
+// Attach user's API key and JWT token to every request
 client.interceptors.request.use(config => {
+  config.headers = config.headers || {}
   const key = localStorage.getItem('sm_ds_key')
-  if (key) {
-    config.headers = config.headers || {}
-    config.headers['X-Api-Key'] = key
-  }
+  if (key) config.headers['X-Api-Key'] = key
+  const token = localStorage.getItem('sm_token')
+  if (token) config.headers['Authorization'] = 'Bearer ' + token
   return config
 })
 

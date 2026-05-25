@@ -7,4 +7,7 @@ export const configApi = {
   setApiKey(apiKey) {
     return client.post('/config/api-key', { apiKey })
   },
+  clearApiKey() {
+    return client.delete('/config/api-key')
+  },
 }

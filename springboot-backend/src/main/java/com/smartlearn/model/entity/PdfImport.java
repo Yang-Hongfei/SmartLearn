@@ -13,6 +13,8 @@ public class PdfImport {
     private String status;
     private String errorMessage;
     private String rawTextSnippet;
+    private Long userId;
+    private Integer adminPreset;
     private LocalDateTime createdAt;
 
     public Long getId() { return id; }
@@ -35,6 +37,10 @@ public class PdfImport {
     public void setErrorMessage(String errorMessage) { this.errorMessage = errorMessage; }
     public String getRawTextSnippet() { return rawTextSnippet; }
     public void setRawTextSnippet(String rawTextSnippet) { this.rawTextSnippet = rawTextSnippet; }
+    public Long getUserId() { return userId; }
+    public void setUserId(Long userId) { this.userId = userId; }
+    public Integer getAdminPreset() { return adminPreset; }
+    public void setAdminPreset(Integer adminPreset) { this.adminPreset = adminPreset; }
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }

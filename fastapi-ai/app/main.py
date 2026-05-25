@@ -44,11 +44,12 @@ app.add_middleware(
 
 
 # Per-request API key: user's localStorage key via X-Api-Key header.
-# If no header, use the .env default (not the previous user's key).
+# Only acts when header IS present — no fallback to .env, so clearing works.
 @app.middleware("http")
 async def per_request_api_key(request: Request, call_next):
     key = request.headers.get("X-Api-Key", "")
-    llm_service.set_request_key(key if key else None)
+    if key and key.strip():
+        llm_service.set_request_key(key.strip())
     response = await call_next(request)
     return response
 
@@ -81,3 +82,9 @@ async def set_api_key(req: ApiKeyRequest):
     if not ok:
         return {"status": "error", "message": "API Key 不能为空"}
     return {"status": "ok", "message": "API Key 已更新", "masked": llm_service.get_api_key_status()["masked"]}
+
+
+@app.delete("/api/config/api-key")
+async def clear_api_key():
+    llm_service.clear_key()
+    return {"status": "ok", "message": "API Key 已清除"}

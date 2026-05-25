@@ -8,19 +8,19 @@ import java.util.List;
 @Mapper
 public interface PdfImportMapper {
 
-    @Insert("INSERT INTO pdf_imports (filename, file_size, total_pages, total_chunks, chunks_completed, questions_extracted, status, error_message, raw_text_snippet, created_at) " +
-            "VALUES (#{filename}, #{fileSize}, #{totalPages}, #{totalChunks}, #{chunksCompleted}, #{questionsExtracted}, #{status}, #{errorMessage}, #{rawTextSnippet}, NOW())")
+    @Insert("INSERT INTO pdf_imports (filename, file_size, total_pages, total_chunks, chunks_completed, questions_extracted, status, error_message, raw_text_snippet, user_id, created_at) " +
+            "VALUES (#{filename}, #{fileSize}, #{totalPages}, #{totalChunks}, #{chunksCompleted}, #{questionsExtracted}, #{status}, #{errorMessage}, #{rawTextSnippet}, #{userId}, NOW())")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     int insert(PdfImport pdfImport);
 
     @Select("SELECT * FROM pdf_imports WHERE id = #{id}")
     PdfImport findById(Long id);
 
-    @Select("SELECT * FROM pdf_imports ORDER BY created_at DESC LIMIT #{size} OFFSET #{offset}")
-    List<PdfImport> findAll(@Param("offset") int offset, @Param("size") int size);
+    @Select("SELECT * FROM pdf_imports WHERE admin_preset = 1 OR user_id = #{userId} ORDER BY created_at DESC LIMIT #{size} OFFSET #{offset}")
+    List<PdfImport> findAccessibleByUser(@Param("userId") Long userId, @Param("offset") int offset, @Param("size") int size);
 
-    @Select("SELECT COUNT(*) FROM pdf_imports")
-    long count();
+    @Select("SELECT COUNT(*) FROM pdf_imports WHERE admin_preset = 1 OR user_id = #{userId}")
+    long countAccessibleByUser(@Param("userId") Long userId);
 
     @Update("UPDATE pdf_imports SET questions_extracted = #{questionsExtracted}, status = #{status}, error_message = #{errorMessage} WHERE id = #{id}")
     int updateResult(@Param("id") Long id, @Param("questionsExtracted") int questionsExtracted,

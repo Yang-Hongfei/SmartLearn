@@ -1,5 +1,6 @@
 package com.smartlearn.controller;
 
+import com.smartlearn.config.UserContext;
 import com.smartlearn.model.dto.ApiResponse;
 import com.smartlearn.model.dto.PageResult;
 import com.smartlearn.model.entity.PdfImport;
@@ -25,15 +26,16 @@ public class PdfImportController {
         if (filename == null || !filename.toLowerCase().endsWith(".pdf")) {
             return ApiResponse.error(400, "仅支持PDF文件");
         }
-        return ApiResponse.success(pdfImportService.uploadAndParse(file));
+        return ApiResponse.success(pdfImportService.uploadAndParse(file, UserContext.getUserId()));
     }
 
     @GetMapping("/imports")
     public ApiResponse<PageResult<PdfImport>> imports(
             @RequestParam(defaultValue = "1") int page,
             @RequestParam(defaultValue = "10") int size) {
-        List<PdfImport> records = pdfImportService.getImports(page, size);
-        long total = pdfImportService.countImports();
+        Long userId = UserContext.getUserId();
+        List<PdfImport> records = pdfImportService.getImports(userId, page, size);
+        long total = pdfImportService.countImports(userId);
         return ApiResponse.success(new PageResult<>(records, total, page, size));
     }
 
