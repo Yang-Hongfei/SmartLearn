@@ -21,18 +21,22 @@
 - 如果只取 top_k，Rerank 没有足够候选去做重排
 """
 
+from langchain_core.prompts import ChatPromptTemplate
 from app.core.config import settings
 from app.core.utils import extract_keywords, meta, merge_dedup
 from app.services import embedding_service, vector_service, rerank_service, llm_service
 
-RAG_SYSTEM_PROMPT = """你是一个算法学习助手，基于提供的知识库资料回答用户问题。
+RAG_PROMPT = ChatPromptTemplate.from_messages([
+    ("system", """你是一个算法学习助手，基于提供的知识库资料回答用户问题。
 
 回答要求：
 1. 使用提供的参考资料来组织答案，在答案末尾标注引用来源（如 [1]、[2]）
 2. 如果参考资料不足以回答问题，请说明，不要编造
 3. 用中文回答，代码示例使用对应编程语言
 4. 对复杂概念给出清晰的定义，配合具体的例子说明
-5. 如果涉及易错点或常见误区，请特别指出"""
+5. 如果涉及易错点或常见误区，请特别指出"""),
+    ("human", "参考资料：\n{context}\n\n请根据以上参考资料回答用户问题。\n用户问题：{question}"),
+])
 
 
 async def rag_query(
@@ -69,15 +73,10 @@ async def rag_query(
         context_parts.append(f"[{i}] 来源：{src}\n{doc['content']}")
     context = "\n\n---\n\n".join(context_parts) if context_parts else "暂无相关参考资料。"
 
-    # ⑦ LLM 生成
-    answer = await llm_service.chat([
-        {"role": "system", "content": RAG_SYSTEM_PROMPT},
-        {"role": "user", "content": (
-            f"参考资料：\n{context}\n\n"
-            f"请根据以上参考资料回答用户问题。\n"
-            f"用户问题：{question}"
-        )},
-    ])
+    # ⑦ LLM 生成 via LangChain ChatPromptTemplate
+    chain = RAG_PROMPT | llm_service.get_model()
+    response = await chain.ainvoke({"context": context, "question": question})
+    answer = response.content or ""
 
     # 组装结构化返回
     sources = []

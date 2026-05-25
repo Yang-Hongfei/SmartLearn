@@ -3,6 +3,7 @@ package com.smartlearn.client;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.smartlearn.config.AiClientConfig;
+import com.smartlearn.config.ApiKeyHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpEntity;
@@ -13,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.Map;
 import java.util.HashMap;
+import java.util.List;
 
 @Component
 public class AiServiceClient {
@@ -27,11 +29,20 @@ public class AiServiceClient {
         this.baseUrl = config.getAiBaseUrl();
     }
 
+    private HttpHeaders jsonHeaders() {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        String key = ApiKeyHolder.get();
+        if (key != null && !key.isEmpty()) {
+            headers.set("X-Api-Key", key);
+        }
+        return headers;
+    }
+
     public AnswerAnalysisResponse submitAnswer(SubmitAnswerRequest request) {
         try {
             String body = objectMapper.writeValueAsString(request);
-            HttpHeaders headers = new HttpHeaders();
-            headers.setContentType(MediaType.APPLICATION_JSON);
+            HttpHeaders headers = jsonHeaders();
             HttpEntity<String> entity = new HttpEntity<>(body, headers);
             return restTemplate.postForObject(baseUrl + "/api/analysis/submit-answer", entity, AnswerAnalysisResponse.class);
         } catch (JsonProcessingException e) {
@@ -51,8 +62,7 @@ public class AiServiceClient {
     public Map parsePdfMap(PdfParseRequest request) {
         try {
             String body = objectMapper.writeValueAsString(request);
-            HttpHeaders headers = new HttpHeaders();
-            headers.setContentType(MediaType.APPLICATION_JSON);
+            HttpHeaders headers = jsonHeaders();
             HttpEntity<String> entity = new HttpEntity<>(body, headers);
             String rawResponse = restTemplate.postForObject(baseUrl + "/api/pdf/parse-qa", entity, String.class);
             log.info("FastAPI raw response length: {}", rawResponse != null ? rawResponse.length() : 0);
@@ -65,11 +75,123 @@ public class AiServiceClient {
         }
     }
 
+    // --- Learn agent APIs ---
+
+    public Map<String, Object> generateLearnPlan(Long pdfImportId, String pdfName, List<Map<String, Object>> questions) {
+        try {
+            Map<String, Object> req = new HashMap<>();
+            req.put("pdf_import_id", pdfImportId);
+            req.put("pdf_name", pdfName);
+            req.put("questions", questions);
+            String body = objectMapper.writeValueAsString(req);
+            HttpHeaders headers = jsonHeaders();
+            HttpEntity<String> entity = new HttpEntity<>(body, headers);
+            String rawResponse = restTemplate.postForObject(baseUrl + "/api/learn/generate-plan", entity, String.class);
+            if (rawResponse != null) {
+                return objectMapper.readValue(rawResponse, Map.class);
+            }
+            return new HashMap<>();
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to generate learn plan", e);
+        }
+    }
+
+    public Map<String, Object> submitLearnAnswer(Object request) {
+        try {
+            String body = objectMapper.writeValueAsString(request);
+            HttpHeaders headers = jsonHeaders();
+            HttpEntity<String> entity = new HttpEntity<>(body, headers);
+            String rawResponse = restTemplate.postForObject(baseUrl + "/api/learn/submit-answer", entity, String.class);
+            if (rawResponse != null) {
+                return objectMapper.readValue(rawResponse, Map.class);
+            }
+            return new HashMap<>();
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to submit learn answer", e);
+        }
+    }
+
+    // --- Config ---
+
+    public Map<String, Object> getApiKeyStatus() {
+        try {
+            String raw = restTemplate.getForObject(baseUrl + "/api/config/api-key", String.class);
+            if (raw != null) return objectMapper.readValue(raw, Map.class);
+            return new HashMap<>();
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to get API key status", e);
+        }
+    }
+
+    public Map<String, Object> setApiKey(String apiKey) {
+        try {
+            Map<String, Object> req = new HashMap<>();
+            req.put("api_key", apiKey);
+            String body = objectMapper.writeValueAsString(req);
+            HttpHeaders headers = jsonHeaders();
+            HttpEntity<String> entity = new HttpEntity<>(body, headers);
+            String raw = restTemplate.postForObject(baseUrl + "/api/config/api-key", entity, String.class);
+            if (raw != null) return objectMapper.readValue(raw, Map.class);
+            return new HashMap<>();
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to set API key", e);
+        }
+    }
+
+    public Map<String, Object> markLearned(Long pdfImportId, String knowledgePointId) {
+        try {
+            Map<String, Object> req = new HashMap<>();
+            req.put("pdf_import_id", pdfImportId);
+            req.put("knowledge_point_id", knowledgePointId);
+            String body = objectMapper.writeValueAsString(req);
+            HttpHeaders headers = jsonHeaders();
+            HttpEntity<String> entity = new HttpEntity<>(body, headers);
+            String rawResponse = restTemplate.postForObject(baseUrl + "/api/learn/mark-learned", entity, String.class);
+            if (rawResponse != null) {
+                return objectMapper.readValue(rawResponse, Map.class);
+            }
+            return new HashMap<>();
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to mark learned", e);
+        }
+    }
+
+    // --- Test generation & evaluation ---
+
+    public Map<String, Object> generateTest(Object request) {
+        try {
+            String body = objectMapper.writeValueAsString(request);
+            HttpHeaders headers = jsonHeaders();
+            HttpEntity<String> entity = new HttpEntity<>(body, headers);
+            String rawResponse = restTemplate.postForObject(baseUrl + "/api/learn/generate-test", entity, String.class);
+            if (rawResponse != null) {
+                return objectMapper.readValue(rawResponse, Map.class);
+            }
+            return new HashMap<>();
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to generate test", e);
+        }
+    }
+
+    public Map<String, Object> evaluateTest(Object request) {
+        try {
+            String body = objectMapper.writeValueAsString(request);
+            HttpHeaders headers = jsonHeaders();
+            HttpEntity<String> entity = new HttpEntity<>(body, headers);
+            String rawResponse = restTemplate.postForObject(baseUrl + "/api/learn/evaluate-test", entity, String.class);
+            if (rawResponse != null) {
+                return objectMapper.readValue(rawResponse, Map.class);
+            }
+            return new HashMap<>();
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to evaluate test", e);
+        }
+    }
+
     public PdfParseResponse parsePdf(PdfParseRequest request) {
         try {
             String body = objectMapper.writeValueAsString(request);
-            HttpHeaders headers = new HttpHeaders();
-            headers.setContentType(MediaType.APPLICATION_JSON);
+            HttpHeaders headers = jsonHeaders();
             HttpEntity<String> entity = new HttpEntity<>(body, headers);
             return restTemplate.postForObject(baseUrl + "/api/pdf/parse-qa", entity, PdfParseResponse.class);
         } catch (JsonProcessingException e) {

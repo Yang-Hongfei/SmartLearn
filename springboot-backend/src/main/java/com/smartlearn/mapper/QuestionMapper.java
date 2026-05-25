@@ -54,4 +54,13 @@ public interface QuestionMapper {
 
     @Delete("DELETE FROM questions WHERE import_batch_id = #{batchId}")
     int deleteByBatchId(Long batchId);
+
+    @Select("SELECT * FROM questions WHERE knowledge_point_ids LIKE CONCAT('%\"', #{kpId}, '\"%') ORDER BY RAND() LIMIT 1")
+    Question findRandomByKnowledgePoint(@Param("kpId") String kpId);
+
+    @Select("SELECT * FROM questions WHERE import_batch_id = #{batchId}")
+    List<Question> findByBatchId(@Param("batchId") Long batchId);
+
+    @Select("SELECT DISTINCT topic FROM questions WHERE import_batch_id = #{batchId} AND topic != ''")
+    List<String> findTopicsByBatchId(@Param("batchId") Long batchId);
 }

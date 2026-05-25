@@ -57,5 +57,20 @@ CREATE TABLE IF NOT EXISTS pdf_imports (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE TABLE IF NOT EXISTS learn_progress (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT NOT NULL DEFAULT 1,
+    pdf_import_id BIGINT NOT NULL,
+    learning_path_json TEXT NOT NULL COMMENT '完整学习路径JSON',
+    current_node_index INT DEFAULT 0,
+    current_node_state VARCHAR(20) DEFAULT 'explain' COMMENT 'explain/quiz',
+    completed_nodes TEXT NULL COMMENT '已完成节点ID JSON数组',
+    reflection_log_json TEXT NULL COMMENT 'Reflection历史JSON',
+    quiz_history_json TEXT NULL COMMENT '答题历史JSON',
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE INDEX idx_lp_user_pdf (user_id, pdf_import_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 -- Insert a default user for practice
 INSERT IGNORE INTO users (id, username, password_hash, nickname) VALUES (1, 'default', '', '学习者');

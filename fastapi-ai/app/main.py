@@ -7,10 +7,11 @@
 """
 
 from contextlib import asynccontextmanager
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import rag, knowledge, learning_path, analysis, pdf_parse
-from app.services import kg_service
+from app.api import rag, knowledge, learning_path, analysis, pdf_parse, learning_agent
+from app.services import kg_service, llm_service
+from pydantic import BaseModel
 
 
 @asynccontextmanager
@@ -32,7 +33,7 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# CORS：允许 SpringBoot（任意端口）和 Streamlit（:8501）跨域请求
+# CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -41,15 +42,42 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+# Per-request API key: user's localStorage key via X-Api-Key header.
+# If no header, use the .env default (not the previous user's key).
+@app.middleware("http")
+async def per_request_api_key(request: Request, call_next):
+    key = request.headers.get("X-Api-Key", "")
+    llm_service.set_request_key(key if key else None)
+    response = await call_next(request)
+    return response
+
 # 注册 4 个路由模块，各自有独立的 prefix
 app.include_router(rag.router)            # /api/rag/*
 app.include_router(knowledge.router)       # /api/knowledge/*
 app.include_router(learning_path.router)   # /api/learning-path/*
 app.include_router(analysis.router)        # /api/analysis/*  ← SpringBoot 对接核心
 app.include_router(pdf_parse.router)       # /api/pdf/*       ← PDF 解析
+app.include_router(learning_agent.router)  # /api/learn/*     ← AI 带学 Agent
+
+
+class ApiKeyRequest(BaseModel):
+    api_key: str
 
 
 @app.get("/api/health")
 async def health():
-    """健康检查 —— Streamlit 侧边栏用此接口判断服务状态"""
     return {"status": "ok", "service": "SmartLearn AI"}
+
+
+@app.get("/api/config/api-key")
+async def get_api_key_status():
+    return llm_service.get_api_key_status()
+
+
+@app.post("/api/config/api-key")
+async def set_api_key(req: ApiKeyRequest):
+    ok = llm_service.update_api_key(req.api_key)
+    if not ok:
+        return {"status": "error", "message": "API Key 不能为空"}
+    return {"status": "ok", "message": "API Key 已更新", "masked": llm_service.get_api_key_status()["masked"]}

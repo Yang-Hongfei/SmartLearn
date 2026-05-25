@@ -8,15 +8,19 @@
 5. LLM 为每个节点生成一句话学习建议
 """
 
+from langchain_core.prompts import ChatPromptTemplate
 from app.services import kg_service, llm_service
 
-PATH_SYSTEM_PROMPT = """你是一个算法学习路径规划助手。根据知识图谱分析结果，生成简短的学习路径建议。
+PATH_PROMPT = ChatPromptTemplate.from_messages([
+    ("system", """你是一个算法学习路径规划助手。根据知识图谱分析结果，生成简短的学习路径建议。
 
 每个节点给出：
 1. 先学什么（前置知识点）
 2. 核心概念一句话说明
 3. 常见错误/注意事项
-用中文回答，保持每条建议在 150 字以内。"""
+用中文回答，保持每条建议在 150 字以内。"""),
+    ("human", "学习路径：{node_names}\n请为路径中每个知识点用一句话给出学习建议，格式：知识点名：建议内容"),
+])
 
 
 async def generate_learning_path(
@@ -71,11 +75,9 @@ async def generate_learning_path(
     # 阶段 3：LLM 为每个节点生成学习建议
     if path_nodes:
         node_names = " → ".join(n["name"] for n in path_nodes)
-        prompt = (
-            f"学习路径：{node_names}\n"
-            f"请为路径中每个知识点用一句话给出学习建议，格式：知识点名：建议内容"
-        )
-        suggestions = await llm_service.chat_simple(prompt, system=PATH_SYSTEM_PROMPT)
+        chain = PATH_PROMPT | llm_service.get_model()
+        response = await chain.ainvoke({"node_names": node_names})
+        suggestions = response.content or ""
     else:
         suggestions = ""
 
