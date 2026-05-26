@@ -20,6 +20,6 @@ mybatis:
 
 smartlearn:
   ai:
-    base-url: http://localhost:8000
+    base-url: http://127.0.0.1:8000
   upload:
     path: C:/Users/86134/Desktop/项目/SmartLearn智能刷题平台（独立全栈开发）/springboot-backend/uploads
