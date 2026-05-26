@@ -13,8 +13,8 @@ export const practiceApi = {
   records(params) {
     return client.get('/practice/records', { params })
   },
-  stats(userId) {
-    return client.get('/practice/stats', { params: { userId } })
+  stats() {
+    return client.get('/practice/stats')
   },
   aiAnalysis(recordId) {
     return client.post(`/practice/${recordId}/ai-analysis`)

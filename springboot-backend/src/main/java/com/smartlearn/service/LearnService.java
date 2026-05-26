@@ -3,6 +3,8 @@ package com.smartlearn.service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.smartlearn.client.AiServiceClient;
+import com.smartlearn.config.ApiKeyHolder;
+import com.smartlearn.config.UserContext;
 import com.smartlearn.mapper.LearnProgressMapper;
 import com.smartlearn.mapper.PdfImportMapper;
 import com.smartlearn.mapper.QuestionMapper;
@@ -32,7 +34,7 @@ public class LearnService {
     }
 
     public Map<String, Object> generatePlan(Long pdfImportId) {
-        Long userId = 1L;
+        Long userId = UserContext.getUserId();
         PdfImport pdf = pdfImportMapper.findById(pdfImportId);
         if (pdf == null) throw new RuntimeException("PDF not found");
 
@@ -53,6 +55,11 @@ public class LearnService {
             qMap.put("difficulty", q.getDifficulty());
             qMap.put("correctAnswer", q.getCorrectAnswer());
             questionList.add(qMap);
+        }
+
+        // Fail early if no API key configured
+        if (ApiKeyHolder.get() == null || ApiKeyHolder.get().isEmpty()) {
+            throw new RuntimeException("请先配置 DeepSeek API Key。点击右上角「设置」按钮，输入您的 API Key 即可使用 AI 功能。");
         }
 
         // Send all questions to FastAPI for LLM to read, summarize, and plan
@@ -77,6 +84,7 @@ public class LearnService {
 
         LearnProgress existing = learnProgressMapper.findByUserAndPdf(userId, pdfImportId);
         if (existing != null) {
+            progress.setId(existing.getId());
             learnProgressMapper.update(progress);
         } else {
             learnProgressMapper.insert(progress);
@@ -89,7 +97,7 @@ public class LearnService {
     }
 
     public Map<String, Object> getProgress(Long pdfImportId) {
-        Long userId = 1L;
+        Long userId = UserContext.getUserId();
         LearnProgress progress = learnProgressMapper.findByUserAndPdf(userId, pdfImportId);
         if (progress == null) return null;
 
@@ -126,7 +134,7 @@ public class LearnService {
     }
 
     public List<Map<String, Object>> listProgress() {
-        Long userId = 1L;
+        Long userId = UserContext.getUserId();
         List<LearnProgress> list = learnProgressMapper.findByUser(userId);
         List<Map<String, Object>> result = new ArrayList<>();
         for (LearnProgress p : list) {
@@ -152,9 +160,13 @@ public class LearnService {
     }
 
     public Map<String, Object> submitAnswer(LearnSubmitRequest req) {
-        Long userId = 1L;
+        Long userId = UserContext.getUserId();
         LearnProgress progress = learnProgressMapper.findByUserAndPdf(userId, req.getPdfImportId());
         if (progress == null) throw new RuntimeException("No learning progress found");
+
+        if (ApiKeyHolder.get() == null || ApiKeyHolder.get().isEmpty()) {
+            throw new RuntimeException("请先配置 DeepSeek API Key。点击右上角「设置」按钮，输入您的 API Key 即可使用 AI 功能。");
+        }
 
         if (req.getCorrectAnswer() == null && req.getQuestion() != null) {
             Object ca = req.getQuestion().get("correctAnswer");
@@ -215,7 +227,7 @@ public class LearnService {
     }
 
     public Map<String, Object> markLearned(LearnMarkLearnedRequest req) {
-        Long userId = 1L;
+        Long userId = UserContext.getUserId();
         LearnProgress progress = learnProgressMapper.findByUserAndPdf(userId, req.getPdfImportId());
         if (progress == null) throw new RuntimeException("No learning progress found");
 
@@ -304,7 +316,7 @@ public class LearnService {
     }
 
     public Map<String, Object> generateTest(Long pdfImportId) {
-        Long userId = 1L;
+        Long userId = UserContext.getUserId();
         LearnProgress progress = learnProgressMapper.findByUserAndPdf(userId, pdfImportId);
         if (progress == null) throw new RuntimeException("No learning progress found");
 
@@ -367,7 +379,7 @@ public class LearnService {
     }
 
     public Map<String, Object> evaluateTest(Long pdfImportId, List<Map<String, Object>> answers, double threshold) {
-        Long userId = 1L;
+        Long userId = UserContext.getUserId();
         LearnProgress progress = learnProgressMapper.findByUserAndPdf(userId, pdfImportId);
         if (progress == null) throw new RuntimeException("No learning progress found");
 
@@ -424,7 +436,7 @@ public class LearnService {
     }
 
     public void deleteProgress(Long pdfImportId) {
-        Long userId = 1L;
+        Long userId = UserContext.getUserId();
         learnProgressMapper.deleteByUserAndPdf(userId, pdfImportId);
     }
 }

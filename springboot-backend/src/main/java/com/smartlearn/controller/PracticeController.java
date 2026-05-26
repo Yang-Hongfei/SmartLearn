@@ -1,5 +1,6 @@
 package com.smartlearn.controller;
 
+import com.smartlearn.config.UserContext;
 import com.smartlearn.model.dto.*;
 import com.smartlearn.model.entity.PracticeRecord;
 import com.smartlearn.service.PracticeService;
@@ -18,6 +19,7 @@ public class PracticeController {
 
     @PostMapping("/submit")
     public ApiResponse<PracticeSubmitResultDTO> submit(@RequestBody PracticeSubmitDTO dto) {
+        dto.setUserId(UserContext.getUserId());
         return ApiResponse.success(practiceService.submitAnswer(dto));
     }
 
@@ -34,15 +36,16 @@ public class PracticeController {
 
     @GetMapping("/records")
     public ApiResponse<PageResult<PracticeRecord>> records(
-            @RequestParam Long userId,
             @RequestParam(required = false) String status,
             @RequestParam(defaultValue = "1") int page,
             @RequestParam(defaultValue = "20") int size) {
+        Long userId = UserContext.getUserId();
         return ApiResponse.success(practiceService.getRecords(userId, status, page, size));
     }
 
     @GetMapping("/stats")
-    public ApiResponse<PracticeStatsDTO> stats(@RequestParam Long userId) {
+    public ApiResponse<PracticeStatsDTO> stats() {
+        Long userId = UserContext.getUserId();
         return ApiResponse.success(practiceService.getStats(userId));
     }
 

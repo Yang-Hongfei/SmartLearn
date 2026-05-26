@@ -4,7 +4,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 public class PracticeSubmitDTO {
-    @NotNull private Long userId;
+    private Long userId;
     @NotNull private Long questionId;
     private String userAnswer;
     @NotBlank private String judgeMode;

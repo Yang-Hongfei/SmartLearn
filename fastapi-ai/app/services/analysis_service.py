@@ -70,6 +70,9 @@ async def analyze_answer(
 ) -> dict:
     """Analyze one answer submission. Returns enriched diagnosis dict."""
 
+    # 0. Guard: API key must be configured
+    llm_service.require_api_key()
+
     # 1. Rule-based judge
     is_correct = _judge(question_type, user_answer, correct_answer)
 
@@ -152,4 +155,12 @@ def _judge(question_type: str, user_answer: str, correct_answer: str) -> bool:
     ca = correct_answer.strip().upper()
     if question_type in ("single_choice", "true_false"):
         return ua == ca
-    return ua == ca or ca in ua or ua in ca
+    # For fill_blank / essay: exact match first, then contains with length guard
+    # to avoid trivial substring matches (e.g. "A" matching "Java")
+    if ua == ca:
+        return True
+    shorter = ua if len(ua) < len(ca) else ca
+    longer = ca if len(ua) < len(ca) else ua
+    if len(shorter) >= 2 and shorter in longer:
+        return True
+    return False

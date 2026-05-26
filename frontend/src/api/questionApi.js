@@ -7,8 +7,8 @@ export const questionApi = {
   getById(id) {
     return client.get(`/questions/${id}`)
   },
-  random(userId) {
-    return client.get('/questions/random', { params: { userId } })
+  random() {
+    return client.get('/questions/random')
   },
   next(currentId, topic = '') {
     return client.get('/questions/next', { params: { currentId, topic } })
@@ -22,8 +22,8 @@ export const questionApi = {
   topics() {
     return client.get('/questions/topics')
   },
-  incorrect(userId) {
-    return client.get('/questions/incorrect', { params: { userId } })
+  incorrect() {
+    return client.get('/questions/incorrect')
   },
   delete(id) {
     return client.delete(`/questions/${id}`)

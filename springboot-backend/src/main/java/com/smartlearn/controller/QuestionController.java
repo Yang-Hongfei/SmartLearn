@@ -1,5 +1,6 @@
 package com.smartlearn.controller;
 
+import com.smartlearn.config.UserContext;
 import com.smartlearn.model.dto.ApiResponse;
 import com.smartlearn.model.dto.PageResult;
 import com.smartlearn.model.entity.Question;
@@ -32,7 +33,8 @@ public class QuestionController {
     }
 
     @GetMapping("/random")
-    public ApiResponse<Question> random(@RequestParam(required = false) Long userId) {
+    public ApiResponse<Question> random() {
+        Long userId = UserContext.getUserId();
         Question q = questionService.getRandom(userId);
         if (q == null) return ApiResponse.error(404, "题库为空");
         return ApiResponse.success(q);
@@ -75,7 +77,8 @@ public class QuestionController {
     }
 
     @GetMapping("/incorrect")
-    public ApiResponse<List<Question>> incorrect(@RequestParam Long userId) {
+    public ApiResponse<List<Question>> incorrect() {
+        Long userId = UserContext.getUserId();
         return ApiResponse.success(questionService.getIncorrectQuestions(userId));
     }
 

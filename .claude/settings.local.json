@@ -19,7 +19,14 @@
       "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); q=d['data']; print\\(f'Random Q: {q[\\\\\"content\\\\\"][:80]}...'\\)\")",
       "Bash(netstat -ano)",
       "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); [print\\(f'ID:{r[\\\\\"id\\\\\"]} file:{r[\\\\\"filename\\\\\"]} pages:{r[\\\\\"totalPages\\\\\"]} chunks:{r[\\\\\"totalChunks\\\\\"]} Q:{r[\\\\\"questionsExtracted\\\\\"]} status:{r[\\\\\"status\\\\\"]}'\\) for r in d['data']['records'][:5]]\")",
-      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f'Total: {d[\\\\\"data\\\\\"][\\\\\"total\\\\\"]} questions'\\)\")"
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f'Total: {d[\\\\\"data\\\\\"][\\\\\"total\\\\\"]} questions'\\)\")",
+      "Bash(npm run *)",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('app/api/learning_agent.py'\\).read\\(\\)\\); print\\('OK'\\)\")",
+      "Bash(python *)",
+      "Bash(mvn spring-boot:run)",
+      "Bash(pip install *)",
+      "Bash(pip list *)",
+      "Bash(mvn test *)"
     ]
   }
 }

@@ -3,6 +3,8 @@ package com.smartlearn.service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.smartlearn.client.AiServiceClient;
+import com.smartlearn.config.ApiKeyHolder;
+import com.smartlearn.config.UserContext;
 import com.smartlearn.mapper.PracticeRecordMapper;
 import com.smartlearn.model.entity.PracticeRecord;
 import com.smartlearn.model.entity.Question;
@@ -32,6 +34,10 @@ public class PracticeService {
 
     @Transactional
     public PracticeSubmitResultDTO submitAnswer(PracticeSubmitDTO dto) {
+        // Ensure userId — trust controller override, but fallback to UserContext
+        if (dto.getUserId() == null) {
+            dto.setUserId(UserContext.getUserId());
+        }
         Question question = questionService.findById(dto.getQuestionId());
         if (question == null) throw new RuntimeException("题目不存在");
 
@@ -72,6 +78,9 @@ public class PracticeService {
         } else if ("ai".equals(judgeMode)) {
             record.setUserAnswer(dto.getUserAnswer());
             record.setJudgeMode("ai");
+            if (ApiKeyHolder.get() == null || ApiKeyHolder.get().isEmpty()) {
+                throw new RuntimeException("请先配置 DeepSeek API Key。点击右上角「设置」按钮，输入您的 API Key 即可使用 AI 判题功能。");
+            }
             String[] kpIds = parseJsonArray(question.getKnowledgePointIds());
             String[] options = parseJsonArray(question.getOptions());
             try {
@@ -185,9 +194,22 @@ public class PracticeService {
         else recordMapper.update(record);
     }
 
-    private boolean autoJudge(String type, String userAnswer, String correctAnswer) {
+    // package-private for testability
+    boolean autoJudge(String type, String userAnswer, String correctAnswer) {
         if (userAnswer == null) return false;
-        return userAnswer.trim().equalsIgnoreCase(correctAnswer.trim());
+        String ua = userAnswer.trim();
+        String ca = correctAnswer.trim();
+        if ("essay".equals(type)) {
+            // Auto-judge cannot reliably score essays; default to false
+            // so user is prompted to self-judge instead.
+            return false;
+        }
+        if ("fill_blank".equals(type)) {
+            // For fill-blank, do exact case-insensitive match (answers are short).
+            return ua.equalsIgnoreCase(ca);
+        }
+        // single_choice / true_false: exact case-insensitive match
+        return ua.equalsIgnoreCase(ca);
     }
 
     private String[] parseJsonArray(String json) {
