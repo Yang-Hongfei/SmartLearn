@@ -103,7 +103,7 @@ npm install && npm run dev
 
 ### 登录
 
-![image-20260526105643266](C:\Users\86134\AppData\Roaming\Typora\typora-user-images\image-20260526105643266.png)
+![image-20260526105643266](imgs\image-20260526105643266.png)
 
 ### 首页
 
