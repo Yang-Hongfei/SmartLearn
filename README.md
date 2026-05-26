@@ -109,7 +109,7 @@ npm install && npm run dev
 
 项目入口，提供「智能刷题」和「AI 带学」两个路径。右上角齿轮图标可配置 API Key。
 
-![image-20260526105811721](C:\Users\86134\AppData\Roaming\Typora\typora-user-images\image-20260526105811721.png)
+![image-20260526105811721](imgs\image-20260526105811721.png)
 
 ### 智能刷题
 
@@ -117,7 +117,7 @@ npm install && npm run dev
 
 AI 判题流程：规则预判 → LLM 语义分析 → Neo4j 知识点补全 → 学习路径生成。
 
-![image-20260526105832845](C:\Users\86134\AppData\Roaming\Typora\typora-user-images\image-20260526105832845.png)
+![image-20260526105832845](imgs\image-20260526105832845.png)
 
 ### AI 带学（核心亮点）
 
@@ -134,21 +134,21 @@ AI 判题流程：规则预判 → LLM 语义分析 → Neo4j 知识点补全 �
 
 支持断点续学：退出后自动恢复进度，答题中的题目精确还原。
 
-![image-20260526105920135](C:\Users\86134\AppData\Roaming\Typora\typora-user-images\image-20260526105920135.png)
+![image-20260526105920135](imgs\image-20260526105920135.png)
 
-![image-20260526105938785](C:\Users\86134\AppData\Roaming\Typora\typora-user-images\image-20260526105938785.png)
+![image-20260526105938785](imgs\image-20260526105938785.png)
 
 ### PDF 导入
 
 上传 PDF → PDFBox 提取文本 → 分块 → FastAPI LangChain ChatPromptTemplate 提取 Q&A 对 → 去重入库。
 
-![image-20260526105849755](C:\Users\86134\AppData\Roaming\Typora\typora-user-images\image-20260526105849755.png)
+![image-20260526105849755](imgs\image-20260526105849755.png)
 
 ### API Key 管理
 
 前端任意页面的齿轮图标均可配置。Key 按请求隔离：每个用户浏览器的 localStorage 独立存储，通过 `X-Api-Key` 请求头传递，后端正则表达式过滤器 + FastAPI 中间件确保不同用户的 Key 互不干扰。
 
-![image-20260526110020863](C:\Users\86134\AppData\Roaming\Typora\typora-user-images\image-20260526110020863.png)
+![image-20260526110020863](imgs\image-20260526110020863.png)
 
 ## API 接口
 
