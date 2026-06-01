@@ -2,9 +2,12 @@
 import { ref, onMounted } from 'vue'
 import { configApi } from '../../api/configApi'
 import { ElMessage } from 'element-plus'
+import { useGsapModal } from '../../composables/useGsapModal'
 
-defineProps({ visible: Boolean })
+const props = defineProps({ visible: Boolean })
 const emit = defineEmits(['close'])
+
+const { show, overlayRef, dialogRef } = useGsapModal(() => props.visible)
 
 const apiKey = ref('')
 const status = ref(null)
@@ -16,7 +19,6 @@ async function loadStatus() {
   try {
     status.value = await configApi.getApiKeyStatus()
   } catch (e) { /* ignore */ }
-  // Auto-configure from localStorage on mount
   if (saved) {
     try { await configApi.setApiKey(saved) } catch (e) { /* ignore */ }
   }
@@ -50,8 +52,8 @@ onMounted(loadStatus)
 </script>
 
 <template>
-  <div v-if="visible" class="soverlay" @click.self="emit('close')">
-    <div class="sdialog">
+  <div v-if="show" ref="overlayRef" class="soverlay" @click.self="emit('close')">
+    <div ref="dialogRef" class="sdialog">
       <div class="sdialog-header">
         <h3>设置</h3>
         <button class="sdialog-close" @click="emit('close')">&times;</button>

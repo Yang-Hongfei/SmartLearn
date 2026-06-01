@@ -1,14 +1,18 @@
 <script setup>
-defineProps({ result: Object, visible: Boolean })
-defineEmits(['close'])
+import { useGsapModal } from '../../composables/useGsapModal'
+
+const props = defineProps({ result: Object, visible: Boolean })
+const emit = defineEmits(['close'])
+
+const { show, overlayRef, dialogRef } = useGsapModal(() => props.visible)
 </script>
 
 <template>
-  <div v-if="visible" class="modal-overlay" @click.self="$emit('close')">
-    <div class="modal">
+  <div v-if="show" ref="overlayRef" class="modal-overlay" @click.self="emit('close')">
+    <div ref="dialogRef" class="modal">
       <div class="modal-header">
         <h3 class="modal-title">导入结果</h3>
-        <button class="modal-close" @click="$emit('close')">&times;</button>
+        <button class="modal-close" @click="emit('close')">&times;</button>
       </div>
       <div v-if="result" class="modal-body">
         <div class="modal-row"><span class="modal-label">文件名</span><span>{{ result.filename }}</span></div>

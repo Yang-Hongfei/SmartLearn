@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import gsap from 'gsap'
 
 defineProps({
   entries: { type: Array, default: () => [] },
@@ -11,6 +12,18 @@ function scoreWide(score) {
   if (score == null) return 0
   return Math.round(score * 100)
 }
+
+function onItemEnter(el, done) {
+  gsap.fromTo(el, { opacity: 0, x: 20, height: 0 }, {
+    opacity: 1, x: 0, height: 'auto',
+    duration: 0.35, ease: 'power2.out',
+    onComplete: done,
+  })
+}
+
+function onItemLeave(el, done) {
+  gsap.to(el, { opacity: 0, x: -10, duration: 0.2, ease: 'power2.in', onComplete: done })
+}
 </script>
 
 <template>
@@ -21,7 +34,14 @@ function scoreWide(score) {
       <span class="reflection-count">{{ entries.length }}</span>
     </button>
 
-    <div class="reflection-list" v-show="!collapsed">
+    <TransitionGroup
+      v-show="!collapsed"
+      tag="div"
+      class="reflection-list"
+      @enter="onItemEnter"
+      @leave="onItemLeave"
+      appear
+    >
       <div v-for="(entry, idx) in entries" :key="idx" class="reflection-item">
         <div class="reflection-score-row" v-if="entry.score != null">
           <span class="reflection-score" :class="{
@@ -40,7 +60,7 @@ function scoreWide(score) {
           {{ entry.conclusion === 'forward' ? '前进' : entry.conclusion === 'reinforce' ? '巩固' : '回退' }}
         </span>
       </div>
-    </div>
+    </TransitionGroup>
   </div>
 </template>
 

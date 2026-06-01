@@ -1,7 +1,8 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, nextTick, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElMessage, ElMessageBox } from 'element-plus'
+import gsap from 'gsap'
 import { pdfApi } from '../api/pdfApi'
 import { learnApi } from '../api/learnApi'
 import { logout } from '../api/authApi'
@@ -11,12 +12,39 @@ const imports = ref([])
 const progressMap = ref({})
 const uploading = ref(false)
 const loading = ref(true)
+const gridRef = ref(null)
 
 const resumeList = computed(() =>
   imports.value.filter(p => progressMap.value[p.id])
 )
 
 const hasProgress = computed(() => resumeList.value.length > 0)
+
+// Stagger cards — call after data loads
+async function animateCards() {
+  await nextTick()
+  if (!gridRef.value) return
+  const cards = gridRef.value.querySelectorAll('.pdf-card:not(.pdf-card--upload)')
+  if (cards.length === 0) return
+  gsap.fromTo(cards, { opacity: 0, y: 20, scale: 0.97 }, {
+    opacity: 1, y: 0, scale: 1,
+    duration: 0.4,
+    stagger: 0.06,
+    ease: 'power2.out',
+  })
+}
+
+// Also animate the upload card separately
+async function animateUploadCard() {
+  await nextTick()
+  if (!gridRef.value) return
+  const uploadCard = gridRef.value.querySelector('.pdf-card--upload')
+  if (uploadCard) {
+    gsap.fromTo(uploadCard, { opacity: 0, scale: 0.95 }, {
+      opacity: 1, scale: 1, duration: 0.35, ease: 'back.out(1.7)',
+    })
+  }
+}
 
 async function loadData() {
   loading.value = true
@@ -30,10 +58,15 @@ async function loadData() {
       progressMap.value = {}
       progList.forEach(p => { progressMap.value[p.pdfImportId] = p })
     }
+    // Trigger DOM render first, then animate
+    loading.value = false
+    await nextTick()
+    animateCards()
+    animateUploadCard()
   } catch (e) {
     ElMessage.error(e.message)
+    loading.value = false
   }
-  loading.value = false
 }
 
 async function handleUpload(file) {
@@ -91,59 +124,61 @@ onMounted(loadData)
       </div>
 
       <template v-else>
-        <section v-if="hasProgress" class="resume-section">
-          <h2 class="section-heading">继续学习</h2>
-          <div class="pdf-grid">
-            <div
-              v-for="pdf in resumeList" :key="pdf.id"
-              class="pdf-card pdf-card--resume"
-              @click="handleSelect(pdf)"
-            >
-              <button class="pdf-card-delete" @click="handleDelete(pdf, $event)" title="删除学习记录">&times;</button>
-              <div class="pdf-card-name">{{ pdf.filename }}</div>
-              <div class="pdf-card-meta">
-                已学 {{ progressMap[pdf.id]?.completedCount || 0 }}/{{ progressMap[pdf.id]?.totalNodes || 0 }} 节点
+        <div ref="gridRef">
+          <section v-if="hasProgress" class="resume-section">
+            <h2 class="section-heading">继续学习</h2>
+            <div class="pdf-grid">
+              <div
+                v-for="pdf in resumeList" :key="pdf.id"
+                class="pdf-card pdf-card--resume"
+                @click="handleSelect(pdf)"
+              >
+                <button class="pdf-card-delete" @click="handleDelete(pdf, $event)" title="删除学习记录">&times;</button>
+                <div class="pdf-card-name">{{ pdf.filename }}</div>
+                <div class="pdf-card-meta">
+                  已学 {{ progressMap[pdf.id]?.completedCount || 0 }}/{{ progressMap[pdf.id]?.totalNodes || 0 }} 节点
+                </div>
+                <div class="pdf-card-time">{{ progressMap[pdf.id]?.updatedAt }}</div>
               </div>
-              <div class="pdf-card-time">{{ progressMap[pdf.id]?.updatedAt }}</div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section class="all-section">
-          <h2 class="section-heading">{{ hasProgress ? '全部题库' : '选择题库开始学习' }}</h2>
-          <div class="pdf-grid">
-            <label class="pdf-card pdf-card--upload">
-              <input
-                type="file" accept=".pdf" style="display:none"
-                @change="e => e.target.files[0] && handleUpload(e.target.files[0])"
-              />
-              <span class="upload-icon">+</span>
-              <span class="upload-text">{{ uploading ? '上传中...' : '上传新题库' }}</span>
-            </label>
+          <section class="all-section">
+            <h2 class="section-heading">{{ hasProgress ? '全部题库' : '选择题库开始学习' }}</h2>
+            <div class="pdf-grid">
+              <label class="pdf-card pdf-card--upload">
+                <input
+                  type="file" accept=".pdf" style="display:none"
+                  @change="e => e.target.files[0] && handleUpload(e.target.files[0])"
+                />
+                <span class="upload-icon">+</span>
+                <span class="upload-text">{{ uploading ? '上传中...' : '上传新题库' }}</span>
+              </label>
 
-            <div
-              v-for="pdf in imports" :key="pdf.id"
-              class="pdf-card"
-              @click="handleSelect(pdf)"
-            >
-              <button
-                v-if="progressMap[pdf.id]"
-                class="pdf-card-delete"
-                @click="handleDelete(pdf, $event)"
-                title="删除学习记录"
-              >&times;</button>
-              <div class="pdf-card-name">{{ pdf.filename }}</div>
-              <div class="pdf-card-meta" v-if="progressMap[pdf.id]">
-                已学 {{ progressMap[pdf.id].completedCount }}/{{ progressMap[pdf.id].totalNodes }} 节点
+              <div
+                v-for="pdf in imports" :key="pdf.id"
+                class="pdf-card"
+                @click="handleSelect(pdf)"
+              >
+                <button
+                  v-if="progressMap[pdf.id]"
+                  class="pdf-card-delete"
+                  @click="handleDelete(pdf, $event)"
+                  title="删除学习记录"
+                >&times;</button>
+                <div class="pdf-card-name">{{ pdf.filename }}</div>
+                <div class="pdf-card-meta" v-if="progressMap[pdf.id]">
+                  已学 {{ progressMap[pdf.id].completedCount }}/{{ progressMap[pdf.id].totalNodes }} 节点
+                </div>
+                <div class="pdf-card-meta pdf-card-meta--dim" v-else>未开始</div>
               </div>
-              <div class="pdf-card-meta pdf-card-meta--dim" v-else>未开始</div>
             </div>
-          </div>
 
-          <div v-if="imports.length === 0 && !uploading" class="empty-hint">
-            还没有题库，上传第一份 PDF 开始 AI 带学
-          </div>
-        </section>
+            <div v-if="imports.length === 0 && !uploading" class="empty-hint">
+              还没有题库，上传第一份 PDF 开始 AI 带学
+            </div>
+          </section>
+        </div>
       </template>
     </div>
   </div>
@@ -218,6 +253,7 @@ onMounted(loadData)
   color: inherit;
   transition: border-color 0.15s, box-shadow 0.15s;
   position: relative;
+  opacity: 0; /* hidden until GSAP stagger reveals */
 }
 .pdf-card:hover {
   border-color: #9ca3af;
@@ -237,6 +273,7 @@ onMounted(loadData)
   background: transparent;
   min-height: 96px;
   cursor: pointer;
+  opacity: 0; /* hidden until GSAP reveals */
 }
 .pdf-card--upload:hover { border-color: #9ca3af; background: #fafafa; }
 

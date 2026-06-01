@@ -1,16 +1,31 @@
 <script setup>
 import { ref } from 'vue'
+import gsap from 'gsap'
 
 defineProps({ options: Array })
 const emit = defineEmits(['select'])
 
 const selected = ref('')
-function select(opt) { selected.value = opt; emit('select', opt) }
+
+function select(opt, event) {
+  selected.value = opt
+  emit('select', opt)
+  // Bounce the clicked button
+  if (event?.currentTarget) {
+    gsap.fromTo(event.currentTarget, { scale: 1 }, { scale: 0.96, duration: 0.08, yoyo: true, repeat: 1, ease: 'power2.inOut' })
+  }
+}
 </script>
 
 <template>
   <div class="options">
-    <button v-for="(opt, idx) in options" :key="idx" class="option" :class="{ 'option--selected': selected === opt }" @click="select(opt)">
+    <button
+      v-for="(opt, idx) in options"
+      :key="idx"
+      class="option"
+      :class="{ 'option--selected': selected === opt }"
+      @click="select(opt, $event)"
+    >
       <span class="option-letter">{{ String.fromCharCode(65 + idx) }}</span>
       <span class="option-text">{{ opt }}</span>
     </button>

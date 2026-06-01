@@ -1,11 +1,15 @@
 <script setup>
-defineProps({ visible: Boolean })
+import { useGsapModal } from '../../composables/useGsapModal'
+
+const props = defineProps({ visible: Boolean })
 const emit = defineEmits(['choose', 'close'])
+
+const { show, overlayRef, dialogRef } = useGsapModal(() => props.visible)
 </script>
 
 <template>
-  <div v-if="visible" class="judge-overlay" @click.self="emit('close')">
-    <div class="judge-dialog">
+  <div v-if="show" ref="overlayRef" class="judge-overlay" @click.self="emit('close')">
+    <div ref="dialogRef" class="judge-dialog">
       <h3 class="judge-dialog-title">选择判题方式</h3>
       <p class="judge-dialog-desc">问答题无法自动判题，请选择：</p>
       <button class="judge-choice" @click="emit('choose', 'self')">查看答案（自主判题）</button>

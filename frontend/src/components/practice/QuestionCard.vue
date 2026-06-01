@@ -1,5 +1,6 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, watch, ref, nextTick } from 'vue'
+import gsap from 'gsap'
 import ChoiceOptionList from './ChoiceOptionList.vue'
 import FillBlankInput from './FillBlankInput.vue'
 import { QUESTION_TYPES } from '../../utils/constants.js'
@@ -9,6 +10,23 @@ const emit = defineEmits(['update:answer'])
 
 const isChoice = computed(() =>
   props.question?.type === 'single_choice' || props.question?.type === 'true_false'
+)
+
+const correctRef = ref(null)
+
+// Animate correct answer section appearing
+watch(
+  () => props.showCorrectAnswer,
+  async (val) => {
+    if (!val) return
+    await nextTick()
+    if (correctRef.value) {
+      gsap.fromTo(correctRef.value, { opacity: 0, y: 10, height: 0 }, {
+        opacity: 1, y: 0, height: 'auto',
+        duration: 0.4, ease: 'power2.out',
+      })
+    }
+  }
 )
 
 function parseOptions(opts) {
@@ -32,7 +50,7 @@ function parseOptions(opts) {
     <div v-else class="qcard-answer">
       <FillBlankInput @update:model-value="(v) => emit('update:answer', v)" />
     </div>
-    <div v-if="showCorrectAnswer && question.correctAnswer" class="qcard-correct">
+    <div v-if="showCorrectAnswer && question.correctAnswer" ref="correctRef" class="qcard-correct">
       <div class="correct-label">标准答案</div>
       <div class="correct-text">{{ question.correctAnswer }}</div>
     </div>

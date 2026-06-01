@@ -1,7 +1,8 @@
 <script setup>
-import { ref, computed, watch, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed, watch, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
+import gsap from 'gsap'
 import ModeSelector from '../components/practice/ModeSelector.vue'
 import QuestionCard from '../components/practice/QuestionCard.vue'
 import ActionBar from '../components/practice/ActionBar.vue'
@@ -39,6 +40,8 @@ const topics = ref([])
 const selectedTopic = ref('')
 const showSettings = ref(false)
 
+const questionAreaRef = ref(null)
+
 function onOpenSettings() { showSettings.value = true }
 async function handleLogout() { await logout(); router.push('/login') }
 onMounted(() => window.addEventListener('open-settings', onOpenSettings))
@@ -48,6 +51,17 @@ const incorrectIds = ref([])
 
 const isEssay = computed(() => question.value?.type === 'essay')
 const showAiBtn = computed(() => submitted.value && currentRecordId.value)
+
+// Animate question card entrance when question loads
+watch(question, async (q) => {
+  if (!q) return
+  await nextTick()
+  if (questionAreaRef.value) {
+    gsap.fromTo(questionAreaRef.value, { opacity: 0, y: 16 }, {
+      opacity: 1, y: 0, duration: 0.35, ease: 'power2.out',
+    })
+  }
+})
 
 async function loadRandomQuestion() {
   loading.value = true; resetState()
@@ -191,7 +205,7 @@ onMounted(() => { loadStats(); loadTotalCount(); loadTopics(); loadRandomQuestio
           <div class="skeleton-line skeleton-line--short"></div>
         </div>
 
-        <div v-else-if="question" class="question-area">
+        <div v-else-if="question" ref="questionAreaRef" class="question-area">
           <QuestionCard :question="question" :show-correct-answer="showCorrectAnswer" @update:answer="(v) => answer = v" />
           <ActionBar :answer="answer" :submitted="submitted" :show-ai-btn="showAiBtn" :loading="submitting" @submit="handleSubmit" @skip="handleSkip" @learned="handleLearned" @ai-analysis="handleAiAnalysis" />
           <SelfJudgePanel :visible="showSelfJudge" @judge="handleSelfJudge" />

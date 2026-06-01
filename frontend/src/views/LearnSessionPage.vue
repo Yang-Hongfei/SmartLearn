@@ -1,7 +1,8 @@
 <script setup>
-import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
 import { ElMessage } from 'element-plus'
+import gsap from 'gsap'
 import SettingsModal from '../components/common/SettingsModal.vue'
 import SessionTopBar from '../components/learn/SessionTopBar.vue'
 import ExplainView from '../components/learn/ExplainView.vue'
@@ -15,8 +16,9 @@ const route = useRoute()
 const pdfId = ref(route.query.pdfId || '')
 const pdfName = ref('')
 
-// 'planning' | 'explain' | 'quiz' | 'reflecting' | 'done' | 'testing' | 'evaluating' | 'passed'
+// 'planning' | 'explain' | 'quiz' | 'reflecting' | 'done' | 'testing' | 'evaluating' | 'passed' | 'result'
 const status = ref('planning')
+const prevStatus = ref('')
 const learningPath = ref([])
 const currentNodeIndex = ref(0)
 const currentNodeState = ref('explain')
@@ -33,7 +35,7 @@ const testQuestions = ref([])
 const testIndex = ref(0)
 const testAnswers = ref([])
 const testResult = ref(null)
-const pendingAction = ref('')    // 'forward' | 'reinforce' | 'rollback' — what to do after user views result
+const pendingAction = ref('')    // 'forward' | 'reinforce' | 'rollback'
 const lastScore = ref(null)      // { score, level, summary, isCorrect }
 const showSettings = ref(false)
 const rollbackTargetId = ref('')
@@ -51,6 +53,72 @@ const explainKey = ref(0)
 const quizKey = ref(0)
 const testKey = ref(0)
 
+// ---- Transition direction tracking ----
+// Determine if the transition is "forward" or "backward" for animation
+const forwardTransitions = new Set([
+  'planning→explain', 'explain→quiz', 'quiz→reflecting',
+  'reflecting→result', 'result→explain', 'result→quiz',
+  'done→testing', 'testing→evaluating', 'evaluating→passed',
+  'evaluating→done', 'quiz→result',
+])
+
+function getTransitionDirection(from, to) {
+  if (forwardTransitions.has(`${from}→${to}`)) return 'forward'
+  return 'backward'
+}
+
+// ---- GSAP transition hooks for session-main content ----
+function onContentEnter(el, done) {
+  const dir = getTransitionDirection(prevStatus.value, status.value)
+  const yStart = dir === 'forward' ? 18 : -18
+  gsap.fromTo(el, { opacity: 0, y: yStart }, {
+    opacity: 1, y: 0, duration: 0.3, ease: 'power2.out',
+    onComplete() {
+      // After content enters, animate score counter if on result page
+      if (status.value === 'result' && lastScore.value) {
+        animateScoreCounter(el)
+      }
+      done()
+    }
+  })
+}
+
+function onContentLeave(el, done) {
+  const dir = getTransitionDirection(prevStatus.value, status.value)
+  const yEnd = dir === 'forward' ? -10 : 10
+  gsap.to(el, { opacity: 0, y: yEnd, duration: 0.18, ease: 'power2.in', onComplete: done })
+}
+
+// ---- Score counter animation ----
+function animateScoreCounter(el) {
+  const pctEl = el.querySelector('.result-pct--anim')
+  if (!pctEl || !lastScore.value) return
+  const target = Math.round((lastScore.value.score || 0) * 100)
+  gsap.fromTo(pctEl, { innerText: 0 }, {
+    innerText: target,
+    duration: 0.8,
+    ease: 'power2.out',
+    snap: { innerText: 1 },
+    onUpdate() {
+      // Force integer display
+      const val = Math.round(parseFloat(pctEl.innerText) || 0)
+      pctEl.innerText = val + '%'
+    },
+    onComplete() {
+      pctEl.innerText = target + '%'
+    }
+  })
+}
+
+// ---- Content transition key ----
+// Forces Vue Transition to re-fire on every status change
+const contentKey = ref(0)
+watch(status, (newVal, oldVal) => {
+  if (oldVal) prevStatus.value = oldVal
+  contentKey.value++
+})
+
+// ---- Status watchers ----
 watch(status, (val) => {
   if (val === 'reflecting' || val === 'evaluating') {
     reflectingStart.value = Date.now()
@@ -79,11 +147,9 @@ async function initSession() {
       currentNodeState.value = prog.currentNodeState || 'explain'
       reflectionLog.value = prog.reflectionLog || []
       if (currentNodeState.value === 'quiz' && prog.currentQuestion) {
-        // Resume in quiz state — restore the exact same question
         currentQuestion.value = prog.currentQuestion
         status.value = 'quiz'
       } else if (currentNodeState.value === 'quiz') {
-        // Fallback: no saved question, load a new one
         status.value = 'planning'
         await handleLearned()
       } else {
@@ -139,7 +205,6 @@ async function handleSubmitAnswer({ answer }) {
       question: currentQuestion.value,
     })
 
-    // Store in sidebar history
     reflectionLog.value.push({
       nodeId: currentNode.value?.knowledgePoint?.id || currentNode.value?.id,
       nodeName: currentNode.value?.knowledgePoint?.name || currentNode.value?.name,
@@ -150,7 +215,6 @@ async function handleSubmitAnswer({ answer }) {
       timestamp: new Date().toISOString(),
     })
 
-    // Show result in center — user decides next step
     lastScore.value = {
       score: result.score,
       level: result.level,
@@ -158,8 +222,7 @@ async function handleSubmitAnswer({ answer }) {
       isCorrect: result.isCorrect,
     }
     pendingAction.value = result.conclusion
-    pendingAction.value = result.conclusion
-status.value = 'result'
+    status.value = 'result'
   } catch (e) {
     ElMessage.error(e.message || '分析请求失败，请重试')
     status.value = 'quiz'
@@ -183,8 +246,8 @@ async function continueAfterResult() {
     )
     if (targetIdx >= 0) currentNodeIndex.value = targetIdx
     currentNodeState.value = 'explain'
-    status.value = 'explain'
     currentQuestion.value = null
+    status.value = 'explain'
     explainKey.value++
   }
 }
@@ -253,7 +316,6 @@ async function evaluateTest() {
     if (result.passed) {
       status.value = 'passed'
     } else {
-      // Re-plan: load new learning path
       if (result.newLearningPath && result.newLearningPath.length > 0) {
         learningPath.value = result.newLearningPath
         currentNodeIndex.value = 0
@@ -288,102 +350,106 @@ onMounted(initSession)
 
     <div class="session-body">
       <div class="session-main">
-        <!-- Planning -->
-        <ExplainView v-if="status === 'planning'" :key="'plan'" :loading="true" />
+        <Transition mode="out-in" @enter="onContentEnter" @leave="onContentLeave" appear>
+          <div :key="contentKey" class="session-content-wrap">
+            <!-- Planning -->
+            <ExplainView v-if="status === 'planning'" :key="'plan'" :loading="true" />
 
-        <!-- Explain -->
-        <ExplainView
-          v-else-if="status === 'explain'"
-          :key="'explain-' + explainKey"
-          :content="currentNode?.explanation || ''"
-          :knowledge-point-name="currentNode?.knowledgePoint?.name || currentNode?.name || ''"
-          :reason="currentNode?.reason || ''"
-          :loading="loading"
-          @learned="handleLearned"
-        />
+            <!-- Explain -->
+            <ExplainView
+              v-else-if="status === 'explain'"
+              :key="'explain-' + explainKey"
+              :content="currentNode?.explanation || ''"
+              :knowledge-point-name="currentNode?.knowledgePoint?.name || currentNode?.name || ''"
+              :reason="currentNode?.reason || ''"
+              :loading="loading"
+              @learned="handleLearned"
+            />
 
-        <!-- Quiz -->
-        <QuizView
-          v-else-if="status === 'quiz'"
-          :key="'quiz-' + quizKey"
-          :question="currentQuestion"
-          :loading="loading"
-          @submit="handleSubmitAnswer"
-        />
+            <!-- Quiz -->
+            <QuizView
+              v-else-if="status === 'quiz'"
+              :key="'quiz-' + quizKey"
+              :question="currentQuestion"
+              :loading="loading"
+              @submit="handleSubmitAnswer"
+            />
 
-        <!-- Test question -->
-        <div v-else-if="status === 'testing'" class="test-area">
-          <div class="test-header">
-            <span class="test-label">综合测试</span>
-            <span class="test-progress">{{ testIndex + 1 }} / {{ testQuestions.length }}</span>
+            <!-- Test question -->
+            <div v-else-if="status === 'testing'" class="test-area">
+              <div class="test-header">
+                <span class="test-label">综合测试</span>
+                <span class="test-progress">{{ testIndex + 1 }} / {{ testQuestions.length }}</span>
+              </div>
+              <QuizView
+                :key="'test-' + testKey"
+                :question="testQuestion"
+                @submit="handleTestSubmit"
+              />
+            </div>
+
+            <!-- Reflecting / Evaluating -->
+            <div v-else-if="status === 'reflecting' || status === 'evaluating'" class="session-reflecting">
+              <div class="reflecting-indicator"><div class="reflecting-bar"></div></div>
+              <p class="reflecting-text">{{ status === 'evaluating' ? 'AI 正在评估综合测试...' : 'AI 正在分析你的答案...' }}</p>
+              <p class="reflecting-elapsed" v-if="reflectingElapsed > 1">{{ reflectingElapsed }}s</p>
+              <p class="reflecting-hint">答对即时返回，答错需要 AI 深度分析（通常 5-15 秒）</p>
+            </div>
+
+            <!-- Result: show score + analysis, let user decide next step -->
+            <div v-else-if="status === 'result'" class="session-result">
+              <div class="result-card">
+                <div class="result-score" :class="{
+                  'result-score--high': lastScore?.score >= 0.85,
+                  'result-score--mid': lastScore?.score >= 0.5 && lastScore?.score < 0.85,
+                  'result-score--low': lastScore?.score < 0.5,
+                }">
+                  <span class="result-pct result-pct--anim">0%</span>
+                  <span class="result-level">{{ lastScore?.level }}</span>
+                </div>
+                <p class="result-summary">{{ lastScore?.summary }}</p>
+                <div class="result-actions">
+                  <button v-if="pendingAction === 'forward'" class="result-btn result-btn--forward" @click="continueAfterResult">
+                    下一知识点
+                  </button>
+                  <button v-else-if="pendingAction === 'reinforce'" class="result-btn result-btn--reinforce" @click="continueAfterResult">
+                    再来一题巩固
+                  </button>
+                  <button v-else-if="pendingAction === 'rollback'" class="result-btn result-btn--rollback" @click="continueAfterResult">
+                    回顾基础知识
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Done: all nodes completed -->
+            <div v-else-if="status === 'done'" class="session-done">
+              <h2 class="done-title">本阶段学习完成</h2>
+              <p class="done-desc">你已完成 {{ totalNodes }} 个知识点的学习。</p>
+              <button class="test-btn" @click="startTest">开始综合测试</button>
+              <router-link to="/learn-hub" class="done-link">返回题库</router-link>
+            </div>
+
+            <!-- Passed: test passed -->
+            <div v-else-if="status === 'passed'" class="session-done">
+              <h2 class="done-title">恭喜！综合测试通过</h2>
+              <p class="done-desc">
+                掌握度 {{ Math.round((testResult?.mastery || 0) * 100) }}%，
+                {{ testResult?.passed ? '已达到' : '未达到' }} {{ Math.round(PASS_THRESHOLD * 100) }}% 的通过线。
+              </p>
+              <div class="test-summary" v-if="testResult">
+                <div class="test-mastery" :class="testResult.mastery >= PASS_THRESHOLD ? 'mastery--pass' : 'mastery--fail'">
+                  {{ Math.round(testResult.mastery * 100) }}%
+                </div>
+                <div class="test-weak" v-if="testResult.weakPoints?.length">
+                  <span class="test-weak-label">薄弱知识点：</span>
+                  {{ testResult.weakPoints.join('、') }}
+                </div>
+              </div>
+              <router-link to="/learn-hub" class="done-link">返回题库</router-link>
+            </div>
           </div>
-          <QuizView
-            :key="'test-' + testKey"
-            :question="testQuestion"
-            @submit="handleTestSubmit"
-          />
-        </div>
-
-        <!-- Reflecting / Evaluating -->
-        <div v-else-if="status === 'reflecting' || status === 'evaluating'" class="session-reflecting">
-          <div class="reflecting-indicator"><div class="reflecting-bar"></div></div>
-          <p class="reflecting-text">{{ status === 'evaluating' ? 'AI 正在评估综合测试...' : 'AI 正在分析你的答案...' }}</p>
-          <p class="reflecting-elapsed" v-if="reflectingElapsed > 1">{{ reflectingElapsed }}s</p>
-          <p class="reflecting-hint">答对即时返回，答错需要 AI 深度分析（通常 5-15 秒）</p>
-        </div>
-
-        <!-- Result: show score + analysis, let user decide next step -->
-        <div v-else-if="status === 'result'" class="session-result">
-          <div class="result-card">
-            <div class="result-score" :class="{
-              'result-score--high': lastScore?.score >= 0.85,
-              'result-score--mid': lastScore?.score >= 0.5 && lastScore?.score < 0.85,
-              'result-score--low': lastScore?.score < 0.5,
-            }">
-              <span class="result-pct">{{ Math.round((lastScore?.score || 0) * 100) }}%</span>
-              <span class="result-level">{{ lastScore?.level }}</span>
-            </div>
-            <p class="result-summary">{{ lastScore?.summary }}</p>
-            <div class="result-actions">
-              <button v-if="pendingAction === 'forward'" class="result-btn result-btn--forward" @click="continueAfterResult">
-                下一知识点
-              </button>
-              <button v-else-if="pendingAction === 'reinforce'" class="result-btn result-btn--reinforce" @click="continueAfterResult">
-                再来一题巩固
-              </button>
-              <button v-else-if="pendingAction === 'rollback'" class="result-btn result-btn--rollback" @click="continueAfterResult">
-                回顾基础知识
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Done: all nodes completed -->
-        <div v-else-if="status === 'done'" class="session-done">
-          <h2 class="done-title">本阶段学习完成</h2>
-          <p class="done-desc">你已完成 {{ totalNodes }} 个知识点的学习。</p>
-          <button class="test-btn" @click="startTest">开始综合测试</button>
-          <router-link to="/learn-hub" class="done-link">返回题库</router-link>
-        </div>
-
-        <!-- Passed: test passed -->
-        <div v-else-if="status === 'passed'" class="session-done">
-          <h2 class="done-title">恭喜！综合测试通过</h2>
-          <p class="done-desc">
-            掌握度 {{ Math.round((testResult?.mastery || 0) * 100) }}%，
-            {{ testResult?.passed ? '已达到' : '未达到' }} {{ Math.round(PASS_THRESHOLD * 100) }}% 的通过线。
-          </p>
-          <div class="test-summary" v-if="testResult">
-            <div class="test-mastery" :class="testResult.mastery >= PASS_THRESHOLD ? 'mastery--pass' : 'mastery--fail'">
-              {{ Math.round(testResult.mastery * 100) }}%
-            </div>
-            <div class="test-weak" v-if="testResult.weakPoints?.length">
-              <span class="test-weak-label">薄弱知识点：</span>
-              {{ testResult.weakPoints.join('、') }}
-            </div>
-          </div>
-          <router-link to="/learn-hub" class="done-link">返回题库</router-link>
-        </div>
+        </Transition>
       </div>
 
       <div class="session-sidebar">
@@ -406,7 +472,13 @@ onMounted(initSession)
 .session-main {
   flex: 7; overflow-y: auto; display: flex; justify-content: center; padding: 40px 0;
 }
-.session-main > * { width: 100%; max-width: 720px; }
+.session-content-wrap {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  justify-content: center;
+}
+.session-content-wrap > * { width: 100%; }
 .session-sidebar {
   flex: 3; border-left: 1px solid rgba(255,255,255,0.06); overflow-y: auto;
   display: flex; flex-direction: column; min-width: 260px; max-width: 340px;
@@ -467,7 +539,7 @@ onMounted(initSession)
 /* Result card */
 .session-result {
   display: flex; align-items: flex-start; justify-content: center;
-  padding: 60px 40px;
+  padding: 60px 0;
 }
 .result-card {
   display: flex; flex-direction: column; align-items: center; gap: 20px;

@@ -1,12 +1,47 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watch, nextTick } from 'vue'
+import gsap from 'gsap'
 
-defineProps({
+const props = defineProps({
   nodes: { type: Array, default: () => [] },
   currentNodeIndex: { type: Number, default: 0 },
 })
 
 const collapsed = ref(false)
+const listRef = ref(null)
+
+// Stagger entrance animation when nodes load or list expands
+watch(
+  () => [props.nodes.length, collapsed.value],
+  async () => {
+    if (collapsed.value || !listRef.value) return
+    await nextTick()
+    const items = listRef.value.querySelectorAll('.timeline-node')
+    gsap.fromTo(items, { opacity: 0, x: -12 }, {
+      opacity: 1, x: 0,
+      duration: 0.3,
+      stagger: 0.05,
+      ease: 'power2.out',
+    })
+  },
+  { flush: 'post' }
+)
+
+// Pulse animation on the current node dot when index changes
+watch(
+  () => props.currentNodeIndex,
+  async (newIdx) => {
+    await nextTick()
+    if (!listRef.value) return
+    const dots = listRef.value.querySelectorAll('.timeline-dot')
+    const currentDot = dots[newIdx]
+    if (currentDot) {
+      gsap.fromTo(currentDot, { scale: 1.4 }, {
+        scale: 1, duration: 0.5, ease: 'power2.out',
+      })
+    }
+  }
+)
 </script>
 
 <template>
@@ -17,7 +52,7 @@ const collapsed = ref(false)
       <span class="timeline-count" v-if="nodes.length">{{ nodes.length }}</span>
     </button>
 
-    <div class="timeline-list" v-show="!collapsed">
+    <div ref="listRef" class="timeline-list" v-show="!collapsed">
       <div
         v-for="(node, idx) in nodes"
         :key="node.knowledgePoint?.id || idx"
@@ -86,6 +121,7 @@ const collapsed = ref(false)
   gap: 10px;
   position: relative;
   padding-bottom: 18px;
+  opacity: 0; /* hidden until GSAP stagger reveals */
 }
 
 .timeline-dot {

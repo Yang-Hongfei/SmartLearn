@@ -3,9 +3,12 @@ import { computed } from 'vue'
 import ErrorAnalysisDisplay from './ErrorAnalysisDisplay.vue'
 import WeakPointsList from './WeakPointsList.vue'
 import LearningPathTimeline from './LearningPathTimeline.vue'
+import { useGsapModal } from '../../composables/useGsapModal'
 
 const props = defineProps({ analysis: Object, visible: Boolean })
 const emit = defineEmits(['close'])
+
+const { show, overlayRef, dialogRef } = useGsapModal(() => props.visible, { scale: true })
 
 const isCorrect = computed(() => props.analysis?.is_correct)
 const errorAnalysis = computed(() => props.analysis?.error_analysis)
@@ -14,8 +17,8 @@ const learningPath = computed(() => props.analysis?.learning_path || [])
 </script>
 
 <template>
-  <div v-if="visible" class="ai-overlay" @click.self="emit('close')">
-    <div class="ai-panel">
+  <div v-if="show" ref="overlayRef" class="ai-overlay" @click.self="emit('close')">
+    <div ref="dialogRef" class="ai-panel">
       <div class="ai-header">
         <h3 class="ai-title">{{ isCorrect ? '回答正确' : '回答错误' }}</h3>
         <button class="ai-close" @click="emit('close')">&times;</button>
